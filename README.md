@@ -45,7 +45,7 @@ tenemos distintos metodos de pagos.
 </p>
 <h3>👨‍💻Jeremy Palacios Principe:</h3>
 <p>
-Me llamo Jeremy pero me dicen Jere, tengo 21 años, termine mis estudios de primaria y secundaria, estudie un curso de plomeria y de Junior Achievement Argentina de   Mundo Digital.
+Me llamo Jeremy pero me dicen Jere, tengo 21 años, termine mis estudios de primaria y secundaria, estudie un curso de Junior Achievement Argentina de Mundo Digital.
 <br>
 Me gusta la programacion y la creacion de videojuegos.
 </p>
