@@ -41,7 +41,7 @@ tenemos distintos metodos de pagos.
  
 <h3>👩‍💻Mayra Martinez:</h3>
 <p>
-¡Hola! ¿Cómo están? Mi nombre es Mayra Martínez, tengo 35 años. Soy miembro del Proyecto Sonata. Me gusta mucho Programación, más practicarlo.
+¡Hola! ¿Cómo están? Mi nombre es Mayra Martínez, tengo 35 años. Soy miembro del Proyecto Sonata, me gusta mucho la música. Actualmente estudiante del Curso de Programación. Trabajo en Atención al cliente. 
 </p>
 <h3>👨‍💻Jeremy Palacios Principe:</h3>
 <p>
