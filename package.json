@@ -1,0 +1,23 @@
+{
+  "name": "grupo_1_-sonata--c13",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">\r     <img width=\"250px\" src=\"/public/img/logo1.png\" alt=\"Logo Sonata\">\r     <h1 text-aling=\"center\" style=\"font-size: 60px;\"> 🎼SONATA <h1>\r </div>",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kaiael24/grupo_1_SONATA-C13.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kaiael24/grupo_1_SONATA-C13/issues"
+  },
+  "homepage": "https://github.com/Kaiael24/grupo_1_SONATA-C13#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
