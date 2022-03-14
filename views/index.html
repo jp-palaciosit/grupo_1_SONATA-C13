@@ -3,12 +3,380 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./img/logo1.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Roboto&display=swap" rel="stylesheet">
+    <!-- Logo -->
+    <link rel="shortcut icon" href="./img/logo/logo1.png" type="image/x-icon">
     <title>Sonata</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <h1>Sonata</h1>
+    <header>
+        <div class="div-header">
+            <!-- buttom burger -->
+            <i class="fa-solid fa-bars"></i> 
+            <!-- buscador -->
+            <form action=""> 
+                <input type="text" placeholder=" ¿Qué instrumento buscás?">
+                <button class="buscar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <!-- logo -->
+            <img src="/img/logo/logo1.png" alt="Logo"> 
+        </div>
+        <nav>
+            <!-- button nav -->
+            <div class="button-tablet">
+                    <button>
+                        <h1>Baterias</h1>
+                    </button>
+                    <button>
+                        <h1>Guitarras</h1>
+                    </button>
+                    <button>
+                        <h1>Flautas</h1>
+                    </button>
+                    <button>
+                        <h1>Pianos</h1>
+                    </button>
+            </div>
+            <div class="button-desktop">
+                <button>
+                    <h1>Baterias</h1>
+                </button>
+                <button>
+                    <h1>Guitarras</h1>
+                </button>
+                <button>
+                    <h1>Flautas</h1>
+                </button>
+                <button>
+                    <h1>Pianos</h1>
+                </button>
+                <button>
+                    <h1>Armonicas</h1>
+                </button>
+                <button>
+                    <h1>Acordeon</h1>
+                </button>
+                <button>
+                    <h1>Saxofon</h1>
+                </button>
+
+            </div>
+            <div>
+                <button class="btn-instruments">
+                    <h1>Instrumentos</h1>
+                </button>
+            </div>
+            
+        </nav>
+    </header>
+    <main>
+        <!-- Carrusel -->  <!--     
+        <div class="container-slider">
+            <div class="slider" id="slider">
+                <div class="slider-section">
+                    <img src="./img/slider/slider1.jpg" alt="" class="slider-img">
+                </div>
+                <div class="slider-section">
+                    <img src="./img/slider/slider2.jpg" alt="" class="slider-img">
+                </div>
+                <div class="slider-section">
+                    <img src="./img/slider/slider3.jpg" alt="" class="slider-img">
+                </div>
+                <div class="slider-section">
+                    <img src="./img/slider/slider4.jpg" alt="" class="slider-img">
+                </div>
+                <div class="slider-section">
+                    <img src="./img/slider/slider5.jpg" alt="" class="slider-img">
+                </div>
+            <div class="slider-btn slider-btn-right" id="btn-right">&#62</div>
+            <div class="slider-btn slider-btn-left" id="btn-left">&#60</div>
+        </div> -->
+        <section class="section-productos">
+            <div class="descripcion-desktop">
+                <h1>Instrumento</h1>
+                <ul>Categoria
+                    <li><a href=""></a>1</li>
+                    <li><a href=""></a>2</li>
+                    <li><a href=""></a>3</li>
+                    <li><a href=""></a>4</li>
+                </ul>
+                <ul>Marcas
+                    <li><a href=""></a>5</li>
+                    <li><a href=""></a>6</li>
+                    <li><a href=""></a>7</li>
+                    <li><a href=""></a>8</li>
+                </ul>
+                <ul>Precio
+                    <li><a href=""></a>9</li>
+                    <li><a href=""></a>10</li>
+                    <li><a href=""></a>11</li>
+                    <li><a href=""></a>12</li>
+                </ul>
+            </div>
+            <div class="articulos-desktop">
+                <article>
+                        <img class="producto" src="/img/productos/guitarraGibson.jpg" alt="guitarra gibson">
+                        <div class="description">
+                            <h3>Guitarra Gibson</h3>
+                            <p class="descuento-envios">15% off - Envios gratis</p>
+                            <p class="precio">Precio: $700</p>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                </article>
+                <article>
+                        <img class="producto" src="/img/productos/bateria.jpg" alt="bateria">
+                        <div class="description">
+                            <h3>Bateria Mapex Prodigy</h3>
+                            <p class="descuento-envios">15% off - Envios gratis</p>
+                            <p class="precio">Precio: $141.58</p>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                </article>
+                <article>
+                    <img class="producto" src="/img/productos/ukelele.jpg" alt="Ukelele">
+                    <div class="description">
+                        <h3>Ukelele Soprano Dakota</h3>
+                        <p class="descuento-envios">13% off - Envios gratis</p>
+                        <p class="precio">Precio: $1.891</p>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </article>
+                <article>
+                    <img class="producto" src="/img/productos/organoMusical.jpg" alt="Organo musical">
+                    <div class="description">
+                        <h3>Organo Musical Teclado</h3>
+                        <p class="descuento-envios">18% off - Envios gratis</p>
+                        <p class="precio">Precio: $6.067</p>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </article>
+                <article>
+                    <img class="producto" src="/img/productos/repiqueMurga.jpg" alt="repique murga">
+                    <div class="description">
+                        <h3>Repique Murga Cromado</h3>
+                        <p class="descuento-envios">Envios gratis</p>
+                        <p class="precio">Precio: $3.600</p>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </article>
+                <article>
+                    <img class="producto" src="/img/productos/armonicaDiatonica.jpg" alt="armonica diatonica">
+                    <div class="description">
+                        <h3>Armonica Diatónica Cromada</h3>
+                        <!-- <p class="descuento-envios">15% off - Envios gratis</p> -->
+                        <p class="precio">Precio: $1.030</p>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </article>
+                <article>
+                    <img class="producto" src="/img/productos/xilofon.jpg" alt="xilofon">
+                    <div class="description">
+                        <h3>Xilofón Metalofon 8 Notas</h3>
+                        <p class="descuento-envios">5% off</p>
+                        <p class="precio">Precio: $2.450</p>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </article>
+                <article>
+                    <img class="producto" src="/img/productos/violinPalatino.jpg" alt="violin palatino">
+                    <div class="description">
+                        <h3>Violin Palatino 4/4 Madera</h3>
+                        <p class="descuento-envios">Envios gratis</p>
+                        <p class="precio">Precio: $7.499</p>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </article>
+                <article>
+                    <img class="producto" src="/img/productos/panderetaParquer.jpg" alt="pandereta">
+                    <div class="description">
+                        <h3>Pandereta Parquer Doble Sonaja</h3>
+                        <!-- <p class="descuento-envios">15% off - Envios gratis</p> -->
+                        <p class="precio">Precio: $2.150</p>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </article>
+                <article>
+                    <img class="producto" src="/img/productos/pedalEfecto.jpg" alt="pedal de efecto">
+                    <div class="description">
+                        <h3>Pedal de efecto para instrumento</h3>
+                        <p class="descuento-envios">10% off - Envios gratis</p>
+                        <p class="precio">Precio: $29.493</p>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </article>
+                <article>
+                    <img class="producto" src="/img/productos/trianguloPercusion.jpg" alt="triangulo percusion">
+                    <div class="description">
+                        <h3>Triangulo Percusion Metalico</h3>
+                        <p class="descuento-envios">13% off</p>
+                        <p class="precio">Precio: $699</p>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </article>
+                <article>
+                    <img class="producto" src="/img/productos/microfonoRode.jpg" alt="microfono rode">
+                    <div class="description">
+                        <h3>Micrófono Rode NT1-A condensador</h3>
+                        <p class="descuento-envios">Envios gratis</p>
+                        <p class="precio">Precio: $63.900</p>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </article>
+                <article>
+                    <img class="producto" src="/img/productos/puasStagg.jpg" alt="puas stagg">
+                    <div class="description">
+                        <h3>Puas Stagg Pack Por 20 Calibres</h3>
+                        <!-- <p class="descuento-envios">15% off - Envios gratis</p> -->
+                        <p class="precio">Precio: $715</p>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </article>
+                <article>
+                    <img class="producto" src="/img/productos/organoMusicalinfantil.jpg" alt="organo musical infantil">
+                    <div class="description">
+                        <h3>Organo Musical Infantil</h3>
+                        <p class="descuento-envios">5% off - Envios gratis</p>
+                        <p class="precio">Precio: $2.990</p>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </article>
+                <article>
+                    <img class="producto" src="/img/productos/kalimba.jpg" alt="kalimba">
+                    <div class="description">
+                        <h3>Kalimba Walter Profesional</h3>
+                        <p class="descuento-envios">Envios gratis</p>
+                        <p class="precio">Precio: $6.977</p>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </article>
+                <article>
+                    <img class="producto" src="/img/productos/acordeonNenes.jpg" alt="acordeon niños">
+                    <div class="description">
+                        <h3>Acordeón Para Niños 7 Teclas</h3>
+                        <!-- <p class="descuento-envios">15% off - Envios gratis</p> -->
+                        <p class="precio">Precio: $3.990</p>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </article>
+                <article>
+                    <img class="producto" src="/img/productos/flautaDulce.jpg" alt="flauta dulce soprano">
+                    <div class="description">
+                        <h3>Flauta Dulce Soprano Yamaha</h3>
+                        <!-- <p class="descuento-envios">20% off - Envios gratis</p> -->
+                        <p class="precio">Precio: $1.950</p>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </article>
+                <article>
+                    <img class="producto" src="/img/productos/pedalEfecto1.jpg" alt="pedal de efecto ">
+                    <div class="description">
+                        <h3>Pedal de efecto para instrumento de cuerda</h3>
+                        <p class="descuento-envios">Envios gratis</p>
+                        <p class="precio">Precio: $17.543</p>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </article>
+                <article>
+                    <img class="producto" src="/img/productos/guitarraInfantil.jpg" alt="guitarra infantil ">
+                    <div class="description">
+                        <h3>Guitarra Infantil Sonido Real</h3>
+                        <!-- <p class="descuento-envios">Envios gratis</p> -->
+                        <p class="precio">Precio: $3.980</p>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </article>
+                <article>
+                    <img class="producto" src="/img/productos/guitarraVintage.jpg" alt="guitarra vintage">
+                    <div class="description">
+                        <h3>Guitarra eléctrica SX Vintage Series FTL-50</h3>
+                        <p class="descuento-envios">Envios gratis</p>
+                        <p class="precio">Precio: $29.750</p>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="section-proteccion">
+            <div>
+                <i class="fa-solid fa-credit-card"></i>
+                <h4>Elegi como pagar</h4>
+                <p>Con Mercado Pago, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+            </div>
+            <div class="separador-proteccion">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h4>Envio rapido y seguro</h4>
+                <p>Elegí Mercado Envíos y seguí tu compra hasta que la recibas. Todos tus paquetes estarán protegidos.</p>
+
+            </div>
+            <div class="separador-proteccion">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h4>Compra protegida</h4>
+                <p>Te acompañamos hasta que recibas lo que compraste. Y si no es lo que esperabas, te devolvemos el dinero.</p>
+
+            </div>
+        </section>
+    </main>
+    <footer>
+            <section>
+                <article>
+                    <h4>Cuenta</h4>
+                    <ul>
+                        <li>Mi cuenta</li>
+                        <li>Carrito</li>
+                        <li>Ayuda</li>
+                    </ul>
+                </article>
+                <article>
+                    <h4>Novedades</h4>
+                    <ul>
+                        <li>
+                            <a href="">Ofertas</a>
+                        </li>
+                        <li>
+                            <a href="">Mas vendidos</a>
+                        </li>
+                        <li>
+                            <a href="">Todas mis compras</a>
+                        </li>
+                    </ul>
+                </article>
+                <article>
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>
+                            <a href="">Whatsapp</a>
+                        </li>
+                        <li>
+                            <a href="">Email</a>
+                        </li>
+                        <li>
+                            <a href="">Dirección</a>
+                        </li>
+                    </ul>
+                </article>
+                <article class="redes-sociales">
+                    <h4>Redes sociales</h4>
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-facebook-square"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                    </ul>
+                </article>
+            </section>
+            <div class="div-p">
+                <p class="p-sonata">© TODOS LOS DERECHOS RESERVADOS - 2022 Sonata</p>  
+            </div>
+    </footer>
+    <!-- <script src="./slider.js"></script> -->
 </body>
 </html>
