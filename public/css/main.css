@@ -1,0 +1,348 @@
+/* MAIN */
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:var(--background-main);
+}
+
+/* ---- Carrusel ------ */
+.section-carrusel{
+    margin: 0px auto 5px;
+    width: 100%;
+}
+.container-slider{
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider{
+    display: flex;
+    width: 500%;
+    /* height: 300px; */
+}
+.slider-section{
+    width: 100%;
+}
+.slider-img{
+    display:block;
+    width: inherit;
+    height: 100%;
+    object-fit:cover;
+}
+.slider-btn{
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    width: 40px;
+    height: 60px;;
+    padding: 9px;
+    background-color: rgba(255, 255, 255, 0.2);
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slider-btn:hover{
+    background-color: #C4C4C4;
+}
+.slider-btn-left{
+    left: 5px;
+}
+.slider-btn-right{
+    right: 5px;
+}
+/* ------------- */
+
+main section{
+    width: 90%;
+    /* height: 150px; */
+    display: flex;
+    flex-direction: column;
+/*     margin-bottom: 10px; */
+}
+main section article{
+   margin-bottom: 15px;
+   background-color: var(--background-gray);
+   display: flex;
+   height: 150px;
+   align-items: center;
+   justify-content: center;
+}
+main section article img.producto{
+    margin-right:10px;
+    width: 50%;
+    height: 90%;
+}
+main section div.descripcion-desktop{
+    display: none;
+}
+main section article div.description{
+    width: 40%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+    font-size: var(--font-description-producto);
+    position: relative;
+    text-align: center;
+}
+main section article div.description p.descuento-envios{
+    background-color: var(--color-gray-ligth);
+}
+main section article div.description p.precio{
+    margin-bottom: 10px
+}
+main section article div.description i{
+    position: absolute;
+    color: var(--color-green);
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--color-green);
+    background-color: #FFF;
+    border-radius: 50%;
+    right: 4px;
+    top: 90px;
+}
+main section.section-proteccion{
+    width: 90%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+main section.section-proteccion div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 8px;
+}
+main section.section-proteccion div h4{
+    font-size: var(--font-h4);
+    margin-bottom: 2px;
+}
+main section.section-proteccion div p{
+    width: 80%;
+    font-size: var(--font-footer);
+    text-align: center;
+    margin-bottom: 3px;
+}
+main section.section-proteccion div i{
+    font-size: 20px;
+    margin-top: 8px;
+    color: var(--color-Celeste);
+}
+
+
+/* END MAIN */
+
+/* MEDIA QUERIES */
+
+/* Celulares grandes/Tables pequeñas */
+
+
+@media (min-width: 481px){
+    :root{
+        --font-h1: 25px;
+        --font-h4: 20px;
+        --font-h4-footer: 20px;
+        --font-cp: 12px;
+        --font-description-producto:20px;
+        --font-footer: 15px;
+        --font-redes-sociales: 30px;
+    }
+    main section article{
+        height: 250px;
+     }
+    main section article div.description i {
+        top:161px;
+    }
+}
+
+@media (min-width: 769px){
+    :root{
+        --font-h1: 25px;
+        --font-h4: 20px;
+        --font-h4-footer: 20px;
+        --font-cp: 12px;
+        --font-description-producto:20px;
+        --font-footer: 15px;
+        --font-redes-sociales: 30px;
+    }
+    /* Carrusel */
+    .slider{
+        display: flex;
+        width: 500%;
+        /* height: 300px; */
+    }
+    .slider-section{
+        width: 100%;
+    }
+    main section.section-carrusel div.container-slider div.slider{
+        height: 500px;
+    }
+    /* ---- */
+    main section div.articulos-desktop{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    main section article{
+        margin: 10px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        width: 260px;
+        height: 310px;
+        border: solid 1px black;
+        /* box-shadow: 8px 8px 5px #909090 */
+     }
+     main section article:hover{
+        box-shadow: 8px 8px 5px #909090
+     }
+    
+    main section article img.producto {
+        height: 60%;
+    }
+    main section article div.description{
+        width: 100%;
+        height: 40%;
+        display: flex;
+        background-color: white;
+        border-top: solid 1px #C4C4C4;
+        font-size: var(--font-description-producto);
+        position: relative;
+        /* text-align: center; */
+    } 
+    /* ---- */
+    main section article div.description i{
+        position: absolute;
+        font-size: 25px;
+        top: -173px;
+        right: 12px;
+        width: 51px;
+        height: 49px;
+        padding: 10px;
+    }
+    main section.section-proteccion{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        
+    }
+    /* ---- */
+    .separador-proteccion{
+        border-left: 1px solid lightgray;
+        
+    }
+}  
+
+@media (min-width: 1280px) and (max-width: 2000px){
+    :root{
+        --font-h4: 25px;
+        --font-h4-footer: 25px;
+        --font-cp: 14px;
+        --font-footer: 16px;
+        --font-redes-sociales: 40px;
+    }
+    /* Carrusel */
+    main section.section-carrusel div.container-slider div.slider{
+        height: 600px;
+    }
+    /* ---- */
+    main section.section-productos{
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        height: 100%;
+    }
+    main section div.descripcion-desktop{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        height:100vh;
+        margin: 10px;
+        display: none;
+    }
+    main section div.descripcion-desktop h1{
+        font-size: 25px;
+    }
+    main section div.descripcion-desktop ul{
+        margin-left: 5px;
+        font-size: 20px;
+    }
+    main section div.descripcion-desktop ul li{
+        list-style: none;
+        font-size: 16px;
+        margin-left: 8px;
+    }
+    main section div.articulos-desktop{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    main section article{
+        margin: 10px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        width: 260px;;
+        height: 310px;
+        border: solid 1px black;
+     }
+    main section article:hover{
+        box-shadow: 8px 8px 5px #909090
+     }
+    main section article img.producto {
+        height: 60%;
+    }
+    main section article div.description{
+        width: 100%;
+        height: 40%;
+        display: flex;
+        background-color: white;
+        border-top: solid 1px #C4C4C4;
+        font-size: var(--font-description-producto);
+        position: relative;
+    } 
+    main section article div.description i{
+        position: absolute;
+        font-size: 25px;
+        top: -173px;
+        right: 12px;
+        width: 51px;
+        height: 49px;
+        padding: 10px;
+
+    }
+    main section article div.description h3{
+        text-align: center;
+    }
+    main section article div.description p.descuento-envios{
+        margin: 2px 0;
+        font-size: 16px;
+    }
+    main section article div.description p.precio{
+        font-size: 30px;
+    }
+    main section.section-proteccion div h4{
+        font-size: 22px;
+    }
+    main section.section-proteccion div p{
+        font-size: 17px;
+    }
+    main section.section-proteccion div i{
+        font-size: 30px;
+    }
+    
+}

@@ -1,0 +1,79 @@
+/* FOOTER */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: var(--font-body);
+    width: 100%;
+    background-color: var(--background-buttom-instrument);
+    color: white;
+}
+footer section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2px;
+}
+footer section article h4{
+    font-size: var(--font-h4-footer);
+    color: white;
+    margin:3px 0px;
+}
+footer section article ul li{
+    list-style: none;
+    font-size: var(--font-footer);
+    padding-bottom: 2px;
+}
+footer section article ul li a{
+    text-decoration: none;
+    color: white;
+
+}
+footer section article.redes-sociales{
+    display: flex;
+    flex-direction: column;
+}
+footer section article.redes-sociales h4{
+    font-size: var(--font-h4);
+    color: white;
+}
+footer section article.redes-sociales ul{
+    display: flex;
+    justify-content: space-around;
+} 
+footer section article.redes-sociales ul li a i{
+    font-size: var(--font-redes-sociales);
+}
+footer div.div-p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 13%;
+    background-color: var(--background-gray);
+    font-size: var(--font-cp);
+    margin-top: 5px;
+}
+
+/* END FOOTER */
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 769px){
+    :root{
+        --font-h1: 25px;
+        --font-h4: 20px;
+        --font-h4-footer: 20px;
+        --font-cp: 12px;
+        --font-description-producto:20px;
+        --font-footer: 15px;
+        --font-redes-sociales: 30px;
+    }
+    
+    footer section article h4{
+        margin:5px 0px;
+    }
+}
+

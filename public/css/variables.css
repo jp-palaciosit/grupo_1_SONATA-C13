@@ -1,0 +1,22 @@
+:root{
+    /* BACKGROUND */
+    --background-gray: #716F6F;
+    --background-buttom-instrument: #8C0000;
+    --background-main: white;
+    /* COLORS */
+    --color-green:#39b54a;
+    --color-Celeste: #1259c3;
+    --color-gray-ligth:#c4c4c4;
+    /* Font-family */
+    --font-roboto: 'Roboto', sans-serif;
+    --font-berkshire :'Berkshire Swash', cursive;
+    /* Font-Size */
+    --font-h1: 20px;
+    --font-body: 12px;
+    --font-h4: 12px;
+    --font-cp: 9px;
+    --font-description-producto:12px;
+    --font-footer: 10px;
+    --font-h4-footer: 12px;
+    --font-redes-sociales: 22px;
+}
