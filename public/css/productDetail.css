@@ -1,0 +1,94 @@
+@import url("styles.css");
+
+*{ padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+main{
+    margin: 5px 0;
+   display: flex;
+   justify-content:center ;
+}
+
+main section h2{
+    margin: 5px 0 10px;
+}
+
+main section{
+    width: 90%;
+    text-align: center;
+    background-color: #C4C4C4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section div img {
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+main section article {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+main section article div.container{
+    display: flex;
+    width: 90%;
+    justify-content:space-between;
+}
+
+main section article div.botones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.producto-precio{
+    font-size: 30px;
+}
+
+.producto-anterior{
+    font-size: 20px;
+    margin-top: 3px;
+    /* text-align: left; */
+    text-decoration:line-through;
+    background-color: #f0ebeb;
+    border-radius: 3px;
+}
+
+.producto-descuento{
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+.botones{
+    font-size: 20px;
+}
+.span-comprar{
+    background-color: #C4C4C4;
+    padding: 3px;
+    border-radius: 6px;
+}
+a {
+    text-decoration: none;
+}
+a.det-producto{
+    font-size: 1.5rem;
+}
+a.det-producto:visited{
+    color: #1259c3;
+}
+
+
+@media (min-width: 769px){
+
+}
+
+@media (min-width: 1280px) and (max-width: 2000px){
+
+}
