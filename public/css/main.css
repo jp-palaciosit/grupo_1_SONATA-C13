@@ -70,7 +70,15 @@ main section article{
    height: 150px;
    align-items: center;
    justify-content: center;
+   position: relative;
 }
+main section article:hover{
+    box-shadow: 0px 4px 0px var(--background-gray);
+}
+/* .ancla-carrito{
+   background-color: aqua;
+   position: absolute;
+} */
 main section article img.producto{
     margin-right:10px;
     width: 50%;
@@ -110,7 +118,11 @@ main section article div.description i{
     border-radius: 50%;
     right: 4px;
     top: 90px;
+    /* background: url("../../views/carrito.html"); */
 }
+/* main section article div.description i::after{
+    
+} */
 main section.section-proteccion{
     width: 90%;
     border: 1px solid black;
@@ -205,7 +217,7 @@ main section.section-proteccion div i{
         width: 260px;
         height: 310px;
         border: solid 1px black;
-        /* box-shadow: 8px 8px 5px #909090 */
+        transition: 0.6s;
      }
      main section article:hover{
         box-shadow: 8px 8px 5px #909090

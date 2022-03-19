@@ -17,6 +17,27 @@ header div.div-header{
     width: 100%;
     height: 60px;
 }
+/*  */
+header div.div-header nav.nav-burguer{
+    display: flex;
+    flex-direction: column;
+}
+header div.div-header nav.nav-burguer div.img-user{
+   display: flex;
+   padding: 100px;
+   justify-content: space-evenly;
+}
+header div.div-header nav.nav-burguer div.img-user img{
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+    border-radius: 50%;
+}
+header div.div-header nav.nav-burguer ul{
+    display: flex;
+}
+
+/*  */
 header div.div-header i{
     font-size: 23px;
     margin-left: 13px;
@@ -59,7 +80,13 @@ header nav div{
     border: 1px solid #C4C4C4;
     border-radius: 5px;
     cursor: pointer;
-} 
+}
+header nav div button:hover{
+    background-color: black;
+}
+header nav div button h1:hover{
+    color: white;
+}
 header nav div button h1{
     position: relative;
     color: white;
