@@ -30,3 +30,7 @@ app.get("/recuperarcontra", (req,res)=>{
 app.get("/datosUser", (req,res)=>{
     res.sendFile(path.join(__dirname, "./views/datosUser.html"))
 })
+
+app.get("/register", (req,res)=>{
+    res.sendFile(path.join(__dirname, "./views/register.html"))
+})
