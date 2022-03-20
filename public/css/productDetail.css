@@ -1,4 +1,5 @@
 @import url("styles.css");
+/* @import url("header.css"); */
 
 *{ padding: 0;
     margin: 0;
@@ -21,6 +22,7 @@ main section{
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 main section div img {

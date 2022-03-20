@@ -15,16 +15,20 @@
     <title>Sonata</title>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
     <header>
         <div class="div-header">
             <!-- buttom burger -->
-            <i class="fa-solid fa-bars"></i> 
-            <nav class="nav-burguer">
+            <label for="menu">
+                <i class="fa-solid fa-bars"></i> 
+            </label>
+            <input type="checkbox" name="checkbox" id="menu" class="nav_input">
+            <div class="nav-burguer">
                 <div class="img-user">
-                    <img src="" alt="img">
-                    <h3>Nombre usuario</h3>
+                    <img src="../img/usuario/User.jpg" alt="img">
+                    <p>Señor Github</p>
                 </div>
                 <ul>
                     <li>
@@ -49,7 +53,7 @@
                         <a href="">Preguntas Frecuentes</a>
                     </li>
                 </ul>
-            </nav>
+            </div>
             <!-- buscador -->
             <form action=""> 
                 <input type="text" placeholder=" ¿Qué instrumento buscás?">
@@ -100,34 +104,42 @@
                 </button>
 
             </div>
-            <div>
-                <button class="btn-instruments">
-                    <h1>Instrumentos</h1>
-                </button>
+            <div class="div-button">
+                <label for="boton-ins" class="label-button">
+                    <!-- <button class="btn-instruments"> -->
+                        <h1>Instrumentos</h1>
+                    <!-- </button> -->
+                </label>
+                <input type="checkbox" name="checkbox" id="boton-ins" class="input-button">
+                <!-- <div class="div-ul-button"> -->
+                    <ul class="ul-button">
+                        <li>
+                            <a href="#">Baterias</a>
+                        </li>
+                        <li>
+                            <a href="">Guitarra</a>
+                        </li>
+                        <li>
+                            <a href="">Flautas</a>
+                        </li>
+                        <li>
+                            <a href="">Pianos</a>
+                        </li>
+                        <li>
+                            <a href="">Armonicas</a>
+                        </li>
+                        <li>
+                            <a href="">Acordeon</a>
+                        </li>
+                        <li>
+                            <a href="">Saxofon</a>
+                        </li>
+                    </ul>
+                <!-- </div> -->
             </div>
-            <ul>
-                <li>
-                    <a href="">Baterias</a>
-                </li>
-                <li>
-                    <a href="">Guitarra</a>
-                </li>
-                <li>
-                    <a href="">Flautas</a>
-                </li>
-                <li>
-                    <a href="">Pianos</a>
-                </li>
-                <li>
-                    <a href="">Armonicas</a>
-                </li>
-                <li>
-                    <a href="">Acordeon</a>
-                </li>
-                <li>
-                    <a href="">Saxofon</a>
-                </li>
-            </ul>
+        </nav>
+        <nav class="nav-instrumento-boton">
+            
         </nav>
     </header>
     <main>
@@ -156,6 +168,7 @@
         </section>        
         <section class="section-productos">
             <div class="articulos-desktop">
+                <a href="productDetail">
                 <article>
                         <img class="producto" src="/img/productos/guitarraGibson.jpg" alt="guitarra gibson">
                         <div class="description">
@@ -167,6 +180,7 @@
                             <!-- </a> -->
                         </div>                           
                 </article>
+                </a>
                 <article>
                         <img class="producto" src="/img/productos/bateria.jpg" alt="bateria">
                         <div class="description">

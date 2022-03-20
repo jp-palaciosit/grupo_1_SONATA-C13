@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Roboto&display=swap" rel="stylesheet">
+    <!-- Logo -->
+    <link rel="shortcut icon" href="./img/logo/logo1.png" type="image/x-icon">
+    <title>Bienvenido!</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <header>
+        <div class="div-header">
+            <!-- buttom burger -->
+            <label for="menu">
+                <i class="fa-solid fa-bars"></i> 
+            </label>
+            <!-- <input type="checkbox" name="checkbox" id="menu" class="nav_input">
+            <div class="nav-burguer">
+                <div class="img-user">
+                    <img src="../img/usuario/User.jpg" alt="img">
+                    <p>Señor Github</p>
+                </div>
+                <ul>
+                    <li>
+                        <a href="">Inici/Registro</a>
+                    </li>
+                    <li>
+                        <a href="">Mi cuenta</a>
+                    </li>
+                    <li>
+                        <a href="">Carrito</a>
+                    </li>
+                    <li>
+                        <a href="">Novedades</a>
+                    </li>
+                    <li>
+                        <a href="">Historial de compras</a>
+                    </li>
+                    <li>
+                        <a href="">Metodos de pago</a>
+                    </li>
+                    <li>
+                        <a href="">Preguntas Frecuentes</a>
+                    </li>
+                </ul>
+            </div> -->
+            <!-- logo -->
+            <img src="/img/logo/logo1.png" alt="Logo"> 
+        </div>
+        <nav>
+            <!-- button nav -->
+            <div class="button-tablet">
+                    <button>
+                        <h1>Baterias</h1>
+                    </button>
+                    <button>
+                        <h1>Guitarras</h1>
+                    </button>
+                    <button>
+                        <h1>Flautas</h1>
+                    </button>
+                    <button>
+                        <h1>Pianos</h1>
+                    </button>
+            </div>
+            <div class="button-desktop">
+                <button>
+                    <h1>Baterias</h1>
+                </button>
+                <button>
+                    <h1>Guitarras</h1>
+                </button>
+                <button>
+                    <h1>Flautas</h1>
+                </button>
+                <button>
+                    <h1>Pianos</h1>
+                </button>
+                <button>
+                    <h1>Armonicas</h1>
+                </button>
+                <button>
+                    <h1>Acordeon</h1>
+                </button>
+                <button>
+                    <h1>Saxofon</h1>
+                </button>
+
+            </div>
+            <div class="div-button">
+                <label for="boton-ins" class="label-button">
+                    <!-- <button class="btn-instruments"> -->
+                        <h1>Instrumentos</h1>
+                    <!-- </button> -->
+                </label>
+                <!-- <input type="checkbox" name="checkbox" id="boton-ins" class="input-button">
+                <div class="div-ul-button">
+                    <ul class="ul-button">
+                        <li>
+                            <a href="#">Baterias</a>
+                        </li>
+                        <li>
+                            <a href="">Guitarra</a>
+                        </li>
+                        <li>
+                            <a href="">Flautas</a>
+                        </li>
+                        <li>
+                            <a href="">Pianos</a>
+                        </li>
+                        <li>
+                            <a href="">Armonicas</a>
+                        </li>
+                        <li>
+                            <a href="">Acordeon</a>
+                        </li>
+                        <li>
+                            <a href="">Saxofon</a>
+                        </li>
+                    </ul> -->
+                
+            </div>
+        </nav>
+        <nav class="nav-instrumento-boton">
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Bienvenido a Sonata</h1>
+            <hr>
+            <article>
+                <form action="datosUser.html" method="get">
+                    <label for="email" class="correo">Email</label>
+                    <input type="email" name="email" id="email" value="" placeholder="  Ingrese su email" class="input-empuje" required>
+                    <label for="passwd">Contraseña</label>
+                    <input type="password" name="passwd" id="passwd" value="" placeholder="  Ingrese su contraseña" class="input-empuje"  required>
+                    <label for="captcha" class="checkbox1">
+                        <input type="checkbox" name="captcha" id="captcha" value="" required class="input-recordar">
+                        <p>Recordar</p>                          
+                    </label>
+                    <button type="submit" class="btn-inicio">
+                           <!--  <a href="https://www.google.com/" target="_blank" class="a-button">Iniciar Sesión</a> -->
+                            <p> Iniciar Sesión</p>
+                            <span class="span1"></span>
+                            <span class="span2"></span>
+                            <span class="span3"></span>
+                            <span class="span4"></span>
+                    </button>
+                    <span class="tengo-cuenta">
+                        <a href="/recuperarcontra">Olvide mi contraseña</a>
+                    </span>
+                    <span class="tengo-cuenta">
+                        <a href="/registro_login">Crear cuenta</a>
+                    </span>
+                </form>
+            </article> 
+        </section>
+    </main>
+    <footer>
+        <section>
+            <article>
+                <h4>Cuenta</h4>
+                <ul>
+                    <li>Mi cuenta</li>
+                    <li>Carrito</li>
+                    <li>Ayuda</li>
+                </ul>
+            </article>
+            <article>
+                <h4>Novedades</h4>
+                <ul>
+                    <li>
+                        <a href="">Ofertas</a>
+                    </li>
+                    <li>
+                        <a href="">Mas vendidos</a>
+                    </li>
+                    <li>
+                        <a href="">Todas mis compras</a>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <h4>Contacto</h4>
+                <ul>
+                    <li>
+                        <a href="">Whatsapp</a>
+                    </li>
+                    <li>
+                        <a href="">Email</a>
+                    </li>
+                    <li>
+                        <a href="">Dirección</a>
+                    </li>
+                </ul>
+            </article>
+            <article class="redes-sociales">
+                <h4>Redes sociales</h4>
+                <ul>
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook-square"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                </ul>
+            </article>
+        </section>
+        <div class="div-p">
+            <p class="p-sonata">© TODOS LOS DERECHOS RESERVADOS - 2022 Sonata</p>  
+        </div>
+</footer>
+</body>
+</html>

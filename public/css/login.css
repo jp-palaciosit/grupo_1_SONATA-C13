@@ -1,0 +1,180 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #1259c3;
+}
+main{
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to top,#616161, #9bc5c3);
+}
+h1{
+    font-size: 30px;
+}
+hr{
+    width: 270px;
+    height: 5px;
+    background: linear-gradient(to right,rgb(42, 197, 224), #000000);
+    border: none;
+    border-radius: 6px;
+}
+main section{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+main section article{
+    margin-top: 5px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main section article form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+}
+input{
+    width: 80%;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    outline: none;
+    font-size: 1.5rem;
+    border: none;
+}
+input::placeholder{
+    font-size: 20px;
+    color: lightgrey;
+}
+.input-recordar{
+    width: 20px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+.checkbox1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    text-align: center;
+    margin: 15px 0 20px;
+    padding: 6px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.5rem;
+    background-color: #C4C4C4;
+    text-transform: uppercase;
+    cursor:pointer;
+}
+button p{
+    color: black;
+}
+button p:hover{
+    color: white;
+}
+.tengo-cuenta{
+    margin-bottom: 10px;
+    color: #000000;
+}
+.btn-inicio{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    letter-spacing: 2px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.btn-inicio:hover{
+    background: #9bc5c3;
+    box-shadow: 0 0 10px #9bc5c3, 0 0 40px #9bc5c3, 0 0 80px #9bc5c3;
+    transition-delay: 1s;
+}
+.btn-inicio span{
+    position: absolute;
+    display: block;
+}
+.a-button{
+    display: block;
+}
+.span1{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #616161);
+}
+.btn-inicio:hover .span1{
+    left: 100%;
+    transition: 1s;
+}
+
+.span3{
+    bottom: 0;
+    right:-100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #616161);
+}
+.btn-inicio:hover .span3{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+    
+}
+.span2{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 80%;
+    background-color: aqua;
+    background: linear-gradient(180deg, transparent, #616161);
+}
+.btn-inicio:hover .span2{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.3s;
+}
+.span4{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #616161);
+}
+.btn-inicio:hover .span4{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+    
+}
+/* @media (min-width: 1000px){
+    main section article form{
+        display: flex;
+        flex-direction: row; 
+        flex-wrap: wrap;
+    }
+    label{
+        margin-right: 10px;
+    }
+    .input-empuje{
+        margin-right: 30px;
+    }
+ 
+}*/
+
+
