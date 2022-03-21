@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
-    <!-- Google Font  -->
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Roboto&display=swap" rel="stylesheet">
@@ -14,6 +14,7 @@
     <link rel="shortcut icon" href="./img/logo/logo1.png" type="image/x-icon">
     <title>Sonata</title>
     <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/productDetail.css">
 </head>
 <body>
@@ -23,7 +24,7 @@
             <label for="menu">
                 <i class="fa-solid fa-bars"></i> 
             </label>
-            <input type="checkbox" name="checkbox" id="menu" class="nav_input">
+            <!-- <input type="checkbox" name="checkbox" id="menu" class="nav_input">
             <div class="nav-burguer">
                 <div class="img-user">
                     <img src="../img/usuario/User.jpg" alt="img">
@@ -52,14 +53,7 @@
                         <a href="">Preguntas Frecuentes</a>
                     </li>
                 </ul>
-            </div>
-            <!-- buscador -->
-            <form action=""> 
-                <input type="text" placeholder=" ¿Qué instrumento buscás?">
-                <button class="buscar">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </form>
+            </div> -->
             <!-- logo -->
             <img src="/img/logo/logo1.png" alt="Logo"> 
         </div>
@@ -109,8 +103,8 @@
                         <h1>Instrumentos</h1>
                     <!-- </button> -->
                 </label>
-                <input type="checkbox" name="checkbox" id="boton-ins" class="input-button">
-                <!-- <div class="div-ul-button"> -->
+                <!-- <input type="checkbox" name="checkbox" id="boton-ins" class="input-button">
+                <div class="div-ul-button">
                     <ul class="ul-button">
                         <li>
                             <a href="#">Baterias</a>
@@ -133,21 +127,20 @@
                         <li>
                             <a href="">Saxofon</a>
                         </li>
-                    </ul>
-                <!-- </div> -->
+                    </ul> -->
+                
             </div>
         </nav>
         <nav class="nav-instrumento-boton">
-            
         </nav>
     </header>
     <main>
         <section>
             <h2>Flauta Traversal Knight 16 llaves con Estuche</h2>
-            <div>
+            <div class="caja-imagen">
                 <img src="/img/productDetail/images.jpg" alt="">
             </div>
-            <article>
+            <article class="produc-detail">
                 <!-- <div>
                     <span>Compartir</span>
                     <ul>
@@ -163,12 +156,27 @@
                     </div>
                     <p class="producto-descuento">-30% descuento</p>
                 </div>
+                <article class="redes-sociales-main">
+                    <h4>Compartir</h4>
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-instagram" id="instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook-square" id="facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter" id="twitter"></i></a></li>
+                    </ul>
+                </article>
                 <div class="botones">
-                    <span class="span-comprar">
+                    <!-- <button class="span-comprar">
                         <a href="" class="det-producto">Comprar</a>
-                    </span>
-                    <span>
-                        <a href="" class="det-producto">Agregar Carrito</a>
+                    </button> -->
+                    <button type="submit" class="btn-inicio">
+                         <p class="button-comprar">COMPRAR</p>
+                         <span class="span1"></span>
+                         <span class="span2"></span>
+                         <span class="span3"></span>
+                         <span class="span4"></span>
+                 </button>
+                    <span class="caja-carrito">
+                        <a href="productCart" class="det-carrito">Agregar Carrito</a>
                     </span>
                 </div>
                 

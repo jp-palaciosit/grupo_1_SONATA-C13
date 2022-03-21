@@ -9,6 +9,7 @@ a{
 }
 main{
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     background: linear-gradient(to top,#616161, #9bc5c3);
@@ -30,6 +31,7 @@ hr{
 }
 main section{
     width: 90%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;

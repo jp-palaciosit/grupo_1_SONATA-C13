@@ -6,36 +6,44 @@
     box-sizing: border-box;
 }
 main{
+    width: 100%;
+    height: 100%;
     margin: 5px 0;
-   display: flex;
-   justify-content:center ;
+    display: flex;
+    justify-content:center ;
 }
 
 main section h2{
+    width: 90%;
     margin: 5px 0 10px;
+    color: white;
 }
 
 main section{
     width: 90%;
+    margin-bottom: 5px;
     text-align: center;
-    background-color: #C4C4C4;
+    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
-
-main section div img {
+.caja-imagen{
+    background-color: white;
     width: 90%;
     margin-bottom: 10px;
 }
-
-main section article {
+main section div img {
+    width: 90%;
+/* margin-bottom: 10px; */
+}
+main section article.produc-detail {
     width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: white;
+    position: relative;
 }
 main section article div.container{
     display: flex;
@@ -52,20 +60,26 @@ main section article div.botones{
 
 .producto-precio{
     font-size: 30px;
+    margin-top: 10px;
 }
 
 .producto-anterior{
     font-size: 20px;
     margin-top: 3px;
+    color: #39b54a;
+    font-weight: bold;
     /* text-align: left; */
-    text-decoration:line-through;
-    background-color: #f0ebeb;
+    text-decoration:line-through black;
+    /* background-color: #f0ebeb; */
     border-radius: 3px;
 }
 
 .producto-descuento{
     padding-top: 15px;
-    font-size: 20px;
+    margin-right: 0;
+    font-size: 15px;
+    color: #39b54a;
+    font-weight:bold;
 }
 
 .botones{
@@ -73,24 +87,152 @@ main section article div.botones{
 }
 .span-comprar{
     background-color: #C4C4C4;
-    padding: 3px;
-    border-radius: 6px;
+    padding: 5px;
+    border-radius: 4px;
 }
+
 a {
     text-decoration: none;
 }
 a.det-producto{
     font-size: 1.5rem;
 }
-a.det-producto:visited{
+span.caja-carrito{
+    margin-top: 20px ;
+}
+a.det-carrito{
     color: #1259c3;
 }
+article.redes-sociales-main{
+    display: none;
+
+}
+article.redes-sociales-main h4{
+    font-size: 30px;
+    color: #1259c3;
+}
+article.redes-sociales-main ul{
+    display: flex;
+    justify-content: space-around;
+} 
+article.redes-sociales-main ul li a i{
+    font-size: 30px;
+}
+.btn-inicio{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    background-color:#1259c3;
+    color: white;
+    letter-spacing: 2px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.btn-inicio:hover{
+    background: #b32aac;
+    box-shadow: 0 0 10px #b32aac, 0 0 40px #b32aac, 0 0 80px #b32aac;
+    transition-delay: 1s;
+}
+.btn-inicio span{
+    position: absolute;
+    display: block;
+}
+.a-button{
+    display: block;
+}
+.span1{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, transparent, #b32aac);
+}
+.btn-inicio:hover .span1{
+    left: 100%;
+    transition: 1s;
+}
+
+.span3{
+    bottom: 0;
+    right:-100%;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(270deg, transparent, #b32aac);
+}
+.btn-inicio:hover .span3{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+    
+}
+.span2{
+    top: -100%;
+    right: 0;
+    width: 6px;
+    height: 80%;
+    background-color: aqua;
+    background: linear-gradient(180deg, transparent, #b32aac);
+}
+.btn-inicio:hover .span2{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.3s;
+}
+.span4{
+    bottom: -100%;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #b32aac);
+}
+.btn-inicio:hover .span4{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+    
+}
+p.texto-description{
+    display: none;
+}
+i#instagram{
+    background: linear-gradient(45deg, #E47038,#A332AB);
+    border-radius: 50px;
+}
+i#facebook{
+    color: #0572E6;
+}
+i#twitter{
+    color: #1D9BF0;
+}
+
 
 
 @media (min-width: 769px){
 
+    article.redes-sociales-main{
+        display: flex;
+        flex-direction: column;
+        margin-top: 5px;
+        position: absolute;
+        right: 8px;
+        bottom: 112px;
+    }
+    .producto-descuento{
+        width: 100%;
+        margin: 1px;
+        text-align: start;
+        font-size: 20px;
+    }
 }
 
 @media (min-width: 1280px) and (max-width: 2000px){
-
+    p.texto-description{
+        display: block;
+        width: 70%;
+        font-size: 20px;
+        font-weight:400;
+    }
 }
