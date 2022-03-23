@@ -9,6 +9,10 @@ app.use(express.static(pathResolve))
 app.listen(PORT, ()=>console.log(`Servidor corriendo en el puerto ${PORT}`))
 
 app.get("/", (req,res)=>{
+    res.sendFile(path.join(__dirname, "./views/principal.html"))
+})
+
+app.get("/index", (req,res)=>{
     res.sendFile(path.join(__dirname, "./views/index.html"))
 })
 

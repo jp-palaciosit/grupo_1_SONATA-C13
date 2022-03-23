@@ -19,21 +19,7 @@ header div.div-header{
     /* z-index: 10; */
 }
 /*  */
-header div.div-header div.nav-burguer{
-    position: absolute;
-    top: 3.7rem;
-    background-color: #333333;
-    width: 220px;
-    height: 400px;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    list-style: none;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    user-select: none;
-}
+
 header div.div-header div.nav-burguer::before{
     content: "";
     position: absolute;
@@ -77,8 +63,48 @@ header div.div-header div.nav-burguer ul{
 header div.div-header div.nav-burguer ul li a{
     color: white;
 }
+header div.div-header div.nav-burguer{
+    position: absolute;
+    top: 3.7rem;
+    background-color: #333333;
+    width: 220px;
+    height: 400px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    user-select: none;
+    animation-name: burgerNav-out;
+    animation-duration: 2s;
+}
+@keyframes burgerNav-in {
+    0%{
+        left: -100%;
+        opacity: 0;
+    }
+    100%{
+        left: 0%;
+        opacity: 1;
+    }
+}
+@keyframes burgerNav-out{
+    0%{
+        left: 0%;
+        opacity: 1;
+    }
+    100%{
+        left: -100%;
+        opacity: 0;
+    }
+}
+
 .nav_input:checked + .nav-burguer{
     opacity: 1;
+    animation-name: burgerNav-in;
+    animation-duration: 2s;
 }
 header div.div-header input.nav_input{
     display: none;
@@ -167,13 +193,15 @@ header nav div label h1{
     width: 150px;
     height: 300px;
     background-color: #333333;
-  /*   left:cal(100%-70%); */
     z-index: 9;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     user-select: none;
 }
 
+.input-button:checked + .ul-button{
+    opacity: 1;
+}
 
 .ul-button::before{
     content: "";
