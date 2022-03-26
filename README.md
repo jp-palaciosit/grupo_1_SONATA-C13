@@ -1,6 +1,6 @@
 
 <div align="center">
-    <img width="250px" src="/public/img/logo1.png" alt="Logo Sonata">
+    <img width="250px" src="/public/img/logo/logo1.png" alt="Logo Sonata">
     <h1 text-aling="center" style="font-size: 60px;"> 🎼SONATA <h1>
 </div>
 

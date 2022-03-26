@@ -1,0 +1,141 @@
+@import url('styles.css');
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+.main-carrito{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* height: 100vw; */
+    background-color: #C4C4C4;
+}
+.section-carrito{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5px;
+}
+.article-carrito{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px black;
+    background: linear-gradient(to bottom, #9BC5C3, #616161);
+}
+.img-carrito{
+    width: 75px;
+    height: 75px;
+    border: 2px solid black;
+    margin: 10px 10px 10px 0;
+}
+.img-description{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+}
+.p-producto{
+    width: 70%;
+    font-size: 14px;
+}
+.p-descuento{
+    font-size: 12px;
+    color: limegreen;
+}
+.p-precio{
+    text-align: end;
+    font-size: 20px;
+}
+.p-precio-total{
+    font-size: 20px;
+}
+.input-number{
+    border: none;
+    border: 1px solid white;
+    margin-top: 5px;
+}
+.input-number:focus{
+    outline: none;
+}
+.datos-precios{
+    display: flex;
+    margin: 0 20px;
+    justify-content: space-between;
+}
+.descuento-input{
+    display: inline;
+}
+.precio-total{
+    display: flex;
+    justify-content: flex-end;
+    display: inline;
+}
+.eliminar{
+    display: flex;
+    justify-content: flex-end;
+    border-top: solid px black;
+    margin-left: 5px;
+}
+.boton-eliminar{
+    height: 20px;
+    width: 60px;
+    color: red;
+    border-radius: 5px;
+    border: none;
+    background-color: orange;
+    margin: 5px 10px 7px;
+}
+.boton{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+}
+hr.separador{
+    margin:10px;
+    width: 100%;
+    background-color: black;
+}
+.comprar{
+    width: 130px;
+    height: 54px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #182848, #4B6CB7);
+    border: 2px solid #182848;
+    outline: 1px solid;
+    outline-color: orange; /* rgba(49, 138, 172, 0.4); */
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    margin-bottom: 5px;
+}
+.comprar:hover {
+    box-shadow: inset 0 0 20px rgba(75, 108, 183, 0.5), 0 0 20px rgba(75, 108, 183, 0.4);
+    outline-color: rgba(49, 138, 172, 0);
+    outline-offset: 80px;
+    text-shadow: 1px 1px 6px #fff;
+    border: orange
+}
+@media (min-width: 1000px) {
+    .article-carrito{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .img-description{
+        width: 60%;
+    }
+    .datos-precios{
+        align-items: center;
+    }
+    .eliminar{
+        align-items: center;
+    }
+}
