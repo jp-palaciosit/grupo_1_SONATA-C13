@@ -5,14 +5,16 @@
 </div>
 
 💪 <h2>SEGUIR HACIENDO:</h2>
+<p>
 *Comunicandonos.
 *Practicas por separado para compararlas luego.
 *Pensando como grupo.
 *Arrancar desde el primer dia con las actividades.
+</p>
 
 👎 <h2>HACER MENOS:</h2>
-*Detalles que no estan en las consignas para entregar.
-*Indecisos en el trabajo.
+<p>*Detalles que no estan en las consignas para entregar.</p>
+<p>*Indecisos en el trabajo.</p>
 
 🙌 <h2>HACER MÁS:</h2>
 *Divertirnos haciendo los trabajos.
