@@ -5,31 +5,34 @@
 </div>
 
 💪 <h2>SEGUIR HACIENDO:</h2>
-<p>
-*Comunicandonos.
-*Practicas por separado para compararlas luego.
-*Pensando como grupo.
-*Arrancar desde el primer dia con las actividades.
-</p>
+<p>*Comunicandonos.</p>
+<p>*Practicas por separado para compararlas luego.</p>
+<p>*Pensando como grupo.</p>
+<p>*Arrancar desde el primer dia con las actividades.</p>
+
 
 👎 <h2>HACER MENOS:</h2>
 <p>*Detalles que no estan en las consignas para entregar.</p>
 <p>*Indecisos en el trabajo.</p>
 
 🙌 <h2>HACER MÁS:</h2>
-*Divertirnos haciendo los trabajos.
-*Mejorar la comunicación.
-*Hacer encuentros diarios para distribuir tareas.
-*practicar el uso de git/github.
-*Mejor la organizacion del tiempo.
+<p>*Divertirnos haciendo los trabajos.</p>
+<p>*Mejorar la comunicación.</p>
+<p>*Hacer encuentros diarios para distribuir tareas.</p>
+<p>*practicar el uso de git/github.</p>
+<p>*Mejor la organizacion del tiempo.</p>
 
 🤗<h2>EMPEZAR A HACER:</h2>
-*Informarnos mas, de diferentes tipos de como hacer el trabajo.
-*Decidir de manera definitiva lo que vamos a presentar.
-*El uso del vencimiento del trello.
-*Pedir ayuda cuando no se entiende algo.
+<p>*Informarnos mas, de diferentes tipos de como hacer el trabajo.</p>
+<p>*Decidir de manera definitiva lo que vamos a presentar.</p>
+<p>*El uso del vencimiento del trello.</p>
+<p>*Pedir ayuda cuando no se entiende algo.</p>
 
 🥺<h2>DEJAR DE HACER:</h2>
-*No pensar lo que van hacer los demas grupos.
-*No buscar la compararse con  el otro.
-*No tener una decision grupal por dudas de los trabajos que se van a presentar.
+<p>*No pensar lo que van hacer los demas grupos.</p>
+<p>*No buscar la compararse con  el otro.</p>
+<p>*No tener una decision grupal por dudas de los trabajos que se van a presentar.</p>
+
+<div align="center">
+    <h1 text-aling="center" style="font-size: 60px;"> Hasta el proximo Sprint! <h1>
+</div>
