@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <% - include("partials/head.ejs") %>
+<body>
+    <% - include("partials/header.ejs") %>
+    <main>
+        <section>
+            <h1>Bienvenido a Sonata</h1>
+            <hr>
+            <article>
+                <form action="datosUser.html" method="get">
+                    <label for="email" class="correo">Email</label>
+                    <input type="email" name="email" id="email" value="" placeholder="  Ingrese su email" class="input-empuje" required>
+                    <label for="passwd">Contraseña</label>
+                    <input type="password" name="passwd" id="passwd" value="" placeholder="  Ingrese su contraseña" class="input-empuje"  required>
+                    <label for="captcha" class="checkbox1">
+                        <input type="checkbox" name="captcha" id="captcha" value="" required class="input-recordar">
+                        <p>Recordar</p>                          
+                    </label>
+                    <button type="submit" class="btn-inicio">
+                           <!--  <a href="https://www.google.com/" target="_blank" class="a-button">Iniciar Sesión</a> -->
+                            <p> Iniciar Sesión</p>
+                            <span class="span1"></span>
+                            <span class="span2"></span>
+                            <span class="span3"></span>
+                            <span class="span4"></span>
+                    </button>
+                    <span class="tengo-cuenta">
+                        <a href="/recuperarcontra">Olvide mi contraseña</a>
+                    </span>
+                    <span class="tengo-cuenta">
+                        <a href="/register">Crear cuenta</a>
+                    </span>
+                </form>
+            </article> 
+        </section>
+    </main>
+    <% - include("partials/footer.ejs") %>
+</body>
+</html>

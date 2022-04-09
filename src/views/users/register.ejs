@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <% - include("partials/head.ejs") %>
+<body>
+    <% - include("partials/header.ejs") %>
+    <main>
+        <section>
+            <h1>Crear cuenta</h1>
+            <hr>
+            <article>
+                <form action="datosUser.html" method="get">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" id="name" value="" placeholder="  Ingrese su nombre" class="input-empuje" required>
+                    <label for="apellido">Apellido  </label>
+                    <input type="text" name="apellido" placeholder="  Ingrese su apellido" class="input-empuje"   required>
+                    <label for="email" class="correo">Email     </label>
+                    <input type="email" name="email" id="email" value="" placeholder="  Ingrese su email" class="input-empuje" required>
+                    <label for="passwd">Contraseña</label>
+                    <input type="password" name="passwd" id="passwd" value="" placeholder="  Ingrese su contraseña" class="input-empuje"  required>
+                    <label for="captcha" class="checkbox1">Captcha
+                        <span class="captcha-robot">
+                            <input type="checkbox" name="captcha" id="captcha" value="" required class="input-captcha">
+                            <p>No soy un robot</p>                           
+                        </span>
+                    </label>
+                    <div class="div-TC">
+                        <input type="checkbox" name="terminos-condiciones" id="TerminoCondicion" class="input-TC" required>
+                        <label for="TerminoCondicion" class="label-TC">
+                            <span>Acepto los</span>
+                            <span>
+                                <a href="">Terminos y Condiciones</a>
+                            </span>
+                            <span>y autorizo el uso de mis datos de acuerdo a la</span>
+                            <span>
+                                <a href="">Declarión de privacidad.</a>
+                            </span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn-inicio">
+                        <!--  <a href="https://www.google.com/" target="_blank" class="a-button">Iniciar Sesión</a> -->
+                         <p>Iniciar Sesión</p>
+                         <span class="span1"></span>
+                         <span class="span2"></span>
+                         <span class="span3"></span>
+                         <span class="span4"></span>
+                 </button>
+                    <span class="tengo-cuenta">
+                        <a href="/login">Ya tengo cuenta</a>
+                    </span>
+                </form>
+                
+            </article> 
+        </section>
+    </main>
+    <% - include("partials/head.ejs") %>
+</body>
+</html>

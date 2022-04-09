@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<% - include("partials/head.ejs") %>
+<body>
+    <% - include("partials/header.ejs") %>
+    <main class="main-carrito">
+        <h2>Carrito de compras</h2>
+        <section class="section-carrito">
+            <article class="article-carrito">
+                <div class="img-description">
+                    <img src="/img/carrito/guitarraElectrica.jpg" alt="Guitarra" class="img-carrito">
+                    <p class="p-producto">Guitarra eléctrica Leonard LE362 stratocaster de aliso black con diapasón de palo de rosa</p>
+                </div>
+                <div class="datos-precios">
+                    <div class="descuento-input">
+                        <p class="p-descuento">
+                        Descuento del 20%
+                        </p>
+                        <form action="" method="get">
+                            <label for="cantidad"></label>
+                            <input type="number" name="" id="cantidad" class="input-number" min="1" max="10" placeholder="0">
+                        </form>
+                    </div>
+                    <div class="precio-total">
+                        <p class="p-precio">$15800</p>
+                        <p class="p-precio-total">Total:12640</p>
+                    </div>
+                </div>
+                <div class="eliminar">
+                    <button class="boton-eliminar">Eliminar</button>
+                </div>
+            </article>
+            <hr class="separador">
+            <article class="article-carrito">
+                <div class="img-description">
+                    <img src="/img/carrito/PianoElectronico.jpg" alt="Piano electrico" class="img-carrito">
+                    <p class="p-producto">Piano Electrónico YAMAHA 88 Teclas en Negro</p>
+                </div>
+                <div class="datos-precios">
+                    <div class="descuento-input">
+                        <p class="p-descuento">
+                        Descuento del 10%
+                        </p>
+                        <form action="" method="get">
+                            <label for="cantidad"></label>
+                            <input type="number" name="" id="cantidad" class="input-number" min="1" max="10" placeholder="0">
+                        </form>
+                    </div>
+                    <div class="precio-total">
+                        <p class="p-precio">$62893</p>
+                        <p class="p-precio-total">Total:60350</p>
+                    </div>
+                </div>
+                <div class="eliminar">
+                    <button class="boton-eliminar">Eliminar</button>
+                </div>
+            </article>
+            <hr class="separador">
+            <article class="article-carrito">
+                <div class="img-description">
+                    <img src="/img/carrito/bateria.jpg" alt="Bateria" class="img-carrito">
+                    <p class="p-producto">PEARL DMP925SP/C 229 Batería 5 Cpos, Decade Maple, 22/10/12/16, Redo 14X5,5</p>
+                </div>
+                <div class="datos-precios">
+                    <div class="descuento-input">
+                        <p class="p-descuento">
+                        Descuento del 5%
+                        </p>
+                        <form action="" method="get">
+                            <label for="cantidad"></label>
+                            <input type="number" name="" id="cantidad" class="input-number" min="1" max="10" placeholder="0">
+                        </form>
+                    </div>
+                    <div class="precio-total">
+                        <p class="p-precio">$10200</p>
+                        <p class="p-precio-total">Total:9640</p>
+                    </div>
+                </div>
+                <div class="eliminar">
+                    <button class="boton-eliminar">Eliminar</button>
+                </div>
+            </article>
+            <div class="comprar">
+                <span class="boton">Comprar</span>
+            </div>
+        </section>
+    </main>
+    <% - include("partials/footer.ejs") %>
+</body>
+</html>

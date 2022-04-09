@@ -170,16 +170,18 @@ header nav div label h1{
    /*  text-align: center; */
 }
 
-.label-button{
+/* .label-button{
     width: 136px;
     height: 24px;
-    background-color: var(--background-buttom-instrument);
     border: 1px solid #C4C4C4;
     border-radius: 5px;
     cursor: pointer;
     text-align: center; 
+} */
+.btn-instruments{
+background-color: var(--background-buttom-instrument);
 }
-.label-button:hover{
+.btn-instruments:hover{
     background-color: black;
 }
 .ul-button{

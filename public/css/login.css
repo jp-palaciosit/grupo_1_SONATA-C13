@@ -71,7 +71,7 @@ input::placeholder{
 button{
     text-align: center;
     margin: 15px 0 20px;
-    padding: 6px;
+    /* padding: 6px; */
     border-radius: 5px;
     border: none;
     font-size: 1.5rem;
