@@ -20,11 +20,11 @@ h1{
     width: 90%;
     text-align: center;
 }
-img{
+img.img-logo-user{
     margin-top: 20px;
     width: 250px;
 }
-button{
+button.datos-user{
     text-align: center;
     margin: 15px 0 20px;
     padding: 6px;
@@ -33,7 +33,7 @@ button{
     border: solid 1px black;
     font-size: 1.5rem;
 }
-button:hover{
+button.datos-user:hover{
     background-color: black;
     color: white;
 }

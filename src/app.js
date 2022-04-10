@@ -28,7 +28,6 @@ app.use("/producto", productRouter)
 
 
 
-
 /* 
 app.get("/", (req,res)=>{
     res.sendFile(path.join(__dirname, "./views/principal.html"))
@@ -39,8 +38,9 @@ app.get("/index", (req,res)=>{
 })
 
 app.get("/home", (req,res)=>{
-    res.sendFile(path.join(__dirname, "./views/index.html"))
+    res.sendFile(path.join(__dirname, "./views/generalFolder/home.html"))
 })
+
 
 app.get("/productDetail", (req,res)=>{
     res.sendFile(path.join(__dirname, "./views/productDetail.html"))

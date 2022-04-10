@@ -29,21 +29,27 @@
             </div>
         </section>        
         <section class="section-productos">
+            
             <div class="articulos-desktop">
+                <%product.forEach(producto => { %>
                 <a href="productDetail">
-                <article>
-                        <img class="producto" src="/img/productos/guitarraGibson.jpg" alt="guitarra gibson">
+                    <article>
+                        <div class="div-img-home">
+                            <img src="img/productos/<%-producto.image[0]%>"   alt="<%-producto.name%>" class="producto-home">
+                        </div>
+                        
                         <div class="description">
-                            <h3>Guitarra Gibson</h3>
-                            <p class="descuento-envios">15% off - Envios gratis</p>
-                            <p class="precio">Precio: $700</p>
+                            <h3><%-producto.name%></h3>
+                            <span class="descuento-envios"><%-producto.discount%><%-producto.shipment%></span>
+                            <p class="precio">$ <%-producto.price%></p>
                             <!-- <a href="productCart" class="ancla-carrito"> -->
                             <i class="fa-solid fa-cart-shopping"></i>
                             <!-- </a> -->
-                        </div>                           
-                </article>
+                        </div>                               
+                    </article>
                 </a>
-                <article>
+                
+                <!-- <article>
                         <img class="producto" src="/img/productos/bateria.jpg" alt="bateria">
                         <div class="description">
                             <h3>Bateria Mapex Prodigy</h3>
@@ -83,7 +89,6 @@
                     <img class="producto" src="/img/productos/armonicaDiatonica.jpg" alt="armonica diatonica">
                     <div class="description">
                         <h3>Armonica Diatónica Cromada</h3>
-                        <!-- <p class="descuento-envios">15% off - Envios gratis</p> -->
                         <p class="precio">Precio: $1.030</p>
                         <i class="fa-solid fa-cart-shopping"></i>
                     </div>
@@ -110,7 +115,6 @@
                     <img class="producto" src="/img/productos/panderetaParquer.jpg" alt="pandereta">
                     <div class="description">
                         <h3>Pandereta Parquer Doble Sonaja</h3>
-                        <!-- <p class="descuento-envios">15% off - Envios gratis</p> -->
                         <p class="precio">Precio: $2.150</p>
                         <i class="fa-solid fa-cart-shopping"></i>
                     </div>
@@ -146,7 +150,6 @@
                     <img class="producto" src="/img/productos/puasStagg.jpg" alt="puas stagg">
                     <div class="description">
                         <h3>Puas Stagg Pack Por 20 Calibres</h3>
-                        <!-- <p class="descuento-envios">15% off - Envios gratis</p> -->
                         <p class="precio">Precio: $715</p>
                         <i class="fa-solid fa-cart-shopping"></i>
                     </div>
@@ -173,7 +176,6 @@
                     <img class="producto" src="/img/productos/acordeonNenes.jpg" alt="acordeon niños">
                     <div class="description">
                         <h3>Acordeón Para Niños 7 Teclas</h3>
-                        <!-- <p class="descuento-envios">15% off - Envios gratis</p> -->
                         <p class="precio">Precio: $3.990</p>
                         <i class="fa-solid fa-cart-shopping"></i>
                     </div>
@@ -182,7 +184,6 @@
                     <img class="producto" src="/img/productos/flautaDulce.jpg" alt="flauta dulce soprano">
                     <div class="description">
                         <h3>Flauta Dulce Soprano Yamaha</h3>
-                        <!-- <p class="descuento-envios">20% off - Envios gratis</p> -->
                         <p class="precio">Precio: $1.950</p>
                         <i class="fa-solid fa-cart-shopping"></i>
                     </div>
@@ -200,7 +201,6 @@
                     <img class="producto" src="/img/productos/guitarraInfantil.jpg" alt="guitarra infantil ">
                     <div class="description">
                         <h3>Guitarra Infantil Sonido Real</h3>
-                        <!-- <p class="descuento-envios">Envios gratis</p> -->
                         <p class="precio">Precio: $3.980</p>
                         <i class="fa-solid fa-cart-shopping"></i>
                     </div>
@@ -213,8 +213,10 @@
                         <p class="precio">Precio: $29.750</p>
                         <i class="fa-solid fa-cart-shopping"></i>
                     </div>
-                </article>
+                </article> -->
+                <% }) %> 
             </div>
+            
         </section>
         <section class="section-proteccion">
             <div>

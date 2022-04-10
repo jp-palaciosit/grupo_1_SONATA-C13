@@ -31,7 +31,7 @@ main section{
     /* justify-content: center; */
    
 }
-main section article{
+main section article.article-register{
     margin-top: 5px;
    /*  background-color: #C4C4C4; */
     display: flex;
@@ -84,7 +84,7 @@ input::placeholder{
     border-radius: 5px;
 }
 
-button{
+button#button-register{
     text-align: center;
     margin: 15px 0 20px;
     padding: 6px;
@@ -95,10 +95,10 @@ button{
     text-transform: uppercase;
     cursor:pointer;
 }
-button p{
+button#button-register p{
     color: black;
 }
-button p:hover{
+button#button-register p:hover{
     color: white;
 }
 .tengo-cuenta{

@@ -19,7 +19,7 @@ main section h2{
     color: white;
 }
 
-main section{
+main section.productDetail{
     width: 90%;
     margin-bottom: 5px;
     text-align: center;

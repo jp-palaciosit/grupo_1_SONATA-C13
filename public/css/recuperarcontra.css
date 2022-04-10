@@ -36,7 +36,7 @@ main section{
     flex-direction: column;
     align-items: center;
  }
-main section article{
+main section article.article-recuPasswd{
     margin-top: 5px;
    /*  background-color: #C4C4C4; */
     display: flex;
@@ -71,7 +71,7 @@ input::placeholder{
     color: lightgrey;
 }
 
-button{
+button#button-recu-passwd{
     text-align: center;
     margin: 20px 0 30px;
     padding: 6px;
@@ -82,7 +82,7 @@ button{
     text-transform: uppercase;
     cursor:pointer;
 }
-button:hover{
+button#button-recu-passwd:hover{
     color: black;
 }
 .tengo-cuenta{
@@ -92,7 +92,7 @@ button:hover{
 .tengo-cuenta a{
     color: #1259c3;
 }
-.btn-inicio{
+.btn-inicio-recuPasswd{
     position: relative;
     display: inline-block;
     padding: 15px 30px;
@@ -101,12 +101,12 @@ button:hover{
     overflow: hidden;
     transition: 0.2s;
 }
-.btn-inicio:hover{
+.btn-inicio-recuPasswd:hover{
     background: #9bc5c3;
     box-shadow: 0 0 10px #9bc5c3, 0 0 40px #9bc5c3, 0 0 80px #9bc5c3;
     transition-delay: 1s;
 }
-.btn-inicio span{
+.btn-inicio-recuPasswd span{
     position: absolute;
     display: block;
 }
@@ -117,7 +117,7 @@ button:hover{
     height: 2px;
     background: linear-gradient(90deg, transparent, #616161);
 }
-.btn-inicio:hover .span1{
+.btn-inicio-recuPasswd:hover .span1{
     left: 100%;
     transition: 1s;
 }
@@ -129,7 +129,7 @@ button:hover{
     height: 2px;
     background: linear-gradient(270deg, transparent, #616161);
 }
-.btn-inicio:hover .span3{
+.btn-inicio-recuPasswd:hover .span3{
     right: 100%;
     transition: 1s;
     transition-delay: 0.5s;
@@ -143,7 +143,7 @@ button:hover{
     background-color: aqua;
     background: linear-gradient(180deg, transparent, #616161);
 }
-.btn-inicio:hover .span2{
+.btn-inicio-recuPasswd:hover .span2{
     top: 100%;
     transition: 1s;
     transition-delay: 0.3s;
@@ -155,7 +155,7 @@ button:hover{
     height: 100%;
     background: linear-gradient(360deg, transparent, #616161);
 }
-.btn-inicio:hover .span4{
+.btn-inicio-recuPasswd:hover .span4{
     bottom: 100%;
     transition: 1s;
     transition-delay: 0.75s;

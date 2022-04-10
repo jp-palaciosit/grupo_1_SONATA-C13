@@ -8,7 +8,7 @@ main{
 
 /* ---- Carrusel ------ */
 .section-carrusel{
-    margin: 0px auto 5px;
+    margin: 0px auto;
     width: 100%;
 }
 .container-slider{
@@ -27,18 +27,19 @@ main{
 }
 .slider-img{
     display:block;
-    width: inherit;
+    width: 100%;
     height: 100%;
     object-fit:cover;
 }
+
 .slider-btn{
     position: absolute;
-    font-size: 30px;
+    font-size: 50px;
     font-weight: bold;
     font-family: monospace;
-    width: 40px;
+    width: 60px;
     height: 60px;;
-    padding: 9px;
+    padding-left: 20px;
     background-color: rgba(255, 255, 255, 0.2);
     top: 50%;
     transform: translateY(-50%);
@@ -79,10 +80,16 @@ main section article:hover{
    background-color: aqua;
    position: absolute;
 } */
-main section article img.producto{
-    margin-right:10px;
+.div-img-home{
+    background-color: white;
     width: 50%;
     height: 90%;
+    margin-right:10px;
+}
+main section article img.producto-home{
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
 }
 main section div.descripcion-desktop{
     display: none;
@@ -118,7 +125,7 @@ main section article div.description i{
     border-radius: 50%;
     right: 4px;
     top: 90px;
-    /* background: url("../../views/carrito.html"); */
+    /* background: url("../views/carrito.html"); */
 }
 /* main section article div.description i::after{
     
@@ -213,7 +220,7 @@ main section.section-proteccion div i{
     }
     main section article{
         margin: 10px;
-        background-color: white;
+        background-color: red;
         display: flex;
         flex-direction: column;
         width: 260px;
@@ -224,9 +231,10 @@ main section.section-proteccion div i{
      main section article:hover{
         box-shadow: 8px 8px 5px #909090
      }
-    
-    main section article img.producto {
+     .div-img-home{
         height: 60%;
+        width: 100%;
+        margin-right:0;
     }
     main section article div.description{
         width: 100%;
@@ -317,9 +325,6 @@ main section.section-proteccion div i{
     main section article:hover{
         box-shadow: 8px 8px 5px #909090
      }
-    main section article img.producto {
-        height: 60%;
-    }
     main section article div.description{
         width: 100%;
         height: 40%;

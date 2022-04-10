@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "Guitarra Gibson",
+        "price": "173.309",
+        "description": "Inspired by Gibson Les Paul Standard 50s de caoba heritage cherry sunburst brillante con diapasón de laurel indio",
+        "categoryId": 1,
+        "projectId": 1,
+        "discount": "10% off ",
+        "shipment":"- Envios gratis",
+        "image": ["guitarraGibson.jpg"],
+        "stock": true
+    },
+    {
+        "id": 2,
+        "name": "Bateria Mapex Prodigy",
+        "price": "141.58",
+        "description": "Excelente batería MAPEX PRODIGY, con acabado recubierto, los tambores están equipados con Prodigy,",
+        "categoryId": 1,
+        "projectId": 2,
+        "discount": "10% off ",
+        "shipment":"- Envios gratis",
+        "image": ["bateria.jpg"],
+        "stock": true
+    },
+    {
+        "id": 3,
+        "name": "Ukelele Soprano Dakota",
+        "price": "1.891",
+        "description": "Fabricada íntegramente en madera (tilo + cedro). Es un producto importado, de primera calidad y el más completodel mercado",
+        "categoryId": 1,
+        "projectId": 3,
+        "discount": "",
+        "shipment":"",
+        "image": ["ukelele.jpg"],
+        "stock": true
+    },
+    {
+        "id": 4,
+        "name": "Pedal de efecto para instrumento",
+        "price": "29.493",
+        "description": "Este pedal de efectos permite alterar el sonido de tu instrumento y, de esta manera, explorar nuevas posibilidades sonoras. ¡Creá con mayor libertad y disfrutá de la música!",
+        "categoryId": 1,
+        "projectId": 4,
+        "discount": "10% off ",
+        "shipment":"",
+        "image": ["pedalEfecto1.jpg"],
+        "stock": true
+    },
+    {
+        "id": 5,
+        "name": "Micrófono Rode NT1-A",
+        "price": "85.900",
+        "description": "Fiel reflejo de la realidad. Con este producto lograrás que la reproducción obtenida sea lo más parecida a la original. Excelente para grabar voces debido a su sensibilidad y amplio rango de frecuencia.",
+        "categoryId": 1,
+        "projectId": 5,
+        "discount": "",
+        "shipment":"- Envios gratis",
+        "image": ["microfonoRode.jpg"],
+        "stock": true
+    }
+]

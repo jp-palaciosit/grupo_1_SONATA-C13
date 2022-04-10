@@ -1,5 +1,5 @@
 
 
-module.export = {
+module.exports = {
     
 }
