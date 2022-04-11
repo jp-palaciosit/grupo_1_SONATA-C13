@@ -4,6 +4,7 @@ header{
     flex-direction: column;
     position: sticky;
     width: 100%;
+    background-color: #247881;
     top: 0;
     z-index: 1;
     /* left: 0; */
@@ -13,7 +14,7 @@ header div.div-header{
     flex-direction: row;
     justify-content:space-between;
     align-items: center;
-    background-color: var(--background-gray);
+    /* background-color: var(--background-gray); */
     width: 100%;
     height: 60px;
     padding: 0 13px;
@@ -152,9 +153,7 @@ header nav div{
 header nav div button:hover{
     background-color: black;
 }
-header nav div button h1:hover{
-    color: white;
-}
+
 header nav div label h1{
     position: relative;
     color: white;
@@ -163,11 +162,15 @@ header nav div label h1{
     font-weight: 100;
     /* bottom: 2px; */
 }
+header nav div label h1:hover{
+    color: white;
+}
 
-/*  */
 .div-button{
     width: 100%;
-/*     background-color: red; */
+    height: 50px;
+    border-top: 3px solid;
+    background-color: #247881;
     text-align: center;
     height: 40px;
    /*  text-align: center; */
@@ -190,10 +193,11 @@ text-align: center;
 border: none;
 width: 140px;
 height: 30px;
-background-color: var(--background-buttom-instrument);
+background: linear-gradient(to top, #712B75, black);
+/* background-color: var(--background-buttom-instrument); */
 }
 .btn-instruments:hover{
-    background-color: black;
+background: linear-gradient(to top, black, #712B75);
 }
 .ul-button{
     position: fixed;
@@ -202,7 +206,7 @@ background-color: var(--background-buttom-instrument);
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    top: 85px;
+    top: 99px;
     width: 150px;
     height: 300px;
     background-color: #333333;
@@ -287,20 +291,21 @@ header nav div.button-desktop{
         text-align: center;
         height: 30px;
     }
-    .label-button{
+    /* .label-button{
         width: 164px;
-    }
+    } */
     .ul-button{
-        top: 95px;
-        width: 200px;
-        height: 350px;
+        top: 100px;
+        /* width: 200px;
+        height: 350px; */
     }
+    /* 
     .ul-button::before{
         top: -15px;
         left: 94px;
         border: solid 8px;
         border-color: transparent transparent #333333;
-    }
+    } */
 }
 
 @media (min-width: 769px){
@@ -348,13 +353,16 @@ header nav div.button-desktop{
     header nav div button{
         width: 160px;
         height: 32px;
-        background-color: white;
+        background: linear-gradient(to top, #712B75, black);
         border: none;
+    }
+    header nav div button:hover{
+        background: linear-gradient(to top, black, #712B75);
     }
     header nav div button h1{      
         bottom: 1px;
         font-size: 25px;
-        color: black;
+        color: white;
     }
      header nav {
         display: flex;
@@ -365,7 +373,8 @@ header nav div.button-desktop{
     header nav div.button-tablet{
         display: flex;
         width: inherit;
-        background-color: var(--background-buttom-instrument);
+        border-top: 3px solid;
+        background-color: #247881;
         justify-content: space-around;
         padding: 25px 0;
     }
@@ -431,7 +440,8 @@ header nav div.button-desktop{
     header nav div.button-desktop{
         display: flex;
         justify-content: center;
-        background-color: var(--background-buttom-instrument);
+        border-top: 3px solid;
+        background-color: #247881;
         justify-content: space-around;
         padding: 30px 0;
     }

@@ -61,12 +61,15 @@ main section{
     width: 90%;
     /* height: 150px; */
     display: flex;
+    margin:10px;
     flex-direction: column;
 /*     margin-bottom: 10px; */
 }
 main section article{
    margin-bottom: 15px;
-   background-color: var(--background-gray);
+/*    background-color: #712B75
+   ; */
+   background: linear-gradient(to top, #712B75, black);
    display: flex;
    height: 150px;
    align-items: center;
@@ -132,7 +135,7 @@ main section article div.description i{
 } */
 main section.section-proteccion{
     width: 90%;
-    /* background-color: #C4C4C4; */
+    background-color: white;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -220,7 +223,7 @@ main section.section-proteccion div i{
     }
     main section article{
         margin: 10px;
-        background-color: red;
+       /*  background-color: red; */
         display: flex;
         flex-direction: column;
         width: 260px;
@@ -247,7 +250,7 @@ main section.section-proteccion div i{
         /* text-align: center; */
     } 
     /* ---- */
-    main section article div.description i{
+   /*  main section article div.description i{
         position: absolute;
         font-size: 25px;
         top: -173px;
@@ -255,7 +258,7 @@ main section.section-proteccion div i{
         width: 51px;
         height: 49px;
         padding: 10px;
-    }
+    } */
     main section.section-proteccion{
         display: flex;
         flex-direction: row;
@@ -266,6 +269,9 @@ main section.section-proteccion div i{
     /* ---- */
     .separador-proteccion{
         border-left: 1px solid black;
+    }
+    main section article div.description i{
+        display: none;
     }
 }  
 
@@ -334,7 +340,7 @@ main section.section-proteccion div i{
         font-size: var(--font-description-producto);
         position: relative;
     } 
-    main section article div.description i{
+    /* main section article div.description i{
         position: absolute;
         font-size: 25px;
         top: -173px;
@@ -343,7 +349,7 @@ main section.section-proteccion div i{
         height: 49px;
         padding: 10px;
 
-    }
+    } */
     main section article div.description h3{
         text-align: center;
     }

@@ -6,7 +6,7 @@ footer{
     justify-content: space-between;
     font-size: var(--font-body);
     width: 100%;
-    background-color: var(--background-buttom-instrument);
+    background-color: #247881;
     color: white;
 }
 footer section{

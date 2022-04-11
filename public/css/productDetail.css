@@ -7,10 +7,11 @@
 }
 main{
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     margin: 5px 0;
     display: flex;
     justify-content:center ;
+    background: linear-gradient(to top, #712B75, black);
 }
 
 main section h2{
@@ -20,30 +21,46 @@ main section h2{
 }
 
 main section.productDetail{
+    margin-top: 30px;
     width: 90%;
+    max-width: 400px;
     margin-bottom: 5px;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
     text-align: center;
-    background-color: black;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.div-separador-productos{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .caja-imagen{
     background-color: white;
+    height: 300px;
     width: 90%;
     margin-bottom: 10px;
 }
 main section div img {
-    width: 90%;
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+
 /* margin-bottom: 10px; */
 }
 main section article.produc-detail {
     width: 90%;
+    height: 265px;
     display: flex;
+    margin-bottom: 13px;
     flex-direction: column;
     align-items: center;
     background-color: white;
-    position: relative;
+    /* position: relative; */
 }
 main section article div.container{
     display: flex;
@@ -53,6 +70,7 @@ main section article div.container{
 
 main section article div.botones{
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     margin: 10px;
@@ -103,12 +121,12 @@ span.caja-carrito{
 a.det-carrito{
     color: #1259c3;
 }
-article.redes-sociales-main{
+/* article.redes-sociales-main{
     display: none;
 
-}
+} */
 article.redes-sociales-main h4{
-    font-size: 30px;
+    font-size: 20px;
     color: #1259c3;
 }
 article.redes-sociales-main ul{
@@ -116,7 +134,15 @@ article.redes-sociales-main ul{
     justify-content: space-around;
 } 
 article.redes-sociales-main ul li a i{
-    font-size: 30px;
+    font-size: 15px;
+}
+article.redes-sociales-main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    position: absolute;
+    right: 63px;
+    bottom: 207px;
 }
 .btn-inicio{
     position: relative;
@@ -198,7 +224,7 @@ p.texto-description{
     display: none;
 }
 i#instagram{
-    background: linear-gradient(45deg, #E47038,#A332AB);
+    background: linear-gradient(45deg,#ECD92A, #F74A00, #CE3086, #863DA4);
     border-radius: 50px;
 }
 i#facebook{
@@ -207,32 +233,90 @@ i#facebook{
 i#twitter{
     color: #1D9BF0;
 }
-
+.description-detalle{
+    width: 90%;
+    font-size: 20px;
+    /* text-align: center; */
+    margin:15px 0 15px;
+}
 
 
 @media (min-width: 769px){
+    
+   /*  main{
+        position: relative;
+    } */
+    main section.productDetail{
+        margin-top: 80px;
+        display: flex;
+        flex-direction: row;
+        max-width: 700px;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        border-left: none;
+        border-right: none;
+/*         max-height: 300px; */
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    main section.productDetail h2{
+        position: absolute;
+        top: -44px;
+        left: -36px;
+        font-size: 30px;
+        color: white;
+    }
+    .caja-imagen{
+        width: 45%;
+        height: 270px;
+        /* margin-top: 10px; */
+        /* margin-bottom: 10px; */
+        /* margin-left: 10px; */
+        margin-bottom: 0;
+    }
+    .div-separador-productos{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 300px;
+    }
+    main section article.produc-detail{
+        width: 50%;
+        height: 270px;
+        /* margin-top: 10px; */
+        /* margin-bottom: 10px; */
+        /* min-height: 250px; */
+        
+        /* margin-right: 10px; */
+        margin-bottom: 0;
+    }
+    article.redes-sociales-main h4{
+        font-size: 30px;
+    }
+    article.redes-sociales-main ul li a i{
+        font-size: 30px;
+    }
 
     article.redes-sociales-main{
-        display: flex;
-        flex-direction: column;
-        margin-top: 5px;
-        position: absolute;
-        right: 8px;
-        bottom: 112px;
+        right: 5px;
+        bottom: 304px;
     }
-    .producto-descuento{
+     /*.producto-descuento{
         width: 100%;
         margin: 1px;
         text-align: start;
         font-size: 20px;
-    }
+    } */
 }
 
-@media (min-width: 1280px) and (max-width: 2000px){
+/* @media (min-width: 1280px) and (max-width: 2000px){
     p.texto-description{
         display: block;
         width: 70%;
         font-size: 20px;
         font-weight:400;
     }
-}
+} */
