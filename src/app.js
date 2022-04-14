@@ -19,10 +19,12 @@ app.set("views", path.join(__dirname, "views"))
 const indexRouter = require("./routers/indexRouter")
 const userRouter = require("./routers/userRouter")
 const productRouter = require("./routers/productRouter")
+const adminRouter = require("./routers/adminRouter")
 
 app.use("/", indexRouter)
 app.use("/usuario", userRouter)
 app.use("/producto", productRouter)
+app.use("/admin", adminRouter)
 
 
 
