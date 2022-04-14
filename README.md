@@ -43,39 +43,48 @@ tenemos distintos metodos de pagos.
 <p>
 ¡Hola! ¿Cómo están? Mi nombre es Mayra Martínez, tengo 35 años. Soy miembro del Proyecto Sonata, me gusta mucho la música. Actualmente estudiante del Curso de Programación. Trabajo en Atención al cliente. 
 </p>
-<h3>👨‍💻Jeremy Palacios Principe:</h3>
-<p>
-Me llamo Jeremy pero me dicen Jere, tengo 21 años, termine mis estudios de primaria y secundaria, estudie un curso de Junior Achievement Argentina de Mundo Digital.
-<br>
-Me gusta la programacion y la creacion de videojuegos.
-</p>
+
 <h3>👨‍💻Juan Pablo Palacios:</h3>
 <p>
 Hola, que tal? Soy Juan Pablo, estudiante de programación y miembro del grupo Nº1 donde con mucho esfuerzo pensamos llevar adelante el proyecto "SONATA".
 <br>
 Aparte de programar, me gusta escuchar musica, ver peliculas y series.
 </p>
+
+<h3>👨‍💻Jeremy Palacios Principe (Ex miembro):</h3>
+<p>
+Me llamo Jeremy pero me dicen Jere, tengo 21 años, termine mis estudios de primaria y secundaria, estudie un curso de Junior Achievement Argentina de Mundo Digital.
+<br>
+Me gusta la programacion y la creacion de videojuegos.
+</p>
+<h3>👨‍💻Luis Raymundo (Ex miembro):</h3>
+<p>
+Me llamo Luis, soy una persona divertida, apasionada por la tecnologia y la musica. Con ganas de aprender siempre cosas nuevas.
+</p>
+
+<h2>Paginas de Trello:</h2>  
+<a href="https://trello.com/grupon1c13/">Click Acá</a>
+<br>
+<h2>Paginas de Referencia:</h2>  
  
- <h2>Paginas de Referencia:</h2>  
- 
-🌐 1. https://todomusica.com.ar/
+🌐 1. <a href="https://todomusica.com.ar/">TodoMusica</a>
   <p>
    -Tomamos como referencia la elegancia de la pagina, la distribución de los productos y el carrusel.
   </p>
-🌐 2. https://www.hoffmannmusica.com.ar/
+🌐 2. <a href="https://www.hoffmannmusica.com.ar/">Hoffmann</a>
   <p>
    -La página de Hoffman, se eligió porque es de un estilo sofisticado. Muy simple en sus accesos, con pocas opciones.
    </p>
-🌐 3. https://fusionmusical.com.ar/
+🌐 3. <a href="https://fusionmusical.com.ar/">Fusion Musical</a>
    <p>
     -La página de Fusion Musical se eligió porque es simple, donde solo los instrumentos le da color. De fácil acceso a lo buscado
    </p>
-🌐 4. https://ar.xprostore.com/
+🌐 4. <a href="https://ar.xprostore.com/">XproStore</a>
    <p>
     -La pagina XproStore es una pagina elegida por la variedad de productos audio/musicales. tanto clásicos como tecnológicos, accesorios y equipos. la sensilles de ver imágenes con sus respectivos nombres deja a la curiosidad del cosumidor para cuando clikee entre a la  gran lista de instrumentos que quiera elegir.
    </p>
 
-🌐 5. https://kemuelmusica.com/
+🌐 5. <a href="https://kemuelmusica.com/">Kemuel</a>
    <p>
     -La página de Kemuel música, se eligió porque tiene muchos detales. Muchos accesos, desde categorias, marcas, variedad en todo. Y más gustó, en que utilizan su nombre como un signo de espera.
    </p>
