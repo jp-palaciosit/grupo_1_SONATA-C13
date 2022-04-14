@@ -35,9 +35,11 @@
 <p>*Retrasar la entrega de proyectos.</p>
 <p>*No buscar la comparación con otros trabajos.</p>
 <p>*No dejar a ningún miembro del equipo solo en todo sentido.</p>
+<hr style="border-color:purple;">
 <br>
 <br>
 <br>
 <div align="center">
     <h1 text-aling="center" style="font-size: 60px;">^^Hasta el próximo Sprint^^ <h1>
 </div>
+<hr style="border-color:purple;">

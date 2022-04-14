@@ -63,28 +63,28 @@ Me llamo Luis, soy una persona divertida, apasionada por la tecnologia y la musi
 </p>
 
 <h2>Paginas de Trello:</h2>  
-<a href="https://trello.com/grupon1c13/">Click Acá</a>
+<a href="https://trello.com/grupon1c13/" target="_blanck">Click Acá</a>
 <br>
 <h2>Paginas de Referencia:</h2>  
  
-🌐 1. <a href="https://todomusica.com.ar/">TodoMusica</a>
+🌐 1. <a href="https://todomusica.com.ar/" target="_blanck">TodoMusica</a>
   <p>
    -Tomamos como referencia la elegancia de la pagina, la distribución de los productos y el carrusel.
   </p>
-🌐 2. <a href="https://www.hoffmannmusica.com.ar/">Hoffmann</a>
+🌐 2. <a href="https://www.hoffmannmusica.com.ar/" target="_blanck">Hoffmann</a>
   <p>
    -La página de Hoffman, se eligió porque es de un estilo sofisticado. Muy simple en sus accesos, con pocas opciones.
    </p>
-🌐 3. <a href="https://fusionmusical.com.ar/">Fusion Musical</a>
+🌐 3. <a href="https://fusionmusical.com.ar/" target="_blanck">Fusion Musical</a>
    <p>
     -La página de Fusion Musical se eligió porque es simple, donde solo los instrumentos le da color. De fácil acceso a lo buscado
    </p>
-🌐 4. <a href="https://ar.xprostore.com/">XproStore</a>
+🌐 4. <a href="https://ar.xprostore.com/" target="_blanck">XproStore</a>
    <p>
     -La pagina XproStore es una pagina elegida por la variedad de productos audio/musicales. tanto clásicos como tecnológicos, accesorios y equipos. la sensilles de ver imágenes con sus respectivos nombres deja a la curiosidad del cosumidor para cuando clikee entre a la  gran lista de instrumentos que quiera elegir.
    </p>
 
-🌐 5. <a href="https://kemuelmusica.com/">Kemuel</a>
+🌐 5. <a href="https://kemuelmusica.com/" target="_blanck">Kemuel</a>
    <p>
     -La página de Kemuel música, se eligió porque tiene muchos detales. Muchos accesos, desde categorias, marcas, variedad en todo. Y más gustó, en que utilizan su nombre como un signo de espera.
    </p>
