@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <% - include("partials/head.ejs") %>
+    <%-include("../partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/recuperarcontra.css">
 <body>
-    <% - include("partials/header.ejs") %>
+    <%-include("../partials/header.ejs") %>
     <main>
         <section>
             <h1>Olvidó su contraseña?</h1>
@@ -14,20 +15,22 @@
                         <label for="email" class="correo">Email</label>
                         <input type="email" name="email" id="email" value="" placeholder="  Ingrese su email" class="input-empuje" required>
                     </div>
-                    <button type="submit" class="btn-inicio-recuPasswd" id="button-recu-passwd">
+                    <br>
+                    <button type="submit" class="btn-inicio-recuPasswd" id="button-recu-Passwd">
                             Recuperar contraseña
                             <span class="span1"></span>
                             <span class="span2"></span>
                             <span class="span3"></span>
                             <span class="span4"></span>
                     </button>
-                    <span class="tengo-cuenta">
+                    <br>
+                    <span class="tengo-cuenta-recu">
                         <a href="/login">Volver</a>
                     </span>
                 </form>
             </article> 
         </section>
     </main>
-    <% - include("partials/footer.ejs") %>
+    <%-include("../partials/footer.ejs") %>
 </body>
 </html>

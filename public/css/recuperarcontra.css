@@ -81,11 +81,12 @@ button#button-recu-passwd{
     background-color: #C4C4C4;
     text-transform: uppercase;
     cursor:pointer;
+    
 }
 button#button-recu-passwd:hover{
     color: black;
 }
-.tengo-cuenta{
+.tengo-cuenta-recu{
     margin-bottom: 10px;
     
 }
@@ -95,11 +96,14 @@ button#button-recu-passwd:hover{
 .btn-inicio-recuPasswd{
     position: relative;
     display: inline-block;
-    padding: 15px 30px;
+    padding: 12px 5px;
     letter-spacing: 2px;
     text-decoration: none;
     overflow: hidden;
     transition: 0.2s;
+    color: #1259c3;
+    /* border: 5px; */
+    font-size: 20px;
 }
 .btn-inicio-recuPasswd:hover{
     background: #9bc5c3;

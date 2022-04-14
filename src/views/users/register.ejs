@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-    <% - include("partials/head.ejs") %>
+    <%-include("../partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/register.css">
 <body>
-    <% - include("partials/header.ejs") %>
-    <main>
+    <%-include("../partials/header.ejs") %>
+    <main class="main-register">
         <section>
-            <h1>Crear cuenta</h1>
+            <h1 class="h1-crearCuenta">Crear cuenta</h1>
             <hr>
             <article class="article-register">
                 <form action="datosUser.html" method="get">
@@ -52,6 +53,6 @@
             </article> 
         </section>
     </main>
-    <% - include("partials/head.ejs") %>
+    <%-include("../partials/footer.ejs") %>
 </body>
 </html>

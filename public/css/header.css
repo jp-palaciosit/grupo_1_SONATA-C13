@@ -154,15 +154,17 @@ header nav div button:hover{
     background-color: black;
 }
 
-header nav div label h1{
+header nav div label h1.btn-instrumento{
     position: relative;
     color: white;
     font-family: var(--font-berkshire);
     font-size: var(--font-h1);
     font-weight: 100;
+    width: 100%;
+    text-align: center;
     /* bottom: 2px; */
 }
-header nav div label h1:hover{
+header nav div label h1.btn-instrumento:hover{
     color: white;
 }
 
@@ -359,10 +361,11 @@ header nav div.button-desktop{
     header nav div button:hover{
         background: linear-gradient(to top, black, #712B75);
     }
-    header nav div button h1{      
-        bottom: 1px;
-        font-size: 25px;
+    header nav div button h1.btn-instrumento{
         color: white;
+        font-family: var(--font-berkshire); 
+        text-align: center;
+        width: 100%;
     }
      header nav {
         display: flex;
@@ -376,10 +379,12 @@ header nav div.button-desktop{
         border-top: 3px solid;
         background-color: #247881;
         justify-content: space-around;
-        padding: 25px 0;
+        text-align: center;
+        align-items: center;
+        padding: 30px 0;
     }
     header nav div.button-tablet button{
-        margin: 10px 0;
+        height: 42px;  
     }
     div.img-user {
         background-color: #333333;
@@ -445,6 +450,21 @@ header nav div.button-desktop{
         justify-content: space-around;
         padding: 30px 0;
     }
+
+/*     header nav div.button-tablet{
+        display: flex;
+        width: inherit;
+        border-top: 3px solid;
+        background-color: #247881;
+        justify-content: space-around;
+        text-align: center;
+        align-items: center;
+        padding: 30px 0;
+    } */
+    header nav div.button-desktop button{
+        height: 42px;  
+    }
+
     header div.div-header div.nav-burguer{
         left: 0;
         width: 300px;

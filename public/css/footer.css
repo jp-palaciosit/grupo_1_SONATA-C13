@@ -47,13 +47,18 @@ footer section article.redes-sociales ul li a i{
     font-size: var(--font-redes-sociales);
 }
 footer div.div-p{
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     align-items: center;
     height: 13%;
     background-color: var(--background-gray);
     font-size: var(--font-cp);
     margin-top: 5px;
+}
+.p-sonata{
+    margin: 2px;
+    width: 100%;
+    text-align: center;
 }
 
 /* END FOOTER */

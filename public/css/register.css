@@ -7,14 +7,15 @@ a{
     text-decoration: none;
     color: #1259c3;
 }
-main{
+main.main-register{
     width: 100%;
     display: flex;
     justify-content: center;
     background: linear-gradient(to top,#616161, #9bc5c3);
 }
-h1{
+h1.h1-crearCuenta{
     font-size: 40px;
+    /* color: white; */
 }
 hr{
     width: 270px;
@@ -91,25 +92,26 @@ button#button-register{
     border-radius: 5px;
     border: none;
     font-size: 1.5rem;
-    background-color: #C4C4C4;
+    background-color: #1259c3;
     text-transform: uppercase;
     cursor:pointer;
 }
 button#button-register p{
-    color: black;
-}
-button#button-register p:hover{
     color: white;
 }
+/* button#button-register p:hover{
+    color: white;
+} */
 .tengo-cuenta{
     margin-bottom: 10px;
-    color: #000000;
+    color: #1259c3;
 }
 .btn-inicio{
     position: relative;
     display: inline-block;
     padding: 15px 30px;
-    color: #fff;
+    color: #1259c3;
+    /* background-color: black; */
     letter-spacing: 2px;
     text-decoration: none;
     overflow: hidden;

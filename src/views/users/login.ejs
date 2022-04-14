@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <% - include("partials/head.ejs") %>
+    <%-include("../partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/login.css">
 <body>
-    <% - include("partials/header.ejs") %>
+    <%-include("../partials/header.ejs") %>
     <main>
         <section>
             <h1>Bienvenido a Sonata</h1>
@@ -25,6 +26,7 @@
                             <span class="span3"></span>
                             <span class="span4"></span>
                     </button>
+                    <br>
                     <span class="tengo-cuenta">
                         <a href="/recuperarcontra">Olvide mi contraseña</a>
                     </span>
@@ -35,6 +37,6 @@
             </article> 
         </section>
     </main>
-    <% - include("partials/footer.ejs") %>
+    <%-include("../partials/footer.ejs") %>
 </body>
 </html>

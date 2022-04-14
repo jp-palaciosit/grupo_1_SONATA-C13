@@ -1,11 +1,23 @@
 /* IMPORTS */
-@import url("principal.css");
+/*  */
+
 @import url("general.css");
 @import url("variables.css");
-@import url("header.css");
+
+/* generalFolder */
+@import url("principal.css");
 /* @import url("main.css"); */
+
+/* partials */
+@import url("header.css");
 @import url("footer.css");
+/* productos */
 @import url('productCart.css');
 @import url("productDetail.css");
 
+/* usuario */
+/* @import url("datosUser.css"); */
+/* @import url("recuperarcontra.css"); */
+/* @import url("register.css"); */
+/* @import url("login.css"); */
 
