@@ -1,0 +1,21 @@
+[
+    {
+        "id": 0,
+        "name": "",
+        "lastName": "",
+        "email": "",
+        "password": "",
+        "captcha": "",
+        "terminosCondiciones": "",
+        "avatar": ""
+    },
+    {
+        "id": 1,
+        "name": "aaaaaaaaaaaaaaaa",
+        "lastName": "aaaaaaaaaaaaaaaaa",
+        "email": "juanchii10p@gmail.com",
+        "passwd": "aaaaaaaaaaaaaaaa",
+        "captcha": "",
+        "terminosCoindiciones": "on"
+    }
+]

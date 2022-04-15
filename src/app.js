@@ -15,12 +15,17 @@ app.listen(PORT, ()=>console.log(`Servidor corriendo en el puerto ${PORT}`))
 app.set("view engine", "ejs")
 app.set("views", path.join(__dirname, "views")) 
 
+/* Para poder usar el metodo POST */
+app.use(express.urlencoded({ extended: false}))
+app.use(express.json())
+
 /* Rutas */
 const indexRouter = require("./routers/indexRouter")
 const userRouter = require("./routers/userRouter")
 const productRouter = require("./routers/productRouter")
 const adminRouter = require("./routers/adminRouter")
 
+/* Pedidos */
 app.use("/", indexRouter)
 app.use("/usuario", userRouter)
 app.use("/producto", productRouter)

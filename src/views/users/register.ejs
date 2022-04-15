@@ -9,15 +9,19 @@
             <h1 class="h1-crearCuenta">Crear cuenta</h1>
             <hr>
             <article class="article-register">
-                <form action="datosUser.html" method="get">
+                <form action="/usuario/registro" method="post">
                     <label for="name">Nombre</label>
                     <input type="text" name="name" id="name" value="" placeholder="  Ingrese su nombre" class="input-empuje" required>
+                    
                     <label for="apellido">Apellido  </label>
-                    <input type="text" name="apellido" placeholder="  Ingrese su apellido" class="input-empuje"   required>
+                    <input type="text" name="lastname" placeholder="  Ingrese su apellido" class="input-empuje"   required>
+                    
                     <label for="email" class="correo">Email     </label>
                     <input type="email" name="email" id="email" value="" placeholder="  Ingrese su email" class="input-empuje" required>
+                    
                     <label for="passwd">Contraseña</label>
                     <input type="password" name="passwd" id="passwd" value="" placeholder="  Ingrese su contraseña" class="input-empuje"  required>
+                    
                     <label for="captcha" class="checkbox1">Captcha
                         <span class="captcha-robot">
                             <input type="checkbox" name="captcha" id="captcha" value="" required class="input-captcha">
@@ -25,7 +29,7 @@
                         </span>
                     </label>
                     <div class="div-TC">
-                        <input type="checkbox" name="terminos-condiciones" id="TerminoCondicion" class="input-TC" required>
+                        <input type="checkbox" name="terCondi" id="TerminoCondicion" class="input-TC" required>
                         <label for="TerminoCondicion" class="label-TC">
                             <span>Acepto los</span>
                             <span>
@@ -46,7 +50,7 @@
                          <span class="span4"></span>
                  </button>
                     <span class="tengo-cuenta">
-                        <a href="/login">Ya tengo cuenta</a>
+                        <a href="<%-"/usuario"%>">Ya tengo cuenta</a>
                     </span>
                 </form>
                 
