@@ -1,0 +1,15 @@
+#logo-admin{
+    width: 3.5rem;
+}
+#btn-admin-modificacion{
+    border-radius: 13px;
+    color: white;
+    background-color: #146C43;
+    margin: 1px;
+}
+#btn-admin-borrar{
+    border-radius: 13px;
+    color: white;
+    background-color: #B02A37;
+    margin: 1px;
+}

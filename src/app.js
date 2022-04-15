@@ -25,49 +25,9 @@ const userRouter = require("./routers/userRouter")
 const productRouter = require("./routers/productRouter")
 const adminRouter = require("./routers/adminRouter")
 
-/* Pedidos */
-app.use("/", indexRouter)
-app.use("/usuario", userRouter)
-app.use("/producto", productRouter)
-app.use("/admin", adminRouter)
+/* Middlewares de Rutas (pedidos) */
+app.use("/", indexRouter) // Home - contact
+app.use("/usuario", userRouter) // listado, detalle
+app.use("/producto", productRouter) // Login, Registro, Perfil
+app.use("/admin", adminRouter) // Admin, ABM products, ABM proyectos(emprendimientos)
 
-
-
-
-
-/* 
-app.get("/", (req,res)=>{
-    res.sendFile(path.join(__dirname, "./views/principal.html"))
-})
-
-app.get("/index", (req,res)=>{
-    res.sendFile(path.join(__dirname, "./views/index.html"))
-})
-
-app.get("/home", (req,res)=>{
-    res.sendFile(path.join(__dirname, "./views/generalFolder/home.html"))
-})
-
-
-app.get("/productDetail", (req,res)=>{
-    res.sendFile(path.join(__dirname, "./views/productDetail.html"))
-})
-app.get("/login", (req,res)=>{
-    res.sendFile(path.join(__dirname, "./views/login.html"))
- })
- 
-app.get("/recuperarcontra", (req,res)=>{
-    res.sendFile(path.join(__dirname, "./views/recuperarcontra.html"))
-})
-
-app.get("/datosUser", (req,res)=>{
-    res.sendFile(path.join(__dirname, "./views/datosUser.html"))
-})
-
-app.get("/register", (req,res)=>{
-    res.sendFile(path.join(__dirname, "./views/register.html"))
-})
-
-app.get("/productCart", (req,res)=>{
-    res.sendFile(path.join(__dirname, "./views/productCart.html"))
-}) */
