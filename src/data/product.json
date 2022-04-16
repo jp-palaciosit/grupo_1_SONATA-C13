@@ -7,8 +7,10 @@
         "categoryId": 1,
         "projectId": 1,
         "discount": "10% off ",
-        "shipment":"- Envios gratis",
-        "image": ["guitarraGibson.jpg"],
+        "shipment": "- Envios gratis",
+        "image": [
+            "guitarraGibson.jpg"
+        ],
         "stock": true
     },
     {
@@ -19,8 +21,10 @@
         "categoryId": 1,
         "projectId": 2,
         "discount": "10% off ",
-        "shipment":"- Envios gratis",
-        "image": ["bateria.jpg"],
+        "shipment": "- Envios gratis",
+        "image": [
+            "bateria.jpg"
+        ],
         "stock": true
     },
     {
@@ -31,8 +35,10 @@
         "categoryId": 1,
         "projectId": 3,
         "discount": "",
-        "shipment":"",
-        "image": ["ukelele.jpg"],
+        "shipment": "",
+        "image": [
+            "ukelele.jpg"
+        ],
         "stock": true
     },
     {
@@ -43,8 +49,10 @@
         "categoryId": 1,
         "projectId": 4,
         "discount": "10% off ",
-        "shipment":"",
-        "image": ["pedalEfecto1.jpg"],
+        "shipment": "",
+        "image": [
+            "pedalEfecto1.jpg"
+        ],
         "stock": true
     },
     {
@@ -55,188 +63,239 @@
         "categoryId": 1,
         "projectId": 5,
         "discount": "",
-        "shipment":"- Envios gratis",
-        "image": ["microfonoRode.jpg"],
+        "shipment": "- Envios gratis",
+        "image": [
+            "microfonoRode.jpg"
+        ],
         "stock": true
     },
-{
-        "id":6,
+    {
+        "id": 6,
         "name": "Organo Musical Teclado",
         "price": "6.067",
         "description": "El mejor Ukelele del condado",
         "categoryId": 1,
         "projectId": 6,
         "discount": "",
-        "shipment":" Envios gratis",
-        "image": ["organoMusical.jpg"],
+        "shipment": " Envios gratis",
+        "image": [
+            "organoMusical.jpg"
+        ],
         "stock": true
     },
-{
-        "id":7,
+    {
+        "id": 7,
         "name": "Repique Murga Cromado",
         "price": "3.600",
         "description": "El producto más vendido de la empresa",
-        "categoryId": 7,
+        "categoryId": 1,
         "projectId": 5,
         "discount": "10% off",
-        "shipment":"",
-        "image": ["repiqueMurga.jpg"],
+        "shipment": "",
+        "image": [
+            "repiqueMurga.jpg"
+        ],
         "stock": true
     },
-{
-        "id":8,
+    {
+        "id": 8,
         "name": "Armonica Diatónica Cromada",
         "price": "1.030",
         "description": "El producto más vendido del mundo",
         "categoryId": 1,
         "projectId": 8,
         "discount": "",
-        "shipment":"Envios gratis",
-        "image": ["armonicaDiatonica.jpg"],
+        "shipment": "Envios gratis",
+        "image": [
+            "armonicaDiatonica.jpg"
+        ],
         "stock": true
     },
-{
-        "id":9,
+    {
+        "id": 9,
         "name": "Xilofón Metalofon 8 Notas",
         "price": "2.450",
         "description": "El Xilofon más esperado en el país",
         "categoryId": 1,
         "projectId": 9,
         "discount": "",
-        "shipment":"Envios gratis",
-        "image": ["xilofon.jpg"],
+        "shipment": "Envios gratis",
+        "image": [
+            "xilofon.jpg"
+        ],
         "stock": true
     },
-{
-        "id":10,
+    {
+        "id": 10,
         "name": "Violin Palatino 4/4 Madera",
         "price": "7.499",
         "description": "El mejor Violin del continente",
         "categoryId": 1,
         "projectId": 10,
         "discount": "5% off ",
-        "shipment":"- Envios gratis",
-        "image": ["violinPalatino.jpg"],
+        "shipment": "- Envios gratis",
+        "image": [
+            "violinPalatino.jpg"
+        ],
         "stock": true
     },
-{
-        "id":11,
+    {
+        "id": 11,
         "name": "Pandereta Parquer Doble Sonaja",
         "price": "2.150",
         "description": "La pandereta más vendida en la empresa",
         "categoryId": 1,
         "projectId": 11,
         "discount": "",
-        "shipment":"Envios gratis",
-        "image": ["panderetaParquer.jpg"],
+        "shipment": "Envios gratis",
+        "image": [
+            "panderetaParquer.jpg"
+        ],
         "stock": true
     },
-{
-        "id":12,
+    {
+        "id": 12,
         "name": "Triangulo Percusion Metalico",
         "price": "699",
         "description": "El producto más economico de la empresa",
         "categoryId": 1,
         "projectId": 12,
         "discount": "",
-        "shipment":"",
-        "image": ["trianguloPercusion.jpg"],
+        "shipment": "",
+        "image": [
+            "trianguloPercusion.jpg"
+        ],
         "stock": true
     },
-{
-        "id":13,
+    {
+        "id": 13,
         "name": "Puas Stagg Pack Por 20 Calibres",
         "price": "715",
         "description": "La Puas más vendidas en el mercado",
         "categoryId": 1,
         "projectId": 13,
         "discount": "",
-        "shipment":"",
-        "image": ["puasStagg.jpg"],
+        "shipment": "",
+        "image": [
+            "puasStagg.jpg"
+        ],
         "stock": true
     },
-{
-        "id":14,
+    {
+        "id": 14,
         "name": "Organo Musical Infantil",
         "price": "2.990",
         "description": "El producto del mercado más eficaz",
         "categoryId": 1,
         "projectId": 14,
         "discount": "5%",
-        "shipment":"- Envios gratis",
-        "image": ["organoMusicalinfantil.jpg"],
+        "shipment": "- Envios gratis",
+        "image": [
+            "organoMusicalinfantil.jpg"
+        ],
         "stock": true
     },
-{
-        "id":15,
+    {
+        "id": 15,
         "name": "Kalimba Walter Profesional",
         "price": "6.977",
         "description": "El producto del mercado más eficaz del mercado",
         "categoryId": 1,
         "projectId": 15,
         "discount": "5% off ",
-        "shipment":"",
-        "image": ["kalimba.jpg"],
+        "shipment": "",
+        "image": [
+            "kalimba.jpg"
+        ],
         "stock": true
     },
-{
-        "id":16,
+    {
+        "id": 16,
         "name": "Acordeón Para Niños 7 Teclas",
         "price": "3.990",
         "description": "El Acordeón para niños más esperado",
         "categoryId": 1,
         "projectId": 16,
         "discount": "",
-        "shipment":"",
-        "image": ["acordeonNenes.jpg"],
+        "shipment": "",
+        "image": [
+            "acordeonNenes.jpg"
+        ],
         "stock": true
     },
-{
-        "id":17,
+    {
+        "id": 17,
         "name": "Flauta Dulce Soprano Yamaha",
         "price": "1.950",
         "description": "La FLauta más vendida en el continente",
         "categoryId": 1,
         "projectId": 17,
         "discount": "",
-        "shipment":"Envios gratis",
-        "image": ["flautaDulce.jpg"],
+        "shipment": "Envios gratis",
+        "image": [
+            "flautaDulce.jpg"
+        ],
         "stock": true
     },
-{
-        "id":18,
+    {
+        "id": 18,
         "name": "Pedal de efecto para instrumento de cuerda",
         "price": "17.543",
         "description": "El Pedal con efeto más vendido en Asia",
         "categoryId": 1,
         "projectId": 18,
         "discount": "15% Off ",
-        "shipment":"- Envios gratis",
-        "image": ["pedalEfecto.jpg"],
+        "shipment": "- Envios gratis",
+        "image": [
+            "pedalEfecto.jpg"
+        ],
         "stock": true
     },
-{
-        "id":19,
+    {
+        "id": 19,
         "name": "Guitarra Infantil Sonido Real",
         "price": "3.980",
         "description": "La Guitarra Infantil más esperado por el mercado Europeo",
         "categoryId": 1,
         "projectId": 19,
         "discount": "",
-        "shipment":"Envios gratis",
-        "image": ["guitarraInfantil.jpg"],
+        "shipment": "Envios gratis",
+        "image": [
+            "guitarraInfantil.jpg"
+        ],
         "stock": true
     },
-{
-        "id":20,
+    {
+        "id": 20,
         "name": "Guitarra eléctrica SX Vintage Series FTL-50",
         "price": "29.750",
         "description": "La Guitarra Electrica más vendida en el continente Americano",
         "categoryId": 1,
         "projectId": 20,
         "discount": "5% Off ",
-        "shipment":"- Envios gratis",
-        "image": ["guitarraVintage.jpg"],
+        "shipment": "- Envios gratis",
+        "image": [
+            "guitarraVintage.jpg"
+        ],
         "stock": true
+    },
+    {
+        "id": 21,
+        "name": "Huevos de pascua",
+        "price": "2000",
+        "discount": "10",
+        "categoryId": "1",
+        "shipment": true,
+        "stock": true
+    },
+    {
+        "name": "Patita",
+        "price": "10000",
+        "discount": "5",
+        "categoryId": "2",
+        "shipment": true,
+        "description": "Patita programa",
+        "id": 22,
+        "stock": false
     }
 ]

@@ -3,7 +3,7 @@ const router = express.Router()
 const adminController = require("../controllers/admin/adminController")
 const adminProductController = require("../controllers/admin/adminProductController")
 
-/* Get - index */
+// Get - index
 router.get("/", adminController.index)
 
 /* CRUD  PRODUCTS*/
@@ -11,12 +11,14 @@ router.get("/", adminController.index)
 // Get - Lista productos
 router.get("/productos", adminProductController.list)
 
-// Get - Agregar producto
- router.get("/productos/agregar", adminProductController.productAdd)
+// Get - Agregar producto (Pero no los crea)
+router.get("/productos/agregar", adminProductController.productAdd)
 
-/* router.get("/productos", adminProductController.list)
+// Post - Crear un producto en DB
+router.post("/productos", adminProductController.productCreate)
 
-router.get("/productos", adminProductController.productCreate)
+
+/*
 
 router.get("/productos", adminProductController.productEdit)
 

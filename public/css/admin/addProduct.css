@@ -4,12 +4,14 @@
 }
 #add-product-stock{
     display: flex;
-    justify-content: center;  
+    justify-content: center; 
+    /* max-width: 150px;  */
 }
 
 #add-product-envio{
     display: flex;
     justify-content: center;
+    /* max-width: 125px; */
 }
 #label-form-agregar{
     margin-left: 5px;
@@ -17,9 +19,33 @@
 #btn-crearProducto{
     text-align: center;
 }
+
 @media (min-width: 768px) {
     .div-StockyEnvios-agregar{
         display: flex;
-        justify-content: space-around;
+        align-items: center; 
+        width: 100%;
+        justify-content: space-evenly;
+        /* max-width: 470px; */
+       
     }
+    .caja-contenedora-formAgregar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .caja_separada{
+        min-width: 337px;
+    }
+    .caja-text-area{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* width: 100%; */
+    }
+    .caja-textarea{
+        max-width: 337px;
+        align-items: center;
+    }
+    
 }

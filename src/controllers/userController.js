@@ -31,7 +31,6 @@ module.exports = {
                 lastId = user.id
             }
         });
-
         let newUser = {
             id: lastId + 1,
             name: req.body.name,

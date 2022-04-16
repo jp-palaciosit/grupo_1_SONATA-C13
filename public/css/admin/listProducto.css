@@ -2,9 +2,21 @@
     background: linear-gradient(to bottom, #9BC5C3, #616161);
 }
 #main-listadoProducto{
-    background-color: white;
+   /*  background-color: red; */
     margin-top: 15px;
+    display: flex;
+    justify-content: center;
 }
+/* .div-caja-table{
+    width: 95%;
+    background-color: #146C43;
+} */
+/* #id-tablet-listaProductos{
+    width: 95%;
+    background-color: aqua;
+} */
+
+/* Mati si lees esto, ayudame por favor a encontrar el error de porque la tablet(?) no se reduce al disminuir para celular, pero si el main, header, footer e incluso el div padre que le puse a tablet */
 
 #logo-admin{
     width: 3.5rem;
