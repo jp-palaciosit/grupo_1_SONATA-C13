@@ -8,7 +8,9 @@ module.exports = {
         })
     },
     productAdd:(req,res)=>{
-
+        res.render("admin/products/addProduct",{
+            title: "Agregar productos"
+        })
     },
     productCreate:(req,res)=>{
 

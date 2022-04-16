@@ -8,12 +8,13 @@ router.get("/", adminController.index)
 
 /* CRUD  PRODUCTS*/
 
-// Get - lista productos
+// Get - Lista productos
 router.get("/productos", adminProductController.list)
 
-/* router.get("/productos", adminProductController.productAdd)
+// Get - Agregar producto
+ router.get("/productos/agregar", adminProductController.productAdd)
 
-router.get("/productos", adminProductController.list)
+/* router.get("/productos", adminProductController.list)
 
 router.get("/productos", adminProductController.productCreate)
 

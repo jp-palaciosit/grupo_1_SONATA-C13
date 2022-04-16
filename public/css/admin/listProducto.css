@@ -1,3 +1,11 @@
+#body-listadoProducto{
+    background: linear-gradient(to bottom, #9BC5C3, #616161);
+}
+#main-listadoProducto{
+    background-color: white;
+    margin-top: 15px;
+}
+
 #logo-admin{
     width: 3.5rem;
 }
@@ -12,4 +20,7 @@
     color: white;
     background-color: #B02A37;
     margin: 1px;
+}
+h6{
+    color: white;
 }

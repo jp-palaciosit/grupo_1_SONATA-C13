@@ -1,11 +1,52 @@
 <%-include("../partials/head")%> 
 <body>
     <%-include("../partials/header")%>
-    <main class="container min-vh-100 pt-5">
-        <h1>Agregar producto</h1>
-    </main>
+    <main class="container min-vh-100 pt-5" >
+        <fieldset class="rounded border w-75 mx-auto p-4" id="formulario-crear-fondo">
+          <legend class="text-center">AGREGAR PRODUCTO</legend>
+          <form class="row " action="" method="">
+            <div class="mb-3 col-md-6">
+              <label for="name" class="form-label">Nombre del producto</label>
+              <input type="text" name="name" class="form-control" id="name" placeholder="Ej: Guitarra Gibson">
+            </div>
+            <div class="mb-3 col-md-6">
+              <label for="price" class="form-label">Precio</label>
+              <input type="number" name="price" class="form-control" id="price" placeholder="Ej: 135000">
+            </div>
+            <div class="mb-3 col-md-6">
+              <label for="discount" class="form-label">Descuento</label>
+              <input type="number" name="discount" class="form-control" id="discount" placeholder="Ej: 5000">
+            </div>
+            <div class="mb-3 col-md-6">
+              <label for="category" class="form-label">Categoria</label>
+              <select name="categoryId" class="form-select" id="category" aria-label="Default select example">
+                <option selected hidden>Categoría</option>
+                <option value="1">Instrumento</option>
+                <option value="2">Accesorios</option>
+              </select>
+            </div>
+            <div class="div-StockyEnvios-agregar">
+                <div class="form-check mb-3 form-switch" id="add-product-stock">
+                    <input class="form-check-input" name="stock" type="checkbox" role="switch" id="stock"> 
+                    <label class="form-check-label" for="stock" id="label-form-agregar">Stock disponible</label>
+                    
+                </div>
+                <div class="form-check mb-3 form-switch" id="add-product-envio">
+                    <input class="form-check-input" name="envio" type="checkbox" role="switch" id="envio"> 
+                    <label class="form-check-label" for="envio" id="label-form-agregar">Envios gratis</label>
+                </div>
+            </div>
+            <div class="mb-3 ">
+              <label for="description" class="form-label">Descripción</label>
+              <textarea name="description" class="form-control" id="description" rows="3"></textarea>
+            </div>
+            <div class="col-12" id="btn-crearProducto">
+              <button class="btn btn-primary" type="submit">Crear</button>
+            </div>
+           </form>
+        </fieldset>
+      </main>
     <%-include("../partials/footer")%> 
-      
-      <%-include("../partials/script")%> 
+    <%-include("../partials/script")%> 
 </body>
 </html>

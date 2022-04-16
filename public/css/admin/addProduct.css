@@ -1,0 +1,25 @@
+
+#formulario-crear-fondo{
+    background: linear-gradient(to bottom, #9BC5C3, #616161);
+}
+#add-product-stock{
+    display: flex;
+    justify-content: center;  
+}
+
+#add-product-envio{
+    display: flex;
+    justify-content: center;
+}
+#label-form-agregar{
+    margin-left: 5px;
+}
+#btn-crearProducto{
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .div-StockyEnvios-agregar{
+        display: flex;
+        justify-content: space-around;
+    }
+}
