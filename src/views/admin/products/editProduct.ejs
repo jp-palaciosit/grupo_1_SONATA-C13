@@ -2,8 +2,51 @@
 <body>
     <%-include("../partials/header")%>
     <main class="container min-vh-100 pt-5">
-        <h1>Editar producto/h1>
-    </main>
+        <form action="/admin/productos" method="post">
+              <fieldset class="rounded border w-75 mx-auto p-4" id="formulario-crear-fondo" >
+                  <legend class="text-center">Editar producto:<%=producto.name%> </legend>
+                  <div class="caja-contenedora-formAgregar">
+                      <div class="mb-3 col-md-6 caja_separada">
+                          <label for="name" class="form-label">Nombre del producto</label>
+                          <input type="text" name="name" class="form-control" id="name" value="<%=producto.name%>">
+                      </div>
+                      <div class="mb-3 col-md-6 caja_separada">
+                          <label for="price" class="form-label">Precio</label>
+                          <input type="number" name="price" class="form-control" id="price" value="<%=producto.price%>">
+                      </div>
+                      <div class="mb-3 col-md-6 caja_separada">
+                          <label for="discount" class="form-label">Descuento</label>
+                          <input type="number" name="discount" class="form-control" id="discount" value="<%=producto.discount%>">
+                      </div>
+                      <div class="mb-3 col-md-6 caja_separada">
+                          <label for="category" class="form-label">Categoria</label>
+                          <select name="categoryId" class="form-select" id="category" aria-label="Default select example">
+                              <option selected hidden>Categoría</option>
+                              <option value="1">Instrumento</option>
+                              <option value="2">Accesorios</option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="div-StockyEnvios-agregar">
+                      <div class="form-check mb-3 form-switch" id="add-product-stock">
+                          <input <%-producto.stock ? "checked" : " "%>  class="form-check-input" name="stock" type="checkbox" role="switch" id="stock"> 
+                          <label class="form-check-label" for="stock" id="label-form-agregar">Stock disponible</label>		
+                      </div>
+                      <div class="form-check mb-3 form-switch" id="add-product-envio">
+                          <input <%-producto.shipment ? "checked" : " "%> class="form-check-input" name="shipment" type="checkbox" role="switch" id="envio"> 
+                          <label class="form-check-label" for="envio" id="label-form-agregar">Envios gratis</label>
+                      </div>
+                  </div>
+                  <div class="mb-3 caja-text-area">
+                      <label for="description" class="form-label">Descripción</label>
+                      <textarea name="description" class="form-control caja-textarea" id="description" rows="3"><%=producto.description%></textarea>
+                  </div>
+                  <div class="col-12" id="btn-crearProducto">
+                      <button class="btn btn-primary" type="submit">Editar</button>
+                  </div>
+              </fieldset>
+            </form>
+      </main>
     <%-include("../partials/footer")%> 
       
       <%-include("../partials/script")%> 

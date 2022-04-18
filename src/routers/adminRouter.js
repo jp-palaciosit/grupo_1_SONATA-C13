@@ -1,7 +1,9 @@
 const express = require("express")
 const router = express.Router()
+/* const methodOverrise */
 const adminController = require("../controllers/admin/adminController")
 const adminProductController = require("../controllers/admin/adminProductController")
+
 
 // Get - index
 router.get("/", adminController.index)
@@ -16,6 +18,15 @@ router.get("/productos/agregar", adminProductController.productAdd)
 
 // Post - Crear un producto en DB
 router.post("/productos", adminProductController.productCreate)
+
+// Get - Editar producto
+
+router.get("/productos/editar/:id", adminProductController.productEdit)
+
+//Put - actualizar producto
+
+/* router.put("productos/editar/:id", adminProductController.productUpdate) */
+
 
 
 /*

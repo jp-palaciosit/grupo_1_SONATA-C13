@@ -38,12 +38,31 @@ module.exports = {
         /* 4) Devolver una vista(Redireccionar) correspondiente */
 
             res.redirect("/admin/productos")
-        }
-    /* productEdit:(req,res)=>{
+        },
+    productEdit:(req,res)=>{
+        // 1- Obtener el id del producto
 
-    },
-    productUpdate:(req,res)=>{
+        let idProducto = +req.params.id
 
+        // 2- Buscar el producto a editar
+        let producto = getProducts.find(producto => producto.id === idProducto)
+        
+        // 3- Mostrar el producto en la vista
+        res.render("admin/products/editProduct",{
+            title: "Editar producto",
+            producto
+        })
+    },  
+    /* productUpdate:(req,res)=>{
+        // 1- Obtener el id del producto
+
+        // 2- Buscar el produucto a editar
+
+        // 3- Modificar el producto
+
+        // 4- Guardar los cambios
+
+        // 5 - Respuesta
     },
     productDelete:(req,res)=>{
 

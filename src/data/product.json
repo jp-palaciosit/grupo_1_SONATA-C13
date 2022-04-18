@@ -6,12 +6,12 @@
         "description": "Inspired by Gibson Les Paul Standard 50s de caoba heritage cherry",
         "categoryId": 1,
         "projectId": 1,
-        "discount": "10% off ",
-        "shipment": "- Envios gratis",
+        "discount":10,
+        "shipment": true,
         "image": [
             "guitarraGibson.jpg"
         ],
-        "stock": true
+        "stock": false
     },
     {
         "id": 2,
@@ -20,12 +20,12 @@
         "description": "Excelente batería MAPEX PRODIGY, con acabado recubierto",
         "categoryId": 1,
         "projectId": 2,
-        "discount": "10% off ",
-        "shipment": "- Envios gratis",
+        "discount":10,
+        "shipment": false,
         "image": [
             "bateria.jpg"
         ],
-        "stock": true
+        "stock": false
     },
     {
         "id": 3,
@@ -35,11 +35,11 @@
         "categoryId": 1,
         "projectId": 3,
         "discount": "",
-        "shipment": "",
+        "shipment": true,
         "image": [
             "ukelele.jpg"
         ],
-        "stock": true
+        "stock": false
     },
     {
         "id": 4,
@@ -48,7 +48,7 @@
         "description": "Este pedal de efectos permite alterar el sonido de tu instrumento y explorar nuevas posibilidades sonoras",
         "categoryId": 1,
         "projectId": 4,
-        "discount": "10% off ",
+        "discount":10,
         "shipment": "",
         "image": [
             "pedalEfecto1.jpg"
@@ -90,7 +90,7 @@
         "description": "El producto más vendido de la empresa",
         "categoryId": 1,
         "projectId": 5,
-        "discount": "10% off",
+        "discount": 10,
         "shipment": "",
         "image": [
             "repiqueMurga.jpg"
@@ -132,7 +132,7 @@
         "description": "El mejor Violin del continente",
         "categoryId": 1,
         "projectId": 10,
-        "discount": "5% off ",
+        "discount": 5,
         "shipment": "- Envios gratis",
         "image": [
             "violinPalatino.jpg"
@@ -188,7 +188,7 @@
         "description": "El producto del mercado más eficaz",
         "categoryId": 1,
         "projectId": 14,
-        "discount": "5%",
+        "discount": 5,
         "shipment": "- Envios gratis",
         "image": [
             "organoMusicalinfantil.jpg"
@@ -202,7 +202,7 @@
         "description": "El producto del mercado más eficaz del mercado",
         "categoryId": 1,
         "projectId": 15,
-        "discount": "5% off ",
+        "discount": 5,
         "shipment": "",
         "image": [
             "kalimba.jpg"
@@ -244,7 +244,7 @@
         "description": "El Pedal con efeto más vendido en Asia",
         "categoryId": 1,
         "projectId": 18,
-        "discount": "15% Off ",
+        "discount": 15,
         "shipment": "- Envios gratis",
         "image": [
             "pedalEfecto.jpg"
@@ -272,7 +272,7 @@
         "description": "La Guitarra Electrica más vendida en el continente Americano",
         "categoryId": 1,
         "projectId": 20,
-        "discount": "5% Off ",
+        "discount": 5,
         "shipment": "- Envios gratis",
         "image": [
             "guitarraVintage.jpg"
@@ -283,19 +283,24 @@
         "id": 21,
         "name": "Huevos de pascua",
         "price": "2000",
-        "discount": "10",
+        "discount": 10,
         "categoryId": "1",
         "shipment": true,
+        "image": [
+            "guitarraVintage.jpg"
+        ],
         "stock": true
     },
     {
         "name": "Patita",
         "price": "10000",
-        "discount": "5",
+        "description": "Patita programa",
+        "discount": 5,
         "categoryId": "2",
         "shipment": true,
-        "description": "Patita programa",
-        "id": 22,
+        "image": [
+            "guitarraVintage.jpg"
+        ],
         "stock": false
     }
 ]
