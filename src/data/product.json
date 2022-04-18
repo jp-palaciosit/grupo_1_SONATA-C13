@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Guitarra Gibson",
-        "price": "173.309",
+        "price": 173.309,
         "description": "Inspired by Gibson Les Paul Standard 50s de caoba heritage cherry",
         "categoryId": 1,
         "projectId": 1,
@@ -16,7 +16,7 @@
     {
         "id": 2,
         "name": "Bateria Mapex Prodigy",
-        "price": "141.58",
+        "price": 14159,
         "description": "Excelente batería MAPEX PRODIGY, con acabado recubierto",
         "categoryId": 1,
         "projectId": 2,
@@ -30,7 +30,7 @@
     {
         "id": 3,
         "name": "Ukelele Soprano Dakota",
-        "price": "1.891",
+        "price": 1891,
         "description": "Es un producto importado, de primera calidad y el más completodel mercado",
         "categoryId": 1,
         "projectId": 3,
@@ -44,7 +44,7 @@
     {
         "id": 4,
         "name": "Pedal de efecto para instrumento",
-        "price": "29.493",
+        "price": 29493,
         "description": "Este pedal de efectos permite alterar el sonido de tu instrumento y explorar nuevas posibilidades sonoras",
         "categoryId": 1,
         "projectId": 4,
@@ -58,7 +58,7 @@
     {
         "id": 5,
         "name": "Micrófono Rode NT1-A",
-        "price": "85.900",
+        "price": 85900,
         "description": "Con este producto lograrás que la reproducción obtenida sea lo más parecida a la original",
         "categoryId": 1,
         "projectId": 5,
@@ -72,7 +72,7 @@
     {
         "id": 6,
         "name": "Organo Musical Teclado",
-        "price": "6.067",
+        "price": 6067,
         "description": "El mejor Ukelele del condado",
         "categoryId": 1,
         "projectId": 6,
@@ -86,7 +86,7 @@
     {
         "id": 7,
         "name": "Repique Murga Cromado",
-        "price": "3.600",
+        "price": 3600,
         "description": "El producto más vendido de la empresa",
         "categoryId": 1,
         "projectId": 5,
@@ -286,6 +286,7 @@
         "discount": 10,
         "categoryId": "1",
         "shipment": true,
+        "description":"hola hola",
         "image": [
             "guitarraVintage.jpg"
         ],

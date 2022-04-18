@@ -25,7 +25,7 @@ router.get("/productos/editar/:id", adminProductController.productEdit)
 
 //Put - actualizar producto
 
-/* router.put("productos/editar/:id", adminProductController.productUpdate) */
+router.put("productos/:id", adminProductController.productUpdate)
 
 
 

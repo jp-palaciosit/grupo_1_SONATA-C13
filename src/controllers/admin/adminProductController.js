@@ -53,18 +53,32 @@ module.exports = {
             producto
         })
     },  
-    /* productUpdate:(req,res)=>{
+     productUpdate:(req,res)=>{
         // 1- Obtener el id del producto
+        let idProducto = +req.params.id 
 
-        // 2- Buscar el produucto a editar
+        // 2 - Buscar el producto a editar y modificar el producto
+        getProducts.forEach(producto => {
+            if(producto.id === idProducto){
+                // para modificar todos los valores del objeto
+                producto.name = req.body.name
+                producto.price = req.body.price
+                producto.discount = req.body.discount
+                producto.categoryId = req.body.categoryId
+                producto.stock = req.body.stock ? true : false
+                producto.shipment = req.body.shipment ? true : false
+                producto.description = req.body.description
 
-        // 3- Modificar el producto
+            }
+        });
 
-        // 4- Guardar los cambios
+        // 3- Guardar los cambios
+        writeProducts(getProducts)
 
-        // 5 - Respuesta
+        // 4 - Respuesta
+        res.redirect("/admin/productos")
     },
-    productDelete:(req,res)=>{
+    /*productDelete:(req,res)=>{
 
     },
     productSearch:(req,res)=>{

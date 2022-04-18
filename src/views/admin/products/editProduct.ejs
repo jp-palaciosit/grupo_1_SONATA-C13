@@ -2,7 +2,7 @@
 <body>
     <%-include("../partials/header")%>
     <main class="container min-vh-100 pt-5">
-        <form action="/admin/productos" method="post">
+        <form action="/admin/productos/<%=producto.id%>?_method=put" method="post">
               <fieldset class="rounded border w-75 mx-auto p-4" id="formulario-crear-fondo" >
                   <legend class="text-center">Editar producto:<%=producto.name%> </legend>
                   <div class="caja-contenedora-formAgregar">
