@@ -2,11 +2,11 @@
     {
         "id": 1,
         "name": "Guitarra Gibson",
-        "price": 173.309,
+        "price": 173309,
         "description": "Inspired by Gibson Les Paul Standard 50s de caoba heritage cherry",
         "categoryId": 1,
         "projectId": 1,
-        "discount":10,
+        "discount": "10",
         "shipment": true,
         "image": [
             "guitarraGibson.jpg"
@@ -16,16 +16,16 @@
     {
         "id": 2,
         "name": "Bateria Mapex Prodigy",
-        "price": 14159,
-        "description": "Excelente batería MAPEX PRODIGY, con acabado recubierto",
-        "categoryId": 1,
+        "price": "1000000",
+        "description": "Excelente!",
+        "categoryId": "1",
         "projectId": 2,
-        "discount":10,
-        "shipment": false,
+        "discount": "5",
+        "shipment": true,
         "image": [
             "bateria.jpg"
         ],
-        "stock": false
+        "stock": true
     },
     {
         "id": 3,
@@ -48,7 +48,7 @@
         "description": "Este pedal de efectos permite alterar el sonido de tu instrumento y explorar nuevas posibilidades sonoras",
         "categoryId": 1,
         "projectId": 4,
-        "discount":10,
+        "discount": 10,
         "shipment": "",
         "image": [
             "pedalEfecto1.jpg"
@@ -286,7 +286,7 @@
         "discount": 10,
         "categoryId": "1",
         "shipment": true,
-        "description":"hola hola",
+        "description": "hola hola",
         "image": [
             "guitarraVintage.jpg"
         ],

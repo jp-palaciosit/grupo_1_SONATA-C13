@@ -53,7 +53,7 @@ module.exports = {
             producto
         })
     },  
-     productUpdate:(req,res)=>{
+    productUpdate:(req,res)=>{
         // 1- Obtener el id del producto
         let idProducto = +req.params.id 
 
