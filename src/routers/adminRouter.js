@@ -8,34 +8,27 @@ const adminProductController = require("../controllers/admin/adminProductControl
 // Get - index
 router.get("/", adminController.index)
 
+router.get("/producto/:id", adminController.product)
+
 /* CRUD  PRODUCTS*/
 
 // Get - Lista productos
-router.get("/productos", adminProductController.list)
+router.get("/products", adminProductController.list)
 
 // Get - Agregar producto (Pero no los crea)
-router.get("/productos/agregar", adminProductController.productAdd)
+router.get("/products/create", adminProductController.productAdd)
 
 // Post - Crear un producto en DB
-router.post("/productos", adminProductController.productCreate)
+router.post("/products", adminProductController.productCreate)
+
 
 // Get - Editar producto
 
-router.get("/productos/editar/:id", adminProductController.productEdit)
+router.get("/products/edit/:id", adminProductController.productEdit)
 
 //Put - actualizar producto
 
-router.put("/productos/:id", adminProductController.productUpdate)
-
-
-
-/*
-
-router.get("/productos", adminProductController.productEdit)
-
-router.get("/productos", adminProductController.list)
-
-router.get("/productos", adminProductController.list) */
+router.put("/products/:id", adminProductController.productUpdate)
 
 
 

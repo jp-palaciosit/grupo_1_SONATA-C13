@@ -18,23 +18,25 @@
                 </thead>
                 <tbody>
                     <% productos.forEach(producto => { %>
+                        <a href="/products/productDetail/<%-producto.id%>">
                         <tr>
-                            <th scope="row"><%-producto.id%></td>
-                            <td><%-producto.name%></td>
-                            <td><%-producto.price%></td>
-                            <td><%-producto.categoryId%></td>
-                            <!-- <td><%-producto.projectId%></td> -->
-                            <td><%-producto.stock%></td>
-                            <!-- <td><%-producto.shipment%></td> -->
-                            <td>
-                                <a href="/admin/productos/editar/<%-producto.id%> " class="btn" id="btn-admin-modificacion">
-                                    <i class="fa-solid fa-pen-to-square"></i>
-                                </a>
-                                <a href="" class="btn" id="btn-admin-borrar">
-                                    <i class="fa-regular fa-trash-can"></i>
-                                </a>
-                            </td>
-                        </tr> 
+                                <th scope="row"><%-producto.id%></td>
+                                <td><%-producto.name%></td>
+                                <td><%-producto.price%></td>
+                                <td><%-producto.categoryId%></td>
+                                <!-- <td><%-producto.projectId%></td> -->
+                                <td><%-producto.stock%></td>
+                                <!-- <td><%-producto.shipment%></td> -->
+                                <td>
+                                    <a href="/admin/products/edit/<%-producto.id%> " class="btn" id="btn-admin-modificacion">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </a>
+                                    <a href="" class="btn" id="btn-admin-borrar">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </a>
+                                </td>
+                        </tr>
+                        </a> 
 
                     <% }) %>                
 

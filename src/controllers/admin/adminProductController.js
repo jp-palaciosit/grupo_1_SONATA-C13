@@ -37,7 +37,7 @@ module.exports = {
         
         /* 4) Devolver una vista(Redireccionar) correspondiente */
 
-            res.redirect("/admin/productos")
+            res.redirect("/admin/products")
         },
     productEdit:(req,res)=>{
         // 1- Obtener el id del producto
