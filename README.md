@@ -65,6 +65,12 @@ Me llamo Luis, soy una persona divertida, apasionada por la tecnologia y la musi
 <h2>Paginas de Trello:</h2>  
 <a href="https://trello.com/grupon1c13/" target="_blank">Click Acá</a>
 <br>
+<h2>Retrospectivas: </h2>  
+<a href="../retros/sprint_i.md" target="_blank">Sprint I</a>
+<a href="https://trello.com/grupon1c13/" target="_blank">Sprint II</a>
+<a href="https://trello.com/grupon1c13/" target="_blank">Sprint III</a>
+<a href="https://trello.com/grupon1c13/" target="_blank">Sprint IX</a>
+<br>
 <h2>Paginas de Referencia:</h2>  
  
 🌐 1. <a href="https://todomusica.com.ar/" target="_blank">TodoMusica</a>

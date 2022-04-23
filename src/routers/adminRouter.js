@@ -10,6 +10,9 @@ router.get("/", adminController.index)
 
 /* router.get("/producto/:id", adminController.product) */
 
+
+
+
 /* CRUD  PRODUCTS*/
 
 // Get - Lista productos
@@ -30,6 +33,6 @@ router.get("/products/edit/:id", adminProductController.productEdit)
 
 router.put("/products/:id", adminProductController.productUpdate)
 
-
+router.delete("/products/eliminar/:id", adminProductController.productDelete)
 
 module.exports = router;

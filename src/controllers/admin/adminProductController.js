@@ -76,12 +76,26 @@ module.exports = {
         writeProducts(getProducts)
 
         // 4 - Respuesta
-        res.redirect("/admin/productos")
+        res.redirect("/admin/products")
     },
-    /*productDelete:(req,res)=>{
-
+    productDelete:(req,res)=>{
+        //1 - Obtener el id del producto a eliminar
+        let idProducto = +req.params.id
+        //2 - Buscar el producto dentro del array y eliminarlo
+        getProducts.forEach(product =>{
+            if(product.id === idProducto){
+                //obtener la ubicacion(indice del producto a enviar)
+                let productDeleteIndex = getProducts.indexOf(product)
+                //Elimino el producto del array
+                getProducts.splice(productDeleteIndex, 1)
+            }
+        })
+        //3 - Sobreescribir el json(guardar los cambios).
+        writeProducts(getProducts)
+        //4 - Enviar respuesta
+        res.redirect("/admin/products")
     },
-    productSearch:(req,res)=>{
+    /*productSearch:(req,res)=>{
 
     } */
 }
