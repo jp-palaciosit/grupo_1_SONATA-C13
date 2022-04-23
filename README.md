@@ -66,13 +66,13 @@ Me llamo Luis, soy una persona divertida, apasionada por la tecnologia y la musi
 <a href="https://trello.com/grupon1c13/" target="_blank">Trello</a>
 <br>
 <h2>Retrospectiva de Sprint: </h2>  
-[Sprint I](./retros.md/sprint_I.md)
+[Sprint I](./retros.md/sprint1.md)
 <br>
-[Sprint II](./retros.md/sprint_III.md)
+[Sprint II](./retros.md/sprint2.md)
 <br>
-[Sprint III](./retros.md/sprint_III.md)
+[Sprint III](./retros.md/sprint3.md)
 <br>
-[Sprint IX](./retros.md/sprint_IX.md)
+[Sprint IX](./retros.md/sprint4.md)
 <br>
 <h2>Paginas de Referencia:</h2>  
  
