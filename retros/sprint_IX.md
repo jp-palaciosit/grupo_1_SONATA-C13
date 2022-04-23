@@ -1,6 +1,6 @@
 <div align="center">
     <img width="250px" src="/public/img/logo/logo1.png" alt="Logo Sonata">
-    <h1 text-aling="center" style="font-size: 60px;"> :partitura:SONATA <h1>
+    <h1 text-aling="center" style="font-size: 60px;"> 🎼SONATA <h1>
 </div>
 
 <h2>💪 SEGUIR HACIENDO:</h2>
