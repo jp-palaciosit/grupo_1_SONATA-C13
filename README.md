@@ -62,17 +62,17 @@ Me gusta la programacion y la creacion de videojuegos.
 Me llamo Luis, soy una persona divertida, apasionada por la tecnologia y la musica. Con ganas de aprender siempre cosas nuevas.
 </p>
 
-<h2>Paginas de Trello:</h2>  
-<a href="https://trello.com/grupon1c13/" target="_blank">Click Acá</a>
+<h2>Organizacion de trabajo:</h2>  
+<a href="https://trello.com/grupon1c13/" target="_blank">Trello</a>
 <br>
-<h2>Retrospectivas: </h2>  
-<a href="/retros/sprint_I.md" target="_blank">Sprint I</a>
+<h2>Retrospectiva de Sprint: </h2>  
+[Sprint I](./retros.md/sprint_I.md)
 <br>
-<a href="/retros/sprint_II.md" target="_blank">Sprint II</a>
+[Sprint II](./retros.md/sprint_III.md)
 <br>
-<a href="/retros/sprint_III.md" target="_blank">Sprint III</a>
+[Sprint III](./retros.md/sprint_III.md)
 <br>
-<a href="/retros/sprint_IX.md" target="_blank">Sprint IX</a>
+[Sprint IX](./retros.md/sprint_IX.md)
 <br>
 <h2>Paginas de Referencia:</h2>  
  
