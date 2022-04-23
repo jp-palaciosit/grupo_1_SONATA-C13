@@ -8,7 +8,7 @@ const adminProductController = require("../controllers/admin/adminProductControl
 // Get - index
 router.get("/", adminController.index)
 
-router.get("/producto/:id", adminController.product)
+/* router.get("/producto/:id", adminController.product) */
 
 /* CRUD  PRODUCTS*/
 
