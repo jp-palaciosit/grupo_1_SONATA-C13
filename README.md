@@ -67,13 +67,13 @@ Me llamo Luis, soy una persona divertida, apasionada por la tecnologia y la musi
 <br>
 <h2>Retrospectiva de Sprint:</h2>
 
-[Sprint 1](./retros/sprint_I.md)
+[Sprint 1](./retro/sprint_I.md)
 
-[Sprint 2](./retros/sprint_II.md)
+[Sprint 2](./retro/sprint_II.md)
 
-[Sprint 3](./retros/sprint_III.md)
+[Sprint 3](./retro/sprint_III.md)
 
-[Sprint 4](./retros/sprint_IX.md)
+[Sprint 4](./retro/sprint_IX.md)
 
 <h2>Paginas de Referencia:</h2>  
  
