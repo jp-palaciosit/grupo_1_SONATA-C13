@@ -65,15 +65,16 @@ Me llamo Luis, soy una persona divertida, apasionada por la tecnologia y la musi
 <h2>Organizacion de trabajo:</h2>  
 <a href="https://trello.com/grupon1c13/" target="_blank">Trello</a>
 <br>
-<h2>Retrospectiva de Sprint: </h2>  
-[Sprint I](./retros.md/sprint1.md)
-<br>
-[Sprint II](./retros.md/sprint2.md)
-<br>
-[Sprint III](./retros.md/sprint3.md)
-<br>
-[Sprint IX](./retros.md/sprint4.md)
-<br>
+## Retrospectiva de Sprint:
+
+[Sprint 1](./retros.md/sprint1.md)
+
+[Sprint 2](./retros.md/sprint2.md)
+
+[Sprint 3](./retros.md/sprint3.md)
+
+[Sprint 4](./retros.md/sprint4.md)
+
 <h2>Paginas de Referencia:</h2>  
  
 🌐 1. <a href="https://todomusica.com.ar/" target="_blank">TodoMusica</a>
