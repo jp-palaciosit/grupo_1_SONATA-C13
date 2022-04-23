@@ -1,9 +1,9 @@
 
 <div align="center">
-    <img width="250px" src="/public/img/logo/logo1.png" alt="Logo Sonata">
     <h1 text-aling="center" style="font-size: 60px;"> 🎼SONATA <h1>
+    <h1 text-aling="center" style="font-size: 50px;">Sprint I<h1>
 </div>
-<h1 text-aling="center" style="font-size: 50px;">Sprint I<h1>
+
 <h2>💪 SEGUIR HACIENDO:</h2>
 <p>*Comunicandonos.</p>
 <p>*Practicas por separado para compararlas luego.</p>
