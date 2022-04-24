@@ -17,5 +17,43 @@
         "passwd": "aaaaaaaaaaaaaaaa",
         "captcha": "",
         "terminosCoindiciones": "on"
+    },
+    {
+        "id": 2,
+        "name": "Juan Pablo",
+        "lastName": "Palacios",
+        "email": "juanchii10p@gmail.com",
+        "passwd": "123456",
+        "captcha": "",
+        "terminosCoindiciones": "on"
+    },
+    {
+        "id": 3,
+        "name": "Juan Pablo",
+        "lastName": "Palacios",
+        "email": "juanchii10p@gmail.com",
+        "passwd": "123456",
+        "captcha": "",
+        "terminosCoindiciones": "on"
+    },
+    {
+        "id": 4,
+        "name": "Juan Pablo",
+        "lastName": "Palacios",
+        "email": "juanchii10p@gmail.com",
+        "passwd": "1111",
+        "captcha": "",
+        "terminosCoindiciones": "on",
+        "avatar": ""
+    },
+    {
+        "id": 5,
+        "name": "Juan Pablo",
+        "lastName": "Palacios",
+        "email": "juanchii10p@gmail.com",
+        "passwd": "1234",
+        "captcha": "",
+        "terminosCoindiciones": "on",
+        "avatar": ""
     }
 ]

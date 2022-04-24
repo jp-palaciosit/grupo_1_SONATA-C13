@@ -24,6 +24,7 @@ module.exports = {
             let newProduct = {
                 ...req.body,
                 id: lastId +1,
+                image: req.file ? req.file.filename : "default-image.png" ,
                 shipment: req.body.shipment ? true: false,
                 stock: req.body.stock ? true: false
             }
@@ -64,6 +65,7 @@ module.exports = {
                 producto.name = req.body.name
                 producto.price = req.body.price
                 producto.discount = req.body.discount
+                producto.image = req.body.image,
                 producto.categoryId = req.body.categoryId
                 producto.stock = req.body.stock ? true : false
                 producto.shipment = req.body.shipment ? true : false

@@ -280,16 +280,8 @@
         "stock": true
     },
     {
-        "id": 21,
-        "name": "Huevos de pascua",
-        "price": "2000",
-        "discount": 10,
-        "categoryId": "1",
-        "shipment": true,
-        "description": "hola hola",
-        "image": [
-            "guitarraVintage.jpg"
-        ],
-        "stock": true
+        "stock": false,
+        "shipment": false,
+        "id": 21
     }
 ]

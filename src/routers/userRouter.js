@@ -1,6 +1,7 @@
 const express = require("express")
 const router = express.Router()
 const userController = require("../controllers/userController")
+const uploadFile = require("../middlewares/uploadAvatar")
 
 /* GET- ruta login */
 router.get("/", userController.login)
@@ -15,8 +16,10 @@ router.get("/registro/correctamente", userController.registrado)
 /* GET - ruta recuperar passwd */
 
 router.get("/olvide-mi-passwd", userController.recPasswd)
-module.exports = router
+
 
 /* POST - Ruta crear nuevo registro de usuario*/
 
-router.post("/registro", userController.processRegister)
+router.post("/registro", uploadFile.single("avatar") ,userController.processRegister)
+
+module.exports = router

@@ -2,7 +2,7 @@
 <body>
     <%-include("../partials/header")%>
     <main class="container min-vh-100 pt-5">
-      <form action="/admin/products" method="post">
+      <form action="/admin/products" method="post" enctype="multipart/form-data">
             <fieldset class="rounded border w-75 mx-auto p-4" id="formulario-crear-fondo" >
                 <legend class="text-center">AGREGAR PRODUCTO</legend>
 				<div class="caja-contenedora-formAgregar">
@@ -26,7 +26,12 @@
 							<option value="2">Accesorios</option>
 						</select>
 					</div>
+					<div class="input-group mb-3 input-imagen-producto">
+						<label class="input-group-text" for="inputGroupFile01">Upload</label>
+						<input type="file" class="form-control" name="image" id="inputGroupFile01">
+					</div>
 				</div>
+				
 				<div class="div-StockyEnvios-agregar">
 					<div class="form-check mb-3 form-switch" id="add-product-stock">
 						<input class="form-check-input" name="stock" type="checkbox" role="switch" id="stock"> 

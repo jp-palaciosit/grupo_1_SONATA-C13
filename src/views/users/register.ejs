@@ -9,7 +9,7 @@
             <h1 class="h1-crearCuenta">Crear cuenta</h1>
             <hr>
             <article class="article-register">
-                <form action="/usuario/registro" method="post">
+                <form action="/usuario/registro" method="post" enctype="multipart/form-data">
                     <label for="name">Nombre</label>
                     <input type="text" name="name" id="name" value="" placeholder="  Ingrese su nombre" class="input-empuje" required>
                     
@@ -21,6 +21,9 @@
                     
                     <label for="passwd">Contraseña</label>
                     <input type="password" name="passwd" id="passwd" value="" placeholder="  Ingrese su contraseña" class="input-empuje"  required>
+
+                    <label for="file">Ingrese un avatar</label>
+                    <input type="file" name="avatar" id="file" value=""  class="input-empuje input-imagen">
                     
                     <label for="captcha" class="checkbox1">Captcha
                         <span class="captcha-robot">
