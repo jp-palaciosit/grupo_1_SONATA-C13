@@ -25,6 +25,8 @@ module.exports = {
     processRegister: (req, res) =>{
         /* Haciendo la comparacion si se recibe nuevo dato y creando un objeto */
 
+        res.send(req.body)
+
         let lastId = 0
         getUsers.forEach(user => {
             if(user.id > lastId){
@@ -38,7 +40,8 @@ module.exports = {
             email: req.body.email,
             passwd: req.body.passwd,
             captcha: req.body.captcha,
-            terminosCoindiciones: req.body.terCondi
+            terminosCoindiciones: req.body.terCondi,
+            avatar: req.file ? req.file.filename : "default-image.png"
         }
 
         /* Pusheando datos recibidos en el array */

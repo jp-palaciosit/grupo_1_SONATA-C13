@@ -19,6 +19,14 @@
 #btn-crearProducto{
     text-align: center;
 }
+.input-imagen-producto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+/*     width: 100%; */
+    max-width: 337px;
+    margin-top: 15px;
+}
 
 @media (min-width: 768px) {
     .div-StockyEnvios-agregar{
@@ -36,6 +44,7 @@
     }
     .caja_separada{
         min-width: 337px;
+
     }
     .caja-text-area{
         display: flex;

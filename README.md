@@ -62,9 +62,25 @@ Me gusta la programacion y la creacion de videojuegos.
 Me llamo Luis, soy una persona divertida, apasionada por la tecnologia y la musica. Con ganas de aprender siempre cosas nuevas.
 </p>
 
-<h2>Paginas de Trello:</h2>  
-<a href="https://trello.com/grupon1c13/" target="_blank">Click Acá</a>
+<h2>Organizacion de trabajo:</h2>  
+<a href="https://trello.com/grupon1c13/" target="_blank">Trello</a>
 <br>
+<h2>Retrospectiva de Sprint:</h2>
+
+[Sprint 1](./retro_daily/sprint_I.md)
+
+[Sprint 2](./retro_daily/sprint_II.md)
+
+[Sprint 3](./retro_daily/sprint_III.md)
+
+[Sprint 4](./retro_daily/sprint_IX.md)
+
+<h2>Daily de Sprint:</h2>
+
+[Sprint 4](./retro_daily/daily_IX.md)
+
+
+
 <h2>Paginas de Referencia:</h2>  
  
 🌐 1. <a href="https://todomusica.com.ar/" target="_blank">TodoMusica</a>

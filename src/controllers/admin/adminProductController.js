@@ -24,6 +24,7 @@ module.exports = {
             let newProduct = {
                 ...req.body,
                 id: lastId +1,
+                image: req.file ? req.file.filename : "default-image.png" ,
                 shipment: req.body.shipment ? true: false,
                 stock: req.body.stock ? true: false
             }
@@ -64,6 +65,7 @@ module.exports = {
                 producto.name = req.body.name
                 producto.price = req.body.price
                 producto.discount = req.body.discount
+                producto.image = req.body.image,
                 producto.categoryId = req.body.categoryId
                 producto.stock = req.body.stock ? true : false
                 producto.shipment = req.body.shipment ? true : false
@@ -76,12 +78,26 @@ module.exports = {
         writeProducts(getProducts)
 
         // 4 - Respuesta
-        res.redirect("/admin/productos")
+        res.redirect("/admin/products")
     },
-    /*productDelete:(req,res)=>{
-
+    productDelete:(req,res)=>{
+        //1 - Obtener el id del producto a eliminar
+        let idProducto = +req.params.id
+        //2 - Buscar el producto dentro del array y eliminarlo
+        getProducts.forEach(product =>{
+            if(product.id === idProducto){
+                //obtener la ubicacion(indice del producto a enviar)
+                let productDeleteIndex = getProducts.indexOf(product)
+                //Elimino el producto del array
+                getProducts.splice(productDeleteIndex, 1)
+            }
+        })
+        //3 - Sobreescribir el json(guardar los cambios).
+        writeProducts(getProducts)
+        //4 - Enviar respuesta
+        res.redirect("/admin/products")
     },
-    productSearch:(req,res)=>{
+    /*productSearch:(req,res)=>{
 
     } */
 }
