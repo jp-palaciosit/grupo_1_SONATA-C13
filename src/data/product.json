@@ -2,26 +2,25 @@
     {
         "id": 1,
         "name": "Guitarra Mayra",
+        "price": 173309,
         "description": "La guitarra del grupo Nº1",
-        "price": 415465.1,
-        "category": "cuerdas",
-        "projectId": 1,
-        "discount": 11,
-        "shipment": "gratis",
+        "categoryId": 1,
+        "discount": 10,
+        "shipment": false,
         "image": [
             "guitarraGibson.jpg"
         ],
-       "stock": false
+        "stock": true
     },
     {
         "id": 2,
         "name": "Bateria Mapex Prodigy",
-        "description": "Platillos Fierros Pdg5254 5 Cuerpos",
-        "price": 177795.0,
-        "category": "percusión",
+        "price": 1000000,
+        "description": "Excelente!",
+        "categoryId": 1,
         "projectId": 2,
-        "discount": 8,
-        "shipment": "gratis",
+        "discount": 5,
+        "shipment": true,
         "image": [
             "bateria.jpg"
         ],
@@ -30,54 +29,54 @@
     {
         "id": 3,
         "name": "Ukelele Soprano Dakota",
-        "description": "Modelo MG21 de madera, de varios colores",
-        "price": 343365.79,
-        "category": "cuerdas",
+        "price": 1891,
+        "description": "Es un producto importado, de primera calidad y el más completodel mercado",
+        "categoryId": 1,
         "projectId": 3,
-        "discount": 18,
-        "shipment": "gratis",
+        "discount": 5,
+        "shipment": true,
         "image": [
             "ukelele.jpg"
+        ],
+        "stock": false
+    },
+    {
+        "id": 4,
+        "name": "Pedal de efecto para instrumento",
+        "price": 29493,
+        "description": "Este pedal de efectos permite alterar el sonido de tu instrumento y explorar nuevas posibilidades sonoras",
+        "categoryId": 1,
+        "projectId": 4,
+        "discount": 10,
+        "shipment": true,
+        "image": [
+            "pedalEfecto1.jpg"
         ],
         "stock": true
     },
     {
-        "id": 4,
-        "name": "Pedal de efecto para instrumento de cuerda",
-        "description": "Maza Fx 1968 ODS dorado",
-        "price": 5064.91,
-        "category": "cuerda",
-        "projectId": 4,
-        "discount": 15,
-        "shipment": "gratis",
-        "image": [
-            "pedalEfecto1.jpg"
-        ],
-        "stock": false
-    },
-    {
         "id": 5,
-        "name": "Micrófono",
-        "description": " Rode NT1-A",
-        "price": 247698.32,
-        "category": "teclado",
+        "name": "Micrófono Rode NT1-A",
+        "price": 85900,
+        "description": "Con este producto lograrás que la reproducción obtenida sea lo más parecida a la original",
+        "categoryId": 1,
         "projectId": 5,
-        "discount": 17,
-        "shipment": "al interior con recargo",
+        "discount": 1,
+        "shipment": true,
         "image": [
             "microfonoRode.jpg"
         ],
-        "stock": false
+        "stock": true
     },
     {
         "id": 6,
         "name": "Organo Musical Teclado",
-        "description": "Mk939 61 Teclas",
-        "price": 24004.72,
-        "category": "teclado",
+        "price": 6067,
+        "description": "El mejor Ukelele del condado",
+        "categoryId": 1,
         "projectId": 6,
-        "discount": 10,
-        "shipment": "al interior con recargo",
+        "discount": 5,
+        "shipment": true,
         "image": [
             "organoMusical.jpg"
         ],
@@ -86,12 +85,12 @@
     {
         "id": 7,
         "name": "Repique Murga Cromado",
-        "description": "Metálico 8 pulgadas",
-        "price": 5384.88,
-        "category": "percusión",
-        "projectId": 7,
-        "discount": 5,
-        "shipment": "al interior con recargo",
+        "price": 3600,
+        "description": "El producto más vendido de la empresa",
+        "categoryId": 1,
+        "projectId": 5,
+        "discount": 10,
+        "shipment": true,
         "image": [
             "repiqueMurga.jpg"
         ],
@@ -99,13 +98,13 @@
     },
     {
         "id": 8,
-        "name": "Armónica Diatónica Cromada",
-        "description": "Dy Air Blusera Afina Do + Estuche",
-        "price": 2582.0,
-        "category": "vientos",
+        "name": "Armonica Diatónica Cromada",
+        "price": 1030,
+        "description": "El producto más vendido del mundo",
+        "categoryId": 1,
         "projectId": 8,
-        "discount": 7,
-        "shipment": "al interior con recargo",
+        "discount": 0,
+        "shipment": true,
         "image": [
             "armonicaDiatonica.jpg"
         ],
@@ -114,12 +113,12 @@
     {
         "id": 9,
         "name": "Xilofón Metalofon 8 Notas",
-        "description": "8 notas, didáctico de madera",
-        "price": 2669.51,
-        "category": "cuerdas",
+        "price": 2450,
+        "description": "El Xilofon más esperado en el país",
+        "categoryId": 1,
         "projectId": 9,
-        "discount": 16,
-        "shipment": "al interior con recargo",
+        "discount": 0,
+        "shipment": true,
         "image": [
             "xilofon.jpg"
         ],
@@ -127,27 +126,27 @@
     },
     {
         "id": 10,
-        "name": "Violin",
-        "description": " Palatino 4/4 Madera",
-        "price": 488085.11,
-        "category": "vientos",
+        "name": "Violin Palatino 4/4 Madera",
+        "price": 7499,
+        "description": "El mejor Violin del continente",
+        "categoryId": 1,
         "projectId": 10,
-        "discount": 11,
-        "shipment": "al interior con recargo",
+        "discount": 5,
+        "shipment": true,
         "image": [
             "violinPalatino.jpg"
         ],
-        "stock": false
+        "stock": true
     },
     {
         "id": 11,
-        "name": "Pandereta Parquer ",
-        "description": "Doble Sonaja",
-        "price": 215076.38,
-        "category": "vientos",
+        "name": "Pandereta Parquer Doble Sonaja",
+        "price": 2150,
+        "description": "La pandereta más vendida en la empresa",
+        "categoryId": 1,
         "projectId": 11,
-        "discount": 9,
-        "shipment": "al interior con recargo",
+        "discount": 2,
+        "shipment": true,
         "image": [
             "panderetaParquer.jpg"
         ],
@@ -155,13 +154,13 @@
     },
     {
         "id": 12,
-        "name": "Triangulo",
-        "description": " Percusión Metálico",
-        "price": 157649.0,
-        "category": "teclado",
+        "name": "Triangulo Percusion Metalico",
+        "price": 699,
+        "description": "El producto más economico de la empresa",
+        "categoryId": 1,
         "projectId": 12,
-        "discount": 12,
-        "shipment": "al interior con recargo",
+        "discount": 3,
+        "shipment": true,
         "image": [
             "trianguloPercusion.jpg"
         ],
@@ -169,27 +168,27 @@
     },
     {
         "id": 13,
-        "name": "Puas Stagg Pack",
-        "description": " Por 20 Calibres",
-        "price": 157853.0,
-        "category": "cuerdas",
+        "name": "Puas Stagg Pack Por 20 Calibres",
+        "price": 715,
+        "description": "La Puas más vendidas en el mercado",
+        "categoryId": 1,
         "projectId": 13,
-        "discount": 16,
-        "shipment": "al interior con recargo",
+        "discount": 3,
+        "shipment": true,
         "image": [
             "puasStagg.jpg"
         ],
-        "stock": false
+        "stock": true
     },
     {
         "id": 14,
-        "name": "Órgano Musical Infantil",
-        "description": "Piano musical 24 Teclas",
-        "price": 150609.36,
-        "category": "teclado",
+        "name": "Organo Musical Infantil",
+        "price": 2990,
+        "description": "El producto del mercado más eficaz",
+        "categoryId": 1,
         "projectId": 14,
-        "discount": 15,
-        "shipment": "al interior con recargo",
+        "discount": 5,
+        "shipment": true,
         "image": [
             "organoMusicalinfantil.jpg"
         ],
@@ -198,54 +197,54 @@
     {
         "id": 15,
         "name": "Kalimba Walter Profesional",
-        "description": "Madera Caoba Negra 17 Notas Acero",
-        "price": 5762.45,
-        "category": "teclado",
+        "price": 6977,
+        "description": "El producto del mercado más eficaz del mercado",
+        "categoryId": 1,
         "projectId": 15,
-        "discount": 9,
-        "shipment": "gratis",
-        "image":[
+        "discount": 5,
+        "shipment": true,
+        "image": [
             "kalimba.jpg"
         ],
-        "stock": false
+        "stock": true
     },
     {
         "id": 16,
-        "name": "Acordeón Para Niños",
-        "description": " 7 Teclas",
-        "price": 268775.26,
-        "category": "percusión",
+        "name": "Acordeón Para Niños 7 Teclas",
+        "price": 3990,
+        "description": "El Acordeón para niños más esperado",
+        "categoryId": 1,
         "projectId": 16,
-        "discount": 19,
-        "shipment": "al interior con recargo",
+        "discount": 3,
+        "shipment": true,
         "image": [
             "acordeonNenes.jpg"
         ],
-        "stock": false
+        "stock": true
     },
     {
         "id": 17,
         "name": "Flauta Dulce Soprano Yamaha",
-        "description": "Yrs-24b Barroca",
-        "price": 1280.07,
-        "category": "vientos",
+        "price": 1950,
+        "description": "La FLauta más vendida en el continente",
+        "categoryId": 1,
         "projectId": 17,
-        "discount": 14,
-        "shipment": "gratis",
+        "discount": 4,
+        "shipment": true,
         "image": [
             "flautaDulce.jpg"
         ],
-        "stock": false
+        "stock": true
     },
     {
         "id": 18,
         "name": "Pedal de efecto para instrumento de cuerda",
-        "description": "Joyo Vintage Overdrive JF-01 verde",
-        "price": 6688.71,
-        "category": "percusión",
+        "price": 17542,
+        "description": "El Pedal con efeto más vendido en Asia",
+        "categoryId": 1,
         "projectId": 18,
-        "discount": 8,
-        "shipment": "al interior con recargo",
+        "discount": 15,
+        "shipment": true,
         "image": [
             "pedalEfecto.jpg"
         ],
@@ -254,28 +253,14 @@
     {
         "id": 19,
         "name": "Guitarra Infantil Sonido Real",
-        "description": "Marca Fibro, Modelo 3782",
-        "price": 166603.08,
-        "category": "vientos",
+        "price": 3980,
+        "description": "La Guitarra Infantil más esperado por el mercado Europeo",
+        "categoryId": 1,
         "projectId": 19,
-        "discount": 19,
-        "shipment": "al interior con recargo",
+        "discount": 6,
+        "shipment": true,
         "image": [
             "guitarraInfantil.jpg"
-        ],
-        "stock": false
-    },
-    {
-        "id": 20,
-        "name": "Guitarra eléctrica SX Vintage Series FTL-50",
-        "description": "telecaster de tilo 2000 2-tone sunburst brillante con diapasón de arce",
-        "price": 35008.27,
-        "category": "teclado",
-        "projectId": 20,
-        "discount": 7,
-        "shipment": "gratis",
-        "image": [
-            "guitarraVintage.jpg"
         ],
         "stock": true
     }

@@ -62,15 +62,14 @@ module.exports = {
         getProducts.forEach(producto => {
             if(producto.id === idProducto){
                 // para modificar todos los valores del objeto
-                producto.name = req.body.name
-                producto.price = req.body.price
-                producto.discount = req.body.discount
+                producto.name = req.body.name,
+                producto.price = req.body.price,
+                producto.discount = req.body.discount,
                 producto.image = req.body.image,
-                producto.categoryId = req.body.categoryId
-                producto.stock = req.body.stock ? true : false
-                producto.shipment = req.body.shipment ? true : false
+                producto.categoryId = req.body.categoryId,
+                producto.stock = req.body.stock ? true : false,
+                /* producto.shipment = req.body.shipment ? true : false */
                 producto.description = req.body.description
-
             }
         });
 

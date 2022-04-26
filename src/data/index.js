@@ -6,7 +6,7 @@ module.exports = {
     getProducts : JSON.parse(fs.readFileSync(path.join(__dirname, "/product.json"), "utf-8")),
 
     /* Metodo para escribir en el .json */
-    writeProducts: (data) =>{ fs.writeFileSync(path.join(__dirname, "/product.json"), JSON.stringify(data))},
+    writeProducts:(data)=>{ fs.writeFileSync(path.join(__dirname, "/product.json"), JSON.stringify(data))},
 
     /* Metodo para leer el .json */
     getUsers: JSON.parse(fs.readFileSync(path.join(__dirname, "/users.json"), "utf-8")),
