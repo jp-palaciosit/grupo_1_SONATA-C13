@@ -263,5 +263,27 @@
             "guitarraInfantil.jpg"
         ],
         "stock": true
+    },
+    {
+        "name": "Juan",
+        "price": "1010",
+        "discount": "2",
+        "categoryId": "Categoría",
+        "stock": true,
+        "shipment": true,
+        "description": "asd",
+        "id": 20,
+        "image": "1651188524368_img_.jpg"
+    },
+    {
+        "name": "Probando Hola",
+        "price": "40",
+        "discount": "5",
+        "categoryId": "Categoría",
+        "stock": false,
+        "shipment": true,
+        "description": "asd",
+        "id": 21,
+        "image": "1651199617537_img_.jpg"
     }
 ]

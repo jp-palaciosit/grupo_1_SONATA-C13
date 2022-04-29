@@ -14,4 +14,5 @@ module.exports = {
     /* Metodo para escribir el .json */
     writeUsers: (data) =>{ fs.writeFileSync(path.join(__dirname, "/users.json"), JSON.stringify(data))}
 
+   
 }

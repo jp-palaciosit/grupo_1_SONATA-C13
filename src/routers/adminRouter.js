@@ -28,7 +28,7 @@ router.get("/products/edit/:id", adminProductController.productEdit)
 
 //Put - actualizar producto
 
-router.put("/products/:id", adminProductController.productUpdate)
+router.put("/products/:id", uploadFile.single("image"), adminProductController.productUpdate)
 
 router.delete("/products/eliminar/:id", adminProductController.productDelete)
 
