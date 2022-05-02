@@ -38,8 +38,11 @@
                         </div>
                         <div class="description">
                             <h3><%-producto.name%></h3>
-                            <span class="descuento-envios"><%-producto.discount%><%-producto.shipment%></span>
-                            <p class="precio">$ <%-producto.price%></p>
+                            <span class="descuento-envios">
+                                <%-producto.discount !== 0 ? `${producto.discount} % OFF` : ""%>
+                                <%-producto.shipment ? "Envios gratis" : "" %>
+                            </span>
+                            <p class="precio">$ <%- thousand(producto.price - producto.price * producto.discount / 100) %></p>
                             <!-- <a href="productCart" class="ancla-carrito"> -->
                             <i class="fa-solid fa-cart-shopping"></i>
                             <!-- </a> -->

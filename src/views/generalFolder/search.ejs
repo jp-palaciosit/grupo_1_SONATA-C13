@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include("../partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/productDetail.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+<body>
+    <%-include("../partials/header.ejs")%>
+    <main>
+        <section class="section-productos">            
+            <div class="articulos-desktop">
+                <% if (searchResult.length > 0) { %>
+                    <%searchResult.forEach(producto => { %>
+                        <a href="/producto/<%-producto.id %>">
+                            <article>
+                                <div class="div-img-home">
+                                    <img src="img/productos/<%-producto.image%>"   alt="<%-producto.name%>" class="producto-home">
+                                </div>
+                                <div class="description">
+                                    <h3><%-producto.name%></h3>
+                                    <span class="descuento-envios">
+                                        <%-producto.discount !== 0 ? `${producto.discount} % OFF` : ""%>
+                                        <%-producto.shipment ? "Envios gratis" : "" %>
+                                    </span>
+                                    <p class="precio">$ <%- thousand(producto.price - producto.price * producto.discount / 100) %></p>
+                                    <!-- <a href="productCart" class="ancla-carrito"> -->
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <!-- </a> -->
+                                </div>                               
+                            </article>
+                        </a>
+                        <% }) %>
+                <% } else { %>
+                <div style="width: 100%; height: 350px; background-color:transparent; display: flex; justify-content: center; align-items: center;">
+                    <h2 style="color: aqua; text-align: center;">No hay resultados en su busqueda: <%=keyword %></h2>
+                </div>
+                <% } %>
+            </div>
+            <!-- <div class="articulos-desktop">
+                
+            </div>   -->          
+        </section>
+    </main>
+    <%-include("../partials/footer.ejs") %>
+</body>
+</html>

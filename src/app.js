@@ -33,7 +33,7 @@ const adminRouter = require("./routers/adminRouter")
 
 /* Middlewares de Rutas (pedidos) */
 app.use("/", indexRouter) // Home - contact
-app.use("/usuario", userRouter) // listado, detalle
-app.use("/producto", productRouter) // Login, Registro, Perfil
+app.use("/usuario", userRouter) // Login, Registro, Perfil
+app.use("/producto", productRouter) // listado, detalle
 app.use("/admin", adminRouter) // Admin, ABM products, ABM proyectos(emprendimientos)
 

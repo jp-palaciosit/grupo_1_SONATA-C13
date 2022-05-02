@@ -13,20 +13,12 @@
                         <img src="/img/productos/<%-product.image%>" alt="<%-product.name%>">
                     </div>
                     <article class="produc-detail">
-                        <!-- <div>
-                            <span>Compartir</span>
-                            <ul>
-                                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                                <li><a href=""><i class="fa-brands fa-facebook-square"></i></a></li>
-                                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
-                            </ul>
-                        </div> -->
                         <div class="container">
                             <div class="precio">
-                                <p class="producto-precio">$ <%-product.price%> </p>
-                                <p class="producto-anterior">$40.500</p>
+                                <p class="producto-precio">$ <%-thousand(product.price)%> </p>
+                                <p class="producto-anterior"><%-thousand(product.price + product.price * product.discount / 100) %></p>
                             </div>
-                            <p class="producto-descuento"><%-product.discount%></p>
+                            <p class="producto-descuento"><%-product.discount ? `${product.discount}% OFF` : ""%></p>
                         </div>
                         <article class="redes-sociales-main">
                             <h4>Compartir</h4>
@@ -38,21 +30,16 @@
                         </article>
                         
                         <div class="botones">
-                            <!-- <button class="span-comprar">
-                                <a href="" class="det-producto">Comprar</a>
-                            </button> -->
                             <div class="description-detalle">
                                 <p><%-product.description%> </p>
-                            </div>
-                        
-                        
+                            </div>                       
                             <button type="submit" class="btn-inicio">
                                 <p class="button-comprar">COMPRAR</p>
                                 <span class="span1"></span>
                                 <span class="span2"></span>
                                 <span class="span3"></span>
                                 <span class="span4"></span>
-                        </button>
+                            </button>
                             <span class="caja-carrito">
                                 <a href="productCart" class="det-carrito">Agregar Carrito</a>
                             </span>
