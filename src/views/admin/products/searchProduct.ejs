@@ -1,0 +1,57 @@
+<%-include("../partials/head")%> 
+<body id="body-listadoProducto">
+    <%-include("../partials/header")%>
+    <main class="container min-vh-100 pt-5" id="main-listadoProducto">
+        <div class="div-caja-table">
+            <table class="table table-striped table-hover" id="id-tablet-lista">
+                <% if (searchResult.length > 0) { %>
+                    <thead>
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Categoria</th>
+                            <!-- <th scope="col">Emprendimiento</th> -->
+                            <th scope="col">stock</th>
+                            <!-- <th scope="col">Envio Gratis</th> -->
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% searchResult.forEach(producto => { %>
+                            <a href="/products/productDetail/<%-producto.id%>">
+                            <tr>
+                                <th scope="row"><%-producto.id%></td>
+                                <td><%-producto.name%></td>
+                                <td><%-producto.price%></td>
+                                <td><%-producto.categoryId%></td>
+                                <!-- <td><%-producto.projectId%></td> -->
+                                <td><%-producto.stock%></td>
+                                <!-- <td><%-producto.shipment%></td> -->
+                                <td>
+                                    <a href="/admin/products/edit/<%-producto.id%> " class="btn" id="btn-admin-modificacion">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </a>
+                                    <form action="/admin/products/eliminar/<%-producto.id%>?_method=delete" method="post">
+                                        <button type="submit" class="btn" id="btn-admin-borrar"> 
+                                            <i class="fa-regular fa-trash-can"></i>
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                            </a> 
+                        <% }) %>
+                    </tbody>   
+                <% } else { %>     
+                    <div>
+                        <h2>El producto <%-keyword%>  no se encuentra en la base de datos</h2>
+                    </div>            
+                <% } %>  
+            </table>
+        </div>
+    </main>
+    <%-include("../partials/footer")%> 
+      
+      <%-include("../partials/script")%> 
+</body>
+</html>

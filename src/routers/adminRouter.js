@@ -8,6 +8,8 @@ const uploadFile = require("../middlewares/uploadProductImg")
 // Get - index
 router.get("/", adminController.index)
 
+router.get("/search", adminController.search)
+
 /* router.get("/producto/:id", adminController.product) */
 
 /* CRUD  PRODUCTS*/
@@ -31,5 +33,6 @@ router.get("/products/edit/:id", adminProductController.productEdit)
 router.put("/products/:id", uploadFile.single("image"), adminProductController.productUpdate)
 
 router.delete("/products/eliminar/:id", adminProductController.productDelete)
+
 
 module.exports = router;

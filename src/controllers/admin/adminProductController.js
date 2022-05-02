@@ -96,7 +96,7 @@ module.exports = {
         //4 - Enviar respuesta
         res.redirect("/admin/products")
     },
-    /*productSearch:(req,res)=>{
+    productSearch:(req,res)=>{
 
-    } */
+    }
 }
