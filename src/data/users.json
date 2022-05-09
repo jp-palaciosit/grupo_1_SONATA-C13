@@ -498,5 +498,35 @@
         "captcha": "pl.home.Trippledex",
         "terminosyCondiciones": "convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel",
         "avatar": "https://robohash.org/quihicenim.png?size=30x30&set=set1"
+    },
+    {
+        "id": 51,
+        "name": "Juan Pablo",
+        "lastName": "Palacios",
+        "email": "juanchii10p@gmail.com",
+        "passwd": "123456789",
+        "captcha": "",
+        "terminosCoindiciones": "on",
+        "avatar": "1652073607046_img_.jpg"
+    },
+    {
+        "id": 52,
+        "name": "Juan Pablo",
+        "lastName": "Palacios",
+        "email": "juanchii.palacios@gmail.com",
+        "passwd": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "captcha": "",
+        "terminosCoindiciones": "on",
+        "avatar": "default-image.png"
+    },
+    {
+        "id": 53,
+        "name": "Hola Bien bien",
+        "lastName": "Palacios",
+        "email": "juanchi@gmail.com",
+        "passwd": "1111111111111111",
+        "captcha": "",
+        "terminosCoindiciones": "on",
+        "avatar": "default-image.png"
     }
 ]

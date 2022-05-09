@@ -8,23 +8,35 @@
 				<div class="caja-contenedora-formAgregar">
 					<div class="mb-3 col-md-6 caja_separada">
 						<label for="name" class="form-label">Nombre del producto</label>
-						<input type="text" name="name" class="form-control" id="name" placeholder="Ej: Guitarra Gibson">
+						<input type="text" name="name" class="form-control" id="name" placeholder="Ej: Guitarra Gibson" value="<%= locals.old && old.name ? old.name : "" %>">
+						<% if (locals.errors && errors.name) { %>
+							<p style="color: red;"><%= errors.name.msg %>  </p>
+						<% } %>
 					</div>
 					<div class="mb-3 col-md-6 caja_separada">
 						<label for="price" class="form-label">Precio</label>
-						<input type="number" name="price" class="form-control" id="price" placeholder="Ej: 135000">
+						<input type="number" name="price" class="form-control" id="price" placeholder="Ej: 135000" value="<%= locals.old && old.price ? old.price : "" %>">
+						<% if (locals.errors && errors.price) { %>
+							<p style="color: red;"><%= errors.price.msg %>  </p>
+						<% } %>
 					</div>
 					<div class="mb-3 col-md-6 caja_separada">
 						<label for="discount" class="form-label">Descuento</label>
-						<input type="number" name="discount" class="form-control" id="discount" placeholder="Ej: 5000">
+						<input type="number" name="discount" class="form-control" id="discount" placeholder="Ej: 5000" value="<%= locals.old && old.discount ? old.discount : "" %>">
+						<% if (locals.errors && errors.discount) { %>
+							<p style="color: red;"><%= errors.discount.msg %>  </p>
+						<% } %>
 					</div>
 					<div class="mb-3 col-md-6 caja_separada">
 						<label for="category" class="form-label">Categoria</label>
 						<select name="categoryId" class="form-select" id="category" aria-label="Default select example">
-							<option selected hidden>Categoría</option>
-							<option value="1">Instrumento</option>
-							<option value="2">Accesorios</option>
+							<option selected hidden value="">Categoría</option>
+							<option value="instrumento" <%= locals.old && old.categoryId === "instrumento" ? "selected" : ""  %> >Instrumento</option>
+							<option value="accesorios" <%= locals.old && old.categoryId === "accesorios" ? "selected" : ""  %>>Accesorios</option>
 						</select>
+						<% if (locals.errors && errors.categoryId) { %>
+							<p style="color: red;"><%= errors.categoryId.msg %>  </p>
+						<% } %>
 					</div>
 					<div class="input-group mb-3 input-imagen-producto">
 						<label class="input-group-text" for="inputGroupFile01">Upload</label>
@@ -34,12 +46,18 @@
 				
 				<div class="div-StockyEnvios-agregar">
 					<div class="form-check mb-3 form-switch" id="add-product-stock">
-						<input class="form-check-input" name="stock" type="checkbox" role="switch" id="stock"> 
-						<label class="form-check-label" for="stock" id="label-form-agregar">Stock disponible</label>		
+						<input class="form-check-input" name="stock" type="checkbox" role="switch" id="stock" value="<%= locals.old && old.stock ? old.stock : "" %>">	
+						<label class="form-check-label" for="stock" id="label-form-agregar">Stock disponible</label>
+						<% if (locals.errors && errors.stock) { %>
+							<p style="color: red;"><%= errors.stock.msg %></p>
+						<% } %>		
 					</div>
 					<div class="form-check mb-3 form-switch" id="add-product-envio">
-						<input class="form-check-input" name="shipment" type="checkbox" role="switch" id="envio"> 
+						<input class="form-check-input" name="shipment" type="checkbox" role="switch" id="envio" value="<%= locals.old && old.shipment ? old.shipment : "" %>">
 						<label class="form-check-label" for="envio" id="label-form-agregar">Envios gratis</label>
+						<% if (locals.errors && errors.shipment) { %>
+							<p style="color: red;"><%= errors.shipment.msg %></p>
+						<% } %>
 					</div>
 				</div>
 				<div class="mb-3 caja-text-area">

@@ -4,6 +4,7 @@ const router = express.Router()
 const adminController = require("../controllers/admin/adminController")
 const adminProductController = require("../controllers/admin/adminProductController")
 const uploadFile = require("../middlewares/uploadProductImg")
+const validateAddProduct = require("../validations/adminAddProduct")
 
 // Get - index
 router.get("/", adminController.index)
@@ -21,7 +22,7 @@ router.get("/products", adminProductController.list)
 router.get("/products/create", adminProductController.productAdd)
 
 // Post - Crear un producto en DB
-router.post("/products", uploadFile.single("image") ,adminProductController.productCreate)
+router.post("/products", uploadFile.single("image"), validateAddProduct ,adminProductController.productCreate)
 
 
 // Get - Editar producto
