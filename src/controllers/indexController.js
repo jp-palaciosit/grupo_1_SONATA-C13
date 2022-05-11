@@ -11,12 +11,15 @@ const removeAccents = (str) => {
  
 module.exports = {
     index:(req, res) => {
-        res.render("generalFolder/principal")
+        res.render("generalFolder/principal", {
+            session: req.session
+        })
     },
     home:(req, res) => {
         res.render("generalFolder/home",{
             producto:getProducts,
-            thousand
+            thousand, 
+            session: req.session
         })
     },
     details:(req, res) =>{
@@ -25,7 +28,8 @@ module.exports = {
         res.render("products/productDetail",{
             title: idProducto.name,
             producto: idProducto,
-            thousand
+            thousand,
+            session: req.session
         })
     },
     search:(req, res)=>{
@@ -39,7 +43,8 @@ module.exports = {
         res.render("generalFolder/search",{
             searchResult,
             keyword: req.query.keywords,
-            thousand
+            thousand,
+            session: req.session
         } )
 
         

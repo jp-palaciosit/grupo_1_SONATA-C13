@@ -4,36 +4,51 @@ const {validationResult} = require("express-validator")
 module.exports = {
     login: (req, res)=>{
         res.render("users/login",{
-            title:"Login"
+            title:"Login",
+            session: req.session
         })
     },
     //Simulacion de logeo
     loginProcess:(req, res)=>{
         let errors = validationResult(req)
         if(errors.isEmpty()){
-            res.redirect("/home")
+           let user = getUsers.find(user => user.email === req.body.email)
+             
+           req.session.userActive = {
+               id: user.id,
+               name: user.name,
+               email: user.email,
+               avatar: user.avatar
+           }
+            res.locals.user = req.session.userActive
+
+            res.redirect("/")
         }
         else{
             res.render("users/login",{
                 title:"Login",
-                errors: errors.mapped()
+                errors: errors.mapped(),
+                session: req.session
             })
         }
     },
     register: (req, res)=>{
         res.render("users/register", {
-            title: "Register"
+            title: "Register",
+            session: req.session
         })
 
     },
     recPasswd: (req, res)=>{
         res.render("users/recuperarContra",{
-            title:"Rec_Passwd"
+            title:"Rec_Passwd",
+            session: req.session
         })
     },
     registrado:(req, res)=>{
         res.render("users/datosUser",{
-            title: "Gracias"
+            title: "Gracias",
+            session: req.session
         })
     },
     processRegister: (req, res) =>{
@@ -67,7 +82,8 @@ module.exports = {
             res.render("users/register",{
                 titulo: "Register",
                 errors: errors.mapped(),
-                old: req.body
+                old: req.body,
+                session: req.session
             })
         }
 
