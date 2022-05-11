@@ -24,6 +24,14 @@ app.use(express.urlencoded({ extended: false}))
 app.use(express.json())
 /* Para usar el metodo put/delete */
 app.use(methodOverride("_method"))
+/* Para usar Session en todas las vistas */
+app.use(session({
+    secret: 'El secreto de SONATA',
+    resave: false,
+    saveUninitialized: true,
+    cookie:{}
+  }))
+
 
 /* Rutas */
 const indexRouter = require("./routers/indexRouter")
