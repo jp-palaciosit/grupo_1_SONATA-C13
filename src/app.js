@@ -3,6 +3,7 @@ const app = express()
 const path = require("path")
 const process =  require("process")
 const methodOverride = require("method-override")
+const session = require("express-session")
 /* se tiene que instalar el dotenv: npm install dotenv */
 require('dotenv').config()
 const PORT = process.env.PORT || 3000
