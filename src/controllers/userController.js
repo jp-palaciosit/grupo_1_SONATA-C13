@@ -18,11 +18,12 @@ module.exports = {
                id: user.id,
                name: user.name,
                email: user.email,
-               avatar: user.avatar
+               avatar: user.avatar,
+               rol: user.rol
            }
             res.locals.user = req.session.userActive
 
-            res.redirect("/")
+            res.redirect("/home")
         }
         else{
             res.render("users/login",{
@@ -70,7 +71,8 @@ module.exports = {
                 passwd: req.body.passwd,
                 captcha: req.body.captcha,
                 terminosCoindiciones: req.body.terCondi,
-                avatar: req.file ? req.file.filename : "default-image.png"
+                avatar: req.file ? req.file.filename : "default-image.png",
+                rol: "USER"
             }
             getUsers.push(newUser)
             writeUsers(getUsers)
@@ -86,10 +88,10 @@ module.exports = {
                 session: req.session
             })
         }
-
-
-       
-       
+    },
+    logOut:(req, res) => {
+        req.session.destroy()
+        res.redirect("/")
     }
     
 }

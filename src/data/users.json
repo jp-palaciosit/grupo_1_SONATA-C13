@@ -507,7 +507,8 @@
         "passwd": "123456789",
         "captcha": "",
         "terminosCoindiciones": "on",
-        "avatar": "1652073607046_img_.jpg"
+        "avatar": "1652073607046_img_.jpg",
+        "rol":"ADMIN"
     },
     {
         "id": 52,
@@ -517,7 +518,8 @@
         "passwd": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
         "captcha": "",
         "terminosCoindiciones": "on",
-        "avatar": "default-image.png"
+        "avatar": "default-image.png",
+        "rol":"USER"
     },
     {
         "id": 53,
@@ -527,6 +529,7 @@
         "passwd": "1111111111111111",
         "captcha": "",
         "terminosCoindiciones": "on",
-        "avatar": "default-image.png"
+        "avatar": "default-image.png",
+        "rol":"USER"
     }
 ]

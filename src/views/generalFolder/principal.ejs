@@ -22,8 +22,8 @@
             <a href="home" class="a-etiqueta-principal">
             <img src="img/logo/logo1.png" alt="LogoSonata" class="logo-principal">
             </a>
-            <% if (session.userActive) { %>
-             <h2>¡¡Bienvenido!!</h2>
+            <% if (typeof session.userActive != "undefined") { %>
+                <h1>Bienvenido <%=session.userActive.name%></h1>
             <% } %>
             <h2 class="h2-principal">El instrumento que vos soñas, acá lo hacemos realidad!</h2>
         </div>

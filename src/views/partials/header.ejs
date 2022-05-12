@@ -8,31 +8,60 @@
         <input type="checkbox" name="checkbox" id="menu" class="nav_input">
         <div class="nav-burguer">
             <div class="img-user">
-                <img src="../img/usuario/User.jpg" alt="img">
-                <p>Señor Github</p>
+                <% if (typeof session.userActive != "undefined") { %>
+                    <img src="<%=session.userActive.avatar%>" alt="img">
+                    <h2 style="color: white;"><%=session.userActive.name%></h2>
+                <% } else { %>
+                    <img src="../img/usuario/User.jpg" alt="img">
+                    <a style="color: white;" href="/usuario/login">Iniciar sesion</a>
+                <% } %>
             </div>
             <ul>
-                <li>
-                    <a href="../usuario/login">Inici/Registro</a>
-                </li>
-                <li>
-                    <a href="">Mi cuenta</a>
-                </li>
-                <li>
-                    <a href="../products/productCart">Carrito</a>
-                </li>
-                <li>
-                    <a href="">Novedades</a>
-                </li>
-                <li>
-                    <a href="">Historial de compras</a>
-                </li>
-                <li>
-                    <a href="">Metodos de pago</a>
-                </li>
-                <li>
-                    <a href="">Preguntas Frecuentes</a>
-                </li>
+                <% if (typeof session.userActive != "undefined") { %>
+                    <% if (session.userActive.rol === "ADMIN") { %>
+                        <li>
+                            <a href="/admin">ADMIN</a>
+                        </li>
+                    <% } %>
+                    <li>
+                        <a href="/usuario/perfil">Mi perfil</a>
+                    </li>
+                    <li>
+                        <a href="">Novedades</a>
+                    </li>
+                    <li>
+                        <a href="">Historial de compras</a>
+                    </li>
+                    <li>
+                        <a href="../products/productCart">Carrito</a>
+                    </li>
+                    <li>
+                        <a href="">Metodos de pago</a>
+                    </li>
+                    <li>
+                        <a href="">Preguntas Frecuentes</a>
+                    </li>
+                    <li>
+                        <a href="/usuario/logout">Cerrar Sesion</a>
+                    </li>
+                <% } else { %>
+                    <li>
+                        <a href="/usuario/registro">Registro</a>
+                    </li>
+                    <li>
+                        <a href="">Novedades</a>
+                    </li>
+                    <li>
+                        <a href="../products/productCart">Carrito</a>
+                    </li>
+                    <li>
+                        <a href="">Metodos de pago</a>
+                    </li>
+                    <li>
+                        <a href="">Preguntas Frecuentes</a>
+                    </li>
+                <% } %>
+                
             </ul>
         </div>
         <!-- buscador -->
