@@ -1,5 +1,7 @@
 const {check, body} = require("express-validator")
 const {getUsers} = require("../data")
+const BCRYPT = require("bcryptjs")
+const bcryptjs = require("bcryptjs")
 
 const validateLogin = [
     check("email")
@@ -7,7 +9,7 @@ const validateLogin = [
         .isEmail().withMessage("Ingrese un mail valido"),
     body("custom").custom((value, { req }) =>{
         let usuarios = getUsers.find(user => user.email === req.body.email)
-        if(usuarios.passwd === req.body.passwd){
+        if(bcryptjs.compareSync(req.body.passwd, usuarios.passwd)){
             return true
         }
         return false

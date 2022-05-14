@@ -3,7 +3,7 @@ const adminCheck = (req, res, next)=>{
         next()
     }
     else{
-        res.send("No tienes permiso para ingresar")
+        res.redirect("/admin/sinPermiso")
     }
 }
 module.exports = adminCheck

@@ -37,5 +37,8 @@ router.put("/products/:id", uploadFile.single("image"), adminProductController.p
 
 router.delete("/products/eliminar/:id", adminProductController.productDelete)
 
+/* Sin permiso Mati y Jona*/
+
+router.get("/sinPermiso", adminController.sinPermiso)
 
 module.exports = router;

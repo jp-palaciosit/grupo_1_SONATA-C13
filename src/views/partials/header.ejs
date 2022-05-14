@@ -9,7 +9,7 @@
         <div class="nav-burguer">
             <div class="img-user">
                 <% if (typeof session.userActive != "undefined") { %>
-                    <img src="<%=session.userActive.avatar%>" alt="img">
+                    <img src="img/avatar/<%=session.userActive.avatar%>" alt="img">
                     <h2 style="color: white;"><%=session.userActive.name%></h2>
                 <% } else { %>
                     <img src="../img/usuario/User.jpg" alt="img">
@@ -72,7 +72,10 @@
             </button>
         </form>
         <!-- logo -->
-        <img src="/img/logo/logo1.png" alt="Logo" class="div-img-header"> 
+        <a href="/home">
+            <img src="/img/logo/logo1.png" alt="Logo" class="div-img-header"> 
+        </a>
+        
     </div>
     <nav>
         <!-- button nav -->

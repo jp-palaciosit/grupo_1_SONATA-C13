@@ -31,4 +31,5 @@ router.post("/registro", uploadFile.single("avatar"), registerValidator, registe
 /* GET - Cerrar sesion */
 
 router.get("/logout", userController.logOut)
+
 module.exports = router

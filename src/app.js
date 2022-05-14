@@ -4,6 +4,8 @@ const path = require("path")
 const process =  require("process")
 const methodOverride = require("method-override")
 const session = require("express-session")
+const cookieParser = require("cookie-parser")
+const cookieSession = require("./middlewares/cookieSession")
 /* se tiene que instalar el dotenv: npm install dotenv */
 require('dotenv').config()
 const PORT = process.env.PORT || 3000
@@ -32,6 +34,8 @@ app.use(session({
     saveUninitialized: true,
     cookie:{}
   }))
+app.use(cookieParser())
+app.use(cookieSession)
 
 
 /* Rutas */
