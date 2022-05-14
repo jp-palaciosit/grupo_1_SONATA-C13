@@ -23,6 +23,8 @@ router.get("/registro/correctamente", userInSession, userController.registrado)
 
 router.get("/olvide-mi-passwd",  userInSession, userController.recPasswd)
 
+/* GET - Perfil User */
+router.get("/perfil",  userController.perfilUser)
 
 /* POST - Ruta crear nuevo registro de usuario*/
 

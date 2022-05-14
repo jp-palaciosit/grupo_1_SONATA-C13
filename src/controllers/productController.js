@@ -9,7 +9,8 @@ module.exports = {
         res.render("products/productDetail",{
             title: idProducto.name,
             product: idProducto,
-            thousand
+            thousand,
+            session: req.session
         })
     }
   

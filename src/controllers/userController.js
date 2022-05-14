@@ -9,6 +9,12 @@ module.exports = {
             session: req.session
         })
     },
+    perfilUser:(req,res)=>{
+        res.render("users/perfilUser",{
+            title:"Perfil",
+            session: req.session
+        })
+    },
     //Simulacion de logeo
     loginProcess:(req, res)=>{
         let errors = validationResult(req)
@@ -18,6 +24,7 @@ module.exports = {
            req.session.userActive = {
                id: user.id,
                name: user.name,
+               lastName: user.lastName,
                email: user.email,
                avatar: user.avatar,
                rol: user.rol
