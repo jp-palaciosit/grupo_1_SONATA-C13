@@ -12,7 +12,7 @@
 <h3>👨‍💻Juan Pablo Palacios:</h3>
 
 <p>● Qué hizo ayer:</p>
-    El dia de ayer hice modificaciones en el formulario de productos, agregando un input file para la imagen.
+    El día de ayer hice modificaciones en el formulario de productos, agregando un input file para la imagen.
 
 <p>● Si se encontró con algún impedimento:</p>
     Al recibir una sola imagen de parte del usuario, se generaba un error debido a que teniamos un forEach que recorria el array de productos. Este error fue solucionado con exito.
