@@ -12,6 +12,7 @@ const removeAccents = (str) => {
 module.exports = {
     index:(req, res) => {
         res.render("generalFolder/principal", {
+            title: "Sonata",
             session: req.session
         })
     },

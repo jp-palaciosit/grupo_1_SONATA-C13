@@ -38,7 +38,6 @@ div.img-user{
     align-items: center;
     justify-content: space-around;
     border-bottom: solid 1px white;
-
 }
 div.img-user img{
     /* margin-left: 10px; */
@@ -193,6 +192,7 @@ header nav div label h1.btn-instrumento:hover{
 .btn-instruments{
 text-align: center;
 border: none;
+border-radius: 10px;
 width: 140px;
 height: 30px;
 background: linear-gradient(to top, #712B75, black);

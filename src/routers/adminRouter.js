@@ -5,21 +5,23 @@ const adminController = require("../controllers/admin/adminController")
 const adminProductController = require("../controllers/admin/adminProductController")
 const uploadFile = require("../middlewares/uploadProductImg")
 const validateAddProduct = require("../validations/adminAddProduct")
+const userSession = require("../middlewares/userSession")
+const adminCheck = require("../middlewares/admincheck")
 
 // Get - index
-router.get("/", adminController.index)
+router.get("/", userSession, adminCheck, adminController.index)
 
-router.get("/search", adminController.search)
+router.get("/search", userSession, adminCheck, adminController.search)
 
 /* router.get("/producto/:id", adminController.product) */
 
 /* CRUD  PRODUCTS*/
 
 // Get - Lista productos
-router.get("/products", adminProductController.list)
+router.get("/products", userSession, adminCheck, adminProductController.list)
 
 // Get - Agregar producto (Pero no los crea)
-router.get("/products/create", adminProductController.productAdd)
+router.get("/products/create", userSession, adminCheck, adminProductController.productAdd)
 
 // Post - Crear un producto en DB
 router.post("/products", uploadFile.single("image"), validateAddProduct ,adminProductController.productCreate)
@@ -27,7 +29,7 @@ router.post("/products", uploadFile.single("image"), validateAddProduct ,adminPr
 
 // Get - Editar producto
 
-router.get("/products/edit/:id", adminProductController.productEdit)
+router.get("/products/edit/:id", userSession, adminCheck, adminProductController.productEdit)
 
 //Put - actualizar producto
 
@@ -35,5 +37,8 @@ router.put("/products/:id", uploadFile.single("image"), adminProductController.p
 
 router.delete("/products/eliminar/:id", adminProductController.productDelete)
 
+/* Sin permiso Mati y Jona*/
+
+router.get("/sinPermiso", adminController.sinPermiso)
 
 module.exports = router;

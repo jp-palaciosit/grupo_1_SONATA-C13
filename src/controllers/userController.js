@@ -1,10 +1,17 @@
 const {getUsers, writeUsers} = require("../data")
 const {validationResult} = require("express-validator")
+const BCRYPT = require("bcryptjs")
 
 module.exports = {
     login: (req, res)=>{
         res.render("users/login",{
             title:"Login",
+            session: req.session
+        })
+    },
+    perfilUser:(req,res)=>{
+        res.render("users/perfilUser",{
+            title:"Perfil",
             session: req.session
         })
     },
@@ -17,12 +24,22 @@ module.exports = {
            req.session.userActive = {
                id: user.id,
                name: user.name,
+               lastName: user.lastName,
                email: user.email,
-               avatar: user.avatar
+               avatar: user.avatar,
+               rol: user.rol
            }
+            if(req.body.captcha){  
+                const TIMECOOKIE = 60000
+                res.cookie("CookieSonata", req.session.userActive,{
+                    expires: new Date(Date.now() + TIMECOOKIE),
+                    httpOnly: true,
+                    secure: true
+                })
+            }
             res.locals.user = req.session.userActive
 
-            res.redirect("/")
+            res.redirect("/home")
         }
         else{
             res.render("users/login",{
@@ -67,10 +84,11 @@ module.exports = {
                 name: req.body.name,
                 lastName: req.body.lastname,
                 email: req.body.email,
-                passwd: req.body.passwd,
+                passwd: BCRYPT.hashSync(req.body.passwd, 10),
                 captcha: req.body.captcha,
                 terminosCoindiciones: req.body.terCondi,
-                avatar: req.file ? req.file.filename : "default-image.png"
+                avatar: req.file ? req.file.filename : "default-image.png",
+                rol: "USER"
             }
             getUsers.push(newUser)
             writeUsers(getUsers)
@@ -86,10 +104,13 @@ module.exports = {
                 session: req.session
             })
         }
-
-
-       
-       
+    },
+    logOut:(req, res) => {
+        req.session.destroy()
+        if(req.cookies.CookieSonata){
+            res.cookie("CookieSonata", "", {maxAge: -1})
+        }
+        res.redirect("/")
     }
     
 }

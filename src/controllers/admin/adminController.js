@@ -4,7 +4,14 @@ const removeAccents = (str) => {return str.normalize("NFD").replace(/[\u0300-\u0
 module.exports = {
     index: (req, res)=>{
         res.render("admin/adminIndex", {
-            title: "adminIndex"
+            title: "adminIndex",
+            session: req.session
+        })
+    },
+    sinPermiso:(req,res)=>{
+        res.render("admin/sinPermiso",{
+            title:"Hola Profes",
+            session: req.session
         })
     },
     search: (req, res)=>{
