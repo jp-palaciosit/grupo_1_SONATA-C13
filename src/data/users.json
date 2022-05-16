@@ -542,5 +542,16 @@
         "terminosCoindiciones": "on",
         "avatar": "1652523575939_img_.png",
         "rol": "USER"
+    },
+    {
+        "id": 55,
+        "name": "Pepo",
+        "lastName": "Palacios",
+        "email": "pepi@gmail.com",
+        "passwd": "$2a$10$cPypjc3.Zvmox1p54WPhC.m.jBd3AmPc8IqQ7h/AmXcuFWrhaAYYi",
+        "captcha": "",
+        "terminosCoindiciones": "on",
+        "avatar": "default-image.png",
+        "rol": "USER"
     }
 ]
