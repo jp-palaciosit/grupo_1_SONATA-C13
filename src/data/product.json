@@ -1,1 +1,300 @@
-[{"id":1,"name":"Guitarra Mayra","price":173309,"description":"La guitarra del grupo Nº1","categoryId":1,"discount":10,"shipment":false,"image":["guitarraGibson.jpg"],"stock":true},{"id":2,"name":"Bateria Mapex Prodigy","price":1000000,"description":"Excelente!","categoryId":1,"projectId":2,"discount":5,"shipment":true,"image":["bateria.jpg"],"stock":true},{"id":3,"name":"Ukelele Soprano Dakota","price":1891,"description":"Es un producto importado, de primera calidad y el más completodel mercado","categoryId":1,"projectId":3,"discount":5,"shipment":true,"image":["ukelele.jpg"],"stock":false},{"id":4,"name":"Pedal de efecto para instrumento","price":29493,"description":"Este pedal de efectos permite alterar el sonido de tu instrumento y explorar nuevas posibilidades sonoras","categoryId":1,"projectId":4,"discount":10,"shipment":true,"image":["pedalEfecto1.jpg"],"stock":true},{"id":5,"name":"Micrófono Rode NT1-A","price":85900,"description":"Con este producto lograrás que la reproducción obtenida sea lo más parecida a la original","categoryId":1,"projectId":5,"discount":1,"shipment":true,"image":["microfonoRode.jpg"],"stock":true},{"id":6,"name":"Órgánó Musical Teclado","price":6067,"description":"El mejor Ukelele del condado","categoryId":1,"projectId":6,"discount":5,"shipment":true,"image":["organoMusical.jpg"],"stock":true},{"id":7,"name":"Repique Murga Cromado","price":3600,"description":"El producto más vendido de la empresa","categoryId":1,"projectId":5,"discount":10,"shipment":true,"image":["repiqueMurga.jpg"],"stock":true},{"id":8,"name":"Armonica Diatónica Cromada","price":1030,"description":"El producto más vendido del mundo","categoryId":1,"projectId":8,"discount":0,"shipment":true,"image":["armonicaDiatonica.jpg"],"stock":true},{"id":9,"name":"Xilofón Metalofon 8 Notas","price":2450,"description":"El Xilofon más esperado en el país","categoryId":1,"projectId":9,"discount":0,"shipment":true,"image":["xilofon.jpg"],"stock":true},{"id":10,"name":"Violin Palatino 4/4 Madera","price":7499,"description":"El mejor Violin del continente","categoryId":1,"projectId":10,"discount":5,"shipment":true,"image":["violinPalatino.jpg"],"stock":true},{"id":11,"name":"Pandereta Parquer Doble Sonaja","price":2150,"description":"La pandereta más vendida en la empresa","categoryId":1,"projectId":11,"discount":2,"shipment":true,"image":["panderetaParquer.jpg"],"stock":true},{"id":12,"name":"Triangulo Percusion Metalico","price":699,"description":"El producto más economico de la empresa","categoryId":1,"projectId":12,"discount":3,"shipment":true,"image":["trianguloPercusion.jpg"],"stock":true},{"id":13,"name":"Puas Stagg Pack Por 20 Calibres","price":715,"description":"La Puas más vendidas en el mercado","categoryId":1,"projectId":13,"discount":3,"shipment":true,"image":["puasStagg.jpg"],"stock":true},{"id":14,"name":"Organo Musical Infantil","price":2990,"description":"El producto del mercado más eficaz","categoryId":1,"projectId":14,"discount":5,"shipment":true,"image":["organoMusicalinfantil.jpg"],"stock":true},{"id":15,"name":"Kalimba Walter Profesional","price":6977,"description":"El producto del mercado más eficaz del mercado","categoryId":1,"projectId":15,"discount":5,"shipment":true,"image":["kalimba.jpg"],"stock":true},{"id":16,"name":"Acordeón Para Niños 7 Teclas","price":3990,"description":"El Acordeón para niños más esperado","categoryId":1,"projectId":16,"discount":3,"shipment":true,"image":["acordeonNenes.jpg"],"stock":true},{"id":17,"name":"Flauta Dulce Soprano Yamaha","price":1950,"description":"La FLauta más vendida en el continente","categoryId":1,"projectId":17,"discount":4,"shipment":true,"image":["flautaDulce.jpg"],"stock":true},{"id":18,"name":"Pedal de efecto para instrumento de cuerda","price":17542,"description":"El Pedal con efeto más vendido en Asia","categoryId":1,"projectId":18,"discount":15,"shipment":true,"image":["pedalEfecto.jpg"],"stock":true},{"id":19,"name":"Guitarra Infantil Sonido Real","price":3980,"description":"La Guitarra Infantil más esperado por el mercado Europeo","categoryId":1,"projectId":19,"discount":6,"shipment":true,"image":["guitarraInfantil.jpg"],"stock":true},{"name":"Juan","price":"1010","discount":"2","categoryId":"Categoría","stock":true,"shipment":true,"description":"asd","id":20,"image":"1651188524368_img_.jpg"},{"name":"Probando Hola","price":"40","discount":"5","categoryId":"Categoría","stock":false,"shipment":true,"description":"asd","id":21,"image":"1651199617537_img_.jpg"},{"name":"Guitarras","price":"1250","discount":"12","categoryId":"1","stock":false,"shipment":false,"description":"","id":22,"image":"default-image.png"}]
+[
+    {
+        "id": 1,
+        "name": "Guitarra Mayra",
+        "price": 173309,
+        "description": "La guitarra del grupo Nº1",
+        "categoryId": 1,
+        "discount": 10,
+        "shipment": false,
+        "image": [
+            "guitarraGibson.jpg"
+        ],
+        "stock": true
+    },
+    {
+        "id": 2,
+        "name": "Bateria Mapex Prodigy",
+        "price": 1000000,
+        "description": "Excelente!",
+        "categoryId": 1,
+        "projectId": 2,
+        "discount": 5,
+        "shipment": true,
+        "image": [
+            "bateria.jpg"
+        ],
+        "stock": true
+    },
+    {
+        "id": 3,
+        "name": "Ukelele Soprano Dakota",
+        "price": 1891,
+        "description": "Es un producto importado, de primera calidad y el más completodel mercado",
+        "categoryId": 1,
+        "projectId": 3,
+        "discount": 5,
+        "shipment": true,
+        "image": [
+            "ukelele.jpg"
+        ],
+        "stock": false
+    },
+    {
+        "id": 4,
+        "name": "Pedal de efecto para instrumento",
+        "price": 29493,
+        "description": "Este pedal de efectos permite alterar el sonido de tu instrumento y explorar nuevas posibilidades sonoras",
+        "categoryId": 1,
+        "projectId": 4,
+        "discount": 10,
+        "shipment": true,
+        "image": [
+            "pedalEfecto1.jpg"
+        ],
+        "stock": true
+    },
+    {
+        "id": 5,
+        "name": "Micrófono Rode NT1-A",
+        "price": 85900,
+        "description": "Con este producto lograrás que la reproducción obtenida sea lo más parecida a la original",
+        "categoryId": 1,
+        "projectId": 5,
+        "discount": 1,
+        "shipment": true,
+        "image": [
+            "microfonoRode.jpg"
+        ],
+        "stock": true
+    },
+    {
+        "id": 6,
+        "name": "Órgánó Musical Teclado",
+        "price": 6067,
+        "description": "El mejor Ukelele del condado",
+        "categoryId": 1,
+        "projectId": 6,
+        "discount": 5,
+        "shipment": true,
+        "image": [
+            "organoMusical.jpg"
+        ],
+        "stock": true
+    },
+    {
+        "id": 7,
+        "name": "Repique Murga Cromado",
+        "price": 3600,
+        "description": "El producto más vendido de la empresa",
+        "categoryId": 1,
+        "projectId": 5,
+        "discount": 10,
+        "shipment": true,
+        "image": [
+            "repiqueMurga.jpg"
+        ],
+        "stock": true
+    },
+    {
+        "id": 8,
+        "name": "Armonica Diatónica Cromada",
+        "price": 1030,
+        "description": "El producto más vendido del mundo",
+        "categoryId": 1,
+        "projectId": 8,
+        "discount": 0,
+        "shipment": true,
+        "image": [
+            "armonicaDiatonica.jpg"
+        ],
+        "stock": true
+    },
+    {
+        "id": 9,
+        "name": "Xilofón Metalofon 8 Notas",
+        "price": 2450,
+        "description": "El Xilofon más esperado en el país",
+        "categoryId": 1,
+        "projectId": 9,
+        "discount": 0,
+        "shipment": true,
+        "image": [
+            "xilofon.jpg"
+        ],
+        "stock": true
+    },
+    {
+        "id": 10,
+        "name": "Violin Palatino 4/4 Madera",
+        "price": 7499,
+        "description": "El mejor Violin del continente",
+        "categoryId": 1,
+        "projectId": 10,
+        "discount": 5,
+        "shipment": true,
+        "image": [
+            "violinPalatino.jpg"
+        ],
+        "stock": true
+    },
+    {
+        "id": 11,
+        "name": "Pandereta Parquer Doble Sonaja",
+        "price": 2150,
+        "description": "La pandereta más vendida en la empresa",
+        "categoryId": 1,
+        "projectId": 11,
+        "discount": 2,
+        "shipment": true,
+        "image": [
+            "panderetaParquer.jpg"
+        ],
+        "stock": true
+    },
+    {
+        "id": 12,
+        "name": "Triangulo Percusion Metalico",
+        "price": 699,
+        "description": "El producto más economico de la empresa",
+        "categoryId": 1,
+        "projectId": 12,
+        "discount": 3,
+        "shipment": true,
+        "image": [
+            "trianguloPercusion.jpg"
+        ],
+        "stock": true
+    },
+    {
+        "id": 13,
+        "name": "Puas Stagg Pack Por 20 Calibres",
+        "price": 715,
+        "description": "La Puas más vendidas en el mercado",
+        "categoryId": 1,
+        "projectId": 13,
+        "discount": 3,
+        "shipment": true,
+        "image": [
+            "puasStagg.jpg"
+        ],
+        "stock": true
+    },
+    {
+        "id": 14,
+        "name": "Organo Musical Infantil",
+        "price": 2990,
+        "description": "El producto del mercado más eficaz",
+        "categoryId": 1,
+        "projectId": 14,
+        "discount": 5,
+        "shipment": true,
+        "image": [
+            "organoMusicalinfantil.jpg"
+        ],
+        "stock": true
+    },
+    {
+        "id": 15,
+        "name": "Kalimba Walter Profesional",
+        "price": 6977,
+        "description": "El producto del mercado más eficaz del mercado",
+        "categoryId": 1,
+        "projectId": 15,
+        "discount": 5,
+        "shipment": true,
+        "image": [
+            "kalimba.jpg"
+        ],
+        "stock": true
+    },
+    {
+        "id": 16,
+        "name": "Acordeón Para Niños 7 Teclas",
+        "price": 3990,
+        "description": "El Acordeón para niños más esperado",
+        "categoryId": 1,
+        "projectId": 16,
+        "discount": 3,
+        "shipment": true,
+        "image": [
+            "acordeonNenes.jpg"
+        ],
+        "stock": true
+    },
+    {
+        "id": 17,
+        "name": "Flauta Dulce Soprano Yamaha",
+        "price": 1950,
+        "description": "La FLauta más vendida en el continente",
+        "categoryId": 1,
+        "projectId": 17,
+        "discount": 4,
+        "shipment": true,
+        "image": [
+            "flautaDulce.jpg"
+        ],
+        "stock": true
+    },
+    {
+        "id": 18,
+        "name": "Pedal de efecto para instrumento de cuerda",
+        "price": 17542,
+        "description": "El Pedal con efeto más vendido en Asia",
+        "categoryId": 1,
+        "projectId": 18,
+        "discount": 15,
+        "shipment": true,
+        "image": [
+            "pedalEfecto.jpg"
+        ],
+        "stock": true
+    },
+    {
+        "id": 19,
+        "name": "Guitarra Infantil Sonido Real",
+        "price": 3980,
+        "description": "La Guitarra Infantil más esperado por el mercado Europeo",
+        "categoryId": 1,
+        "projectId": 19,
+        "discount": 6,
+        "shipment": true,
+        "image": [
+            "guitarraInfantil.jpg"
+        ],
+        "stock": true
+    },
+    {
+        "name": "Juan",
+        "price": "1010",
+        "discount": "2",
+        "categoryId": "Categoría",
+        "stock": true,
+        "shipment": true,
+        "description": "asd",
+        "id": 20,
+        "image": "1651188524368_img_.jpg"
+    },
+    {
+        "name": "Probando Hola",
+        "price": "40",
+        "discount": "5",
+        "categoryId": "Categoría",
+        "stock": false,
+        "shipment": true,
+        "description": "asd",
+        "id": 21,
+        "image": "1651199617537_img_.jpg"
+    },
+    {
+        "name": "Guitarras",
+        "price": "1250",
+        "discount": "12",
+        "categoryId": "1",
+        "stock": false,
+        "shipment": false,
+        "description": "",
+        "id": 22,
+        "image": "default-image.png"
+    }
+]
