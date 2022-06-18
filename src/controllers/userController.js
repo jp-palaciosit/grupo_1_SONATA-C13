@@ -19,16 +19,20 @@ module.exports = {
     loginProcess:(req, res)=>{
         let errors = validationResult(req)
         if(errors.isEmpty()){
-           let user = getUsers.find(user => user.email === req.body.email)
-             
-           req.session.userActive = {
-               id: user.id,
-               name: user.name,
-               lastName: user.lastName,
-               email: user.email,
-               avatar: user.avatar,
-               rol: user.rol
-           }
+            db.User.findOne({
+                where: {
+                    email: req.body.email
+                }
+            })
+                .then((user)=>{
+                   req.session.userActive = {
+                    id: user.id,
+                    name: user.name,
+                    lastName: user.lastName,
+                    email: user.email,
+                    avatar: user.avatar,
+                    rol: user.id_rol
+           } 
             if(req.body.captcha){  
                 const TIMECOOKIE = 60000
                 res.cookie("CookieSonata", req.session.userActive,{
@@ -37,9 +41,12 @@ module.exports = {
                     secure: true
                 })
             }
+        
             res.locals.user = req.session.userActive
 
             res.redirect("/home")
+        })
+        .catch(error => console.log(error))
         }
         else{
             res.render("users/login",{
@@ -73,14 +80,7 @@ module.exports = {
         let errors = validationResult(req)
         
         if(errors.isEmpty()){ 
-            let lastId = 0
-            getUsers.forEach(user => {
-                if(user.id > lastId){
-                    lastId = user.id
-                }
-            });
-            let newUser = {
-                id: lastId + 1,
+            db.User.create({
                 name: req.body.name,
                 lastName: req.body.lastname,
                 email: req.body.email,
@@ -88,12 +88,12 @@ module.exports = {
                 captcha: req.body.captcha,
                 terminosCoindiciones: req.body.terCondi,
                 avatar: req.file ? req.file.filename : "default-image.png",
-                rol: "USER"
-            }
-            getUsers.push(newUser)
-            writeUsers(getUsers)
-
-            res.redirect("/usuario/login")
+                id_rol: 2
+            })
+            .then((user) => {
+                res.redirect("/usuarios/login")
+            })
+            .catch(error => res.send(error))
 
         }
         else{

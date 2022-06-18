@@ -16,10 +16,12 @@ module.exports = (sequelize,dataTypes)=> {
             allowNull:false
         },
         discount:{
-            type:dataTypes.INTEGER(11)
+            type:dataTypes.INTEGER(11),
+            allowNull:false
         },
-        categoryId:{
-            type:dataTypes.INTEGER(11)
+        id_categoria:{
+            type:dataTypes.INTEGER(11),
+            allowNull:false
         },
         stock:{
             type:dataTypes.BOOLEAN,
@@ -43,5 +45,13 @@ module.exports = (sequelize,dataTypes)=> {
         timestamps:false
     }
     const Producto = sequelize.define(alias, cols, config)
+
+    Producto.associate = (models) => {
+        Producto.belongsTo(models.Category, {
+            as: "categoria",
+            foreignKey: "id_categoria",
+        })
+    }
+
     return Producto
 }

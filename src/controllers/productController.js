@@ -6,7 +6,9 @@ module.exports = {
     list:(req,res)=>{
         db.Producto.findAll()
         .then(productos=>{
-            res.send(productos)
+            res.render("generalFolder/home",{
+                session:req.session
+            })
         })
     },
     detalle:(req, res) =>{
