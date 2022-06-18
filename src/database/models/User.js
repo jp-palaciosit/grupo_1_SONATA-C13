@@ -54,6 +54,14 @@ module.exports = (sequelize, dataTypes) => {
             as: "Rol",
             foreignKey: "id_rol"
         })
+        User.hasMany(models.Carrito, {
+            as: "carrito",
+            foreignKey: "id_usuario"
+        })
+        User.hasMany(models.Historial, {
+            as: "Historial",
+            foreignKey: "id_usuario"
+        })
     };
 
     return User;

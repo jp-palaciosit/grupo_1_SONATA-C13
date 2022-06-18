@@ -36,7 +36,8 @@ module.exports = (sequelize,dataTypes)=> {
             allowNull:false
         },
         image:{
-            type:dataTypes.STRING(100)        
+            type:dataTypes.STRING(100),
+            allowNull:false       
         }
 
     }
@@ -50,6 +51,14 @@ module.exports = (sequelize,dataTypes)=> {
         Producto.belongsTo(models.Category, {
             as: "categoria",
             foreignKey: "id_categoria",
+        })
+        Producto.hasMany(models.Carrito, {
+            as: "carrito",
+            foreignKey: "id_producto"
+        })
+        Producto.belongsTo(models.Category, {
+            as: "Historial",
+            foreignKey: "id_historial",
         })
     }
 
