@@ -28,7 +28,7 @@ router.get("/perfil",  userController.perfilUser)
 
 /* POST - Ruta crear nuevo registro de usuario*/
 
-router.post("/registro", uploadFile.single("avatar"), registerValidator, registerValidator ,userController.processRegister)
+router.post("/registro", uploadFile.single("avatar"), registerValidator,userController.processRegister)
 
 /* GET - Cerrar sesion */
 

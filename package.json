@@ -14,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "nodemonConfig": {
-    "ignore": "/src/data/*.json"
+    "ignore": "src/data/*.json"
   },
   "bugs": {
     "url": "https://github.com/Kaiael24/grupo_1_SONATA-C13/issues"

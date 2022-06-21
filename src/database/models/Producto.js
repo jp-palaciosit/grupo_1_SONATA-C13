@@ -5,7 +5,6 @@ module.exports = (sequelize,dataTypes)=> {
             type:dataTypes.INTEGER(11),
             primaryKey:true,
             autoIncrement:true,
-            allowNull:false
         },
         name:{
             type:dataTypes.STRING(100),
@@ -49,11 +48,11 @@ module.exports = (sequelize,dataTypes)=> {
 
     Producto.associate = (models) => {
         Producto.belongsTo(models.Category, {
-            as: "categoria",
+            as: "Category",
             foreignKey: "id_categoria",
         })
         Producto.hasMany(models.Carrito, {
-            as: "carrito",
+            as: "Carrito",
             foreignKey: "id_producto"
         })
         Producto.belongsTo(models.Category, {

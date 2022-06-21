@@ -1,13 +1,22 @@
-const {getProducts, writeProducts} = require("../../data")
+/* const {getProducts, writeProducts} = require("../../data") */
 const {validationResult} = require("express-validator")
-
+const db = require("../../database/models")
 module.exports = {
     list:(req,res)=>{
-        res.render("admin/products/listaProductos", {
-            title:"Lista de productos",
-            productos: getProducts
+        db.Producto.findAll(
+            {include:[{association:'Category'}]}
+        )
+        .then((producto)=>{
+            res.render("admin/products/listaProductos", {
+                title:"Lista de productos",
+                productos: producto,
+                session:req.session
+            })
         })
-    },
+        .catch((error)=>{
+            res.send(error)
+        }) 
+        },
     productAdd:(req,res)=>{
         res.render("admin/products/addProduct",{
             title: "Agregar productos"
@@ -108,8 +117,5 @@ module.exports = {
         writeProducts(getProducts)
         //4 - Enviar respuesta
         res.redirect("/admin/products")
-    },
-    productSearch:(req,res)=>{
-
     }
 }

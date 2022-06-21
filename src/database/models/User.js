@@ -1,12 +1,10 @@
 module.exports = (sequelize, dataTypes) => {
     let alias = "User";
-
     let cols = {
         id: {
             type: dataTypes.INTEGER(11),
             primaryKey: true,
             autoIncrement: true,
-            allowNull: false,
         },
         name: {
             type: dataTypes.STRING(20),
@@ -20,7 +18,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(45),
             allowNull: false,
         },
-        password: {
+        passwd: {
             type: dataTypes.STRING(70),
             allowNull: false,
         },
@@ -36,8 +34,8 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(100),
             allowNull:false
         },
-        id_rol: {
-            type: dataTypes.INTEGER(11),
+        rol: {
+            type: dataTypes.STRING(50),
             allowNull: false,
         },
     };
@@ -48,12 +46,7 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const User = sequelize.define(alias, cols, config);
-    
     User.associate = (models) => {
-        User.belongsTo(models.Rols, {
-            as: "Rol",
-            foreignKey: "id_rol"
-        })
         User.hasMany(models.Carrito, {
             as: "carrito",
             foreignKey: "id_usuario"
@@ -63,6 +56,5 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "id_usuario"
         })
     };
-
     return User;
 }

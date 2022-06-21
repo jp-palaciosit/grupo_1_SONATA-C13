@@ -53,7 +53,7 @@ DROP TABLE IF EXISTS `categoria`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `categoria` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -76,7 +76,7 @@ DROP TABLE IF EXISTS `historial`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `historial` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(100) NOT NULL,
+  `name` varchar(100) NOT NULL,
   `logo` varchar(100) NOT NULL,
   `id_usuario` int(11) NOT NULL,
   PRIMARY KEY (`id`),
@@ -106,7 +106,6 @@ CREATE TABLE `productos` (
   `name` varchar(100) NOT NULL,
   `price` int(11) NOT NULL,
   `discount` int(11) DEFAULT NULL,
-  `categoryId` int(11) NOT NULL,
   `stock` tinyint(4) NOT NULL,
   `shipment` tinyint(4) NOT NULL,
   `description` text NOT NULL,
@@ -127,7 +126,7 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
-INSERT INTO `productos` VALUES (6,'Guitarra Mayra',173309,10,1,1,1,'La guitarra del grupo Nº1',NULL,NULL,NULL);
+INSERT INTO `productos` VALUES (6,'Guitarra Mayra',173309,10,1,1,'La guitarra del grupo NÂº1',NULL,NULL,NULL);
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -199,4 +198,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-18  6:13:33
+-- Dump completed on 2022-06-20  5:19:45

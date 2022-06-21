@@ -6,30 +6,42 @@ module.exports = {
     list:(req,res)=>{
         db.Producto.findAll()
         .then(productos=>{
-            res.render("generalFolder/home",{
-                session:req.session
+            res.render("generalFolder/productDB",{
+                session:req.session,
+                product:productos,
+                thousand
             })
         })
+        .catch((error) => { res.send(error)})
     },
     detalle:(req, res) =>{
         let reqPar = +req.params.id
-        let idProducto = getProducts.find(buscoId => buscoId.id === reqPar)
+
+        db.Producto.findByPk(reqPar
+           /*  where: {
+                id: id_producto
+            },
+            include: [{ association: "image"}] */
+        )
+        .then((producto) => {
+            res.render("products/productDetail", {
+                titulo: "Detalle del producto",
+                product:producto,
+                session:req.session,
+                thousand
+            })
+        })
+        .catch((error) => { res.send(error)})        
+    }
+        /* let idProducto = getProducts.find(buscoId => buscoId.id === reqPar)
         res.render("products/productDetail",{
             title: idProducto.name,
             product: idProducto,
             thousand,
             session: req.session
         })
-    }
+    } */
   
 }
-    /* getOne: (req,res)=>{
-        res.render("products/productDetail",{
-            producto: getProducts
-        })
-    },
-    carrito: (req, res)=>{
-        res.render("products/productCart")
-    }, */
 
 

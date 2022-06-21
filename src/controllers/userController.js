@@ -1,6 +1,9 @@
-const {getUsers, writeUsers} = require("../data")
+/* const {getUsers, writeUsers} = require("../data") */
 const {validationResult} = require("express-validator")
 const BCRYPT = require("bcryptjs")
+const db = require("../database/models")
+/* const sequelize = db.sequelize */
+
 
 module.exports = {
     login: (req, res)=>{
@@ -31,7 +34,7 @@ module.exports = {
                     lastName: user.lastName,
                     email: user.email,
                     avatar: user.avatar,
-                    rol: user.id_rol
+                    rol: user.rol
            } 
             if(req.body.captcha){  
                 const TIMECOOKIE = 60000
@@ -77,9 +80,10 @@ module.exports = {
     },
     processRegister: (req, res) =>{
         //verificar si hay error en el form
-        let errors = validationResult(req)
         
+        let errors = validationResult(req)
         if(errors.isEmpty()){ 
+            /* {include:[{association:'Rol'}]} */
             db.User.create({
                 name: req.body.name,
                 lastName: req.body.lastname,
@@ -88,13 +92,12 @@ module.exports = {
                 captcha: req.body.captcha,
                 terminosCoindiciones: req.body.terCondi,
                 avatar: req.file ? req.file.filename : "default-image.png",
-                id_rol: 2
+                rol: "ADMIN"
             })
             .then((user) => {
-                res.redirect("/usuarios/login")
+                res.redirect("/usuario/login")
             })
             .catch(error => res.send(error))
-
         }
         else{
             res.render("users/register",{
@@ -112,5 +115,4 @@ module.exports = {
         }
         res.redirect("/")
     }
-    
 }

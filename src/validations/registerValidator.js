@@ -1,29 +1,35 @@
-const {check, body} = require("express-validator")
+const {body} = require("express-validator")
 const {getUsers} = require("../data")
+const db = require("../database/models")
 
 const validateRegister = [
-    check("name")
+    body("name")
         .notEmpty().withMessage("Ingrese un nombre").bail()
         .isLength({min:2}).withMessage("Ingrese un nombre válido"),
-    check("lastname")
+    body("lastname")
         .notEmpty().withMessage("Ingrese un nombre").bail()
         .isLength({min:2}).withMessage("Ingrese un nombre valido"),
-    check("email")
+    body("email")
         .notEmpty().withMessage("Ingrese un email").bail()
         .isEmail().withMessage("Ingrese un mail válido"),
     body("email").custom(value =>{
-        let usuarios = getUsers.find(user => user.email === value)
-        if(usuarios){
-            return false
+        return db.User.findOne({
+            where:{
+                email:value
+            }
+        })
+        .then((user)=>{
+            if(user){
+            return Promise.reject("Email ya registrado")
         }
-        return true
-    }).withMessage("Email ya registrado"),
-    check("passwd")
+        })
+    }),
+    body("passwd")
         .notEmpty().withMessage("Ingrese una contraseña").bail()
         .isLength({min:8}).withMessage("La contraseña debe tener minimo 8 caracteres."),
-    check("captcha")
+    body("captcha")
         .isString("on").withMessage("Acepte el captcha"),
-    check("terCondi")
+    body("terCondi")
         .isString("on").withMessage("Acepte terminos y condiciones"),
 ]
 
