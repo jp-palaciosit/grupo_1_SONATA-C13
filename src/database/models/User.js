@@ -51,10 +51,6 @@ module.exports = (sequelize, dataTypes) => {
             as: "carrito",
             foreignKey: "id_usuario"
         })
-        User.hasMany(models.Historial, {
-            as: "Historial",
-            foreignKey: "id_usuario"
-        })
     };
     return User;
 }

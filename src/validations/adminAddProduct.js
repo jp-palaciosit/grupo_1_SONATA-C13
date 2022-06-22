@@ -1,10 +1,10 @@
 const {check, body} = require("express-validator")
-const {getProducts} = require("../data")
+/* const {getProducts} = require("../data") */
 
 const validateAddProduct = [
     check("name")
         .notEmpty().withMessage("Ingrese un nombre del producto").bail()
-        .isAlphanumeric().withMessage("Ingrese un nombre valido")
+        .isAlphanumeric().withMessage("Ingrese un nombre valido").bail()
         .isLength({mind:6}).withMessage("El nombre tiene que tener al menos 6 caracteres"),
     check("price")
         .notEmpty().withMessage("Ingrese precio del producto").bail()

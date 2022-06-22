@@ -5,6 +5,7 @@ module.exports = (sequelize,dataTypes)=> {
             type:dataTypes.INTEGER(11),
             primaryKey:true,
             autoIncrement:true,
+            allowNull: false
         },
         name:{
             type:dataTypes.STRING(100),
@@ -51,13 +52,9 @@ module.exports = (sequelize,dataTypes)=> {
             as: "Category",
             foreignKey: "id_categoria",
         })
-        Producto.hasMany(models.Carrito, {
-            as: "Carrito",
+        Producto.hasMany(models.ProductImage, {
+            as: "productImage",
             foreignKey: "id_producto"
-        })
-        Producto.belongsTo(models.Category, {
-            as: "Historial",
-            foreignKey: "id_historial",
         })
     }
 

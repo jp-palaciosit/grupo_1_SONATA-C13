@@ -1,6 +1,7 @@
 /* const {getProducts, writeProducts} = require("../../data") */
 const {validationResult} = require("express-validator")
 const db = require("../../database/models")
+
 module.exports = {
     list:(req,res)=>{
         db.Producto.findAll(
@@ -19,38 +20,91 @@ module.exports = {
         },
     productAdd:(req,res)=>{
         res.render("admin/products/addProduct",{
-            title: "Agregar productos"
+            title: "Agregar productos",
+            session:req.session
         })
     },
     productCreate:(req,res)=>{
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            db.Producto.create({
+               
+                name: req.body.name,
+                price: req.body.price,
+                discount:req.body.discount,
+                description: req.body.description,
+                id_categoria: req.body.id_categoria,
+                shipment:req.body.shipment ? true : false,
+                stock: req.body.stock ? true : false
+            })
+                .then((product) => {
+                    db.ProductImage.create({
+                        imageName: req.file ? req.file.filename : "default-image.png",
+                        id_producto: product.id
+                    })
+                        .then(() => {
+                            res.redirect('/admin/products/listaProductos')
+                        })
+                        .catch((error) => res.send(error))
+                })
+                .catch((error) => res.send(error))
+
+            }
+
+
+
+
+
+
+
+/* 
+
+           db.Producto.create({include:[{association:'Category'}], 
+             ...req.body,
+             stock: req.body.stock ? req.body.stock = 1 : req.body.stock = 0,
+             shipment: req.body.shipment ? req.body.shipment = 1 : req.body.shipment = 0,
+             image: req.file ? req.file.filename : "default-image.png"
+
+          })
+          
+        .then(() => res.redirect('/admin/products/listaProductos'))
+
+           .catch(error => res.send(error))
+        }else{
+          res.render('admin/products/addProduct', { 
+            titulo: "Agregar producto",
+            errors: errors.mapped(),
+            old: req.body
+           })
+        }  */
+       },
+
+
+
+
+
+
+
+
+
+
+
+/* 
         let errors = validationResult(req)
         if(errors.isEmpty()){
-             /* 1) Crear el objeto producto */
-             let lastId = 0
-             getProducts.forEach(product => {
-                 if(product.id > lastId){
-                     lastId = product.id
-                 }
-             });
- 
-             let newProduct = {
+             db.Producto.create(
+                {include:[{association:'Category'}],
                  ...req.body,
-                 id: lastId +1,
                  image: req.file ? req.file.filename : "default-image.png" ,
-                 shipment: req.body.shipment ? true: false,
-                 stock: req.body.stock ? true: false
-             }
-            
-            /* 2) Agregarlo al array correspondiente */
-                getProducts.push(newProduct)
-                
-            /* 3) Escribir el array con el nuevo producto en el json */
-            
-                writeProducts(getProducts)
-            
-            /* 4) Devolver una vista(Redireccionar) correspondiente */
- 
-             res.redirect("/admin/products")
+                 shipment: req.body.shipment ? 1 : 0,
+                 stock: req.body.stock ? req.body.stock = 1 : req.body.stock = 0
+             })
+             .then((result) => {
+                res.redirect("/admin")
+            })
+            .catch((error) => {
+            res.send(error)
+            })
          
         }
         else{
@@ -59,8 +113,8 @@ module.exports = {
              errors: errors.mapped(),
              old: req.body
             })
-        }   
-    },
+        }    
+    },*/
        
     productEdit:(req,res)=>{
         // 1- Obtener el id del producto
