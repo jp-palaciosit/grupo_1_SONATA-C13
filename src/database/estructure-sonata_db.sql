@@ -16,35 +16,6 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `carrito`
---
-
-DROP TABLE IF EXISTS `carrito`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `carrito` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `id_usuario` int(11) NOT NULL,
-  `id_producto` int(11) NOT NULL,
-  `cantidad_producto` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `carrito_FK` (`id_usuario`),
-  KEY `carrito_FK_1` (`id_producto`),
-  CONSTRAINT `carrito_FK` FOREIGN KEY (`id_usuario`) REFERENCES `users` (`ID`),
-  CONSTRAINT `carrito_FK_1` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `carrito`
---
-
-LOCK TABLES `carrito` WRITE;
-/*!40000 ALTER TABLE `carrito` DISABLE KEYS */;
-/*!40000 ALTER TABLE `carrito` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `categoria`
 --
 
@@ -55,7 +26,7 @@ CREATE TABLE `categoria` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,34 +35,8 @@ CREATE TABLE `categoria` (
 
 LOCK TABLES `categoria` WRITE;
 /*!40000 ALTER TABLE `categoria` DISABLE KEYS */;
+INSERT INTO `categoria` VALUES (1,'Intrumento'),(2,'Accesorio');
 /*!40000 ALTER TABLE `categoria` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `historial`
---
-
-DROP TABLE IF EXISTS `historial`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `historial` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) NOT NULL,
-  `logo` varchar(100) NOT NULL,
-  `id_usuario` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `historial_FK` (`id_usuario`),
-  CONSTRAINT `historial_FK` FOREIGN KEY (`id_usuario`) REFERENCES `users` (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `historial`
---
-
-LOCK TABLES `historial` WRITE;
-/*!40000 ALTER TABLE `historial` DISABLE KEYS */;
-/*!40000 ALTER TABLE `historial` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -111,13 +56,10 @@ CREATE TABLE `productos` (
   `description` text NOT NULL,
   `image` varchar(100) DEFAULT NULL,
   `id_categoria` int(11) DEFAULT NULL,
-  `id_historial` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `productos_FK` (`id_historial`),
   KEY `productos_FK_1` (`id_categoria`),
-  CONSTRAINT `productos_FK` FOREIGN KEY (`id_historial`) REFERENCES `historial` (`id`),
   CONSTRAINT `productos_FK_1` FOREIGN KEY (`id_categoria`) REFERENCES `categoria` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -126,31 +68,8 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
-INSERT INTO `productos` VALUES (6,'Guitarra Mayra',173309,10,1,1,'La guitarra del grupo NÂº1',NULL,NULL,NULL);
+INSERT INTO `productos` VALUES (6,'Guitarra Mayra',173309,10,1,1,'La guitarra del grupo NÂº1',NULL,NULL),(7,'Guitarra',111,23,1,1,'dASD','',1),(8,'Guitarra',111,23,1,1,'dASD','',1),(9,'Guitarra',111,23,1,1,'dASD','',1),(10,'Guitarra',111,23,1,1,'dASD','',1);
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `roles`
---
-
-DROP TABLE IF EXISTS `roles`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `roles` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nameRol` varchar(100) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `roles`
---
-
-LOCK TABLES `roles` WRITE;
-/*!40000 ALTER TABLE `roles` DISABLE KEYS */;
-/*!40000 ALTER TABLE `roles` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -169,11 +88,9 @@ CREATE TABLE `users` (
   `captcha` tinyint(4) NOT NULL,
   `terminosCoindiciones` tinyint(4) NOT NULL,
   `avatar` varchar(100) DEFAULT NULL,
-  `id_rol` int(11) DEFAULT NULL,
-  PRIMARY KEY (`ID`),
-  KEY `users_FK` (`id_rol`),
-  CONSTRAINT `users_FK` FOREIGN KEY (`id_rol`) REFERENCES `roles` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `rol` varchar(50) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -182,6 +99,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'Juan Pablo','Palacios','admin@admin.com','$2a$10$G.H5AfT9kp6O9c2QIg8/AOoU3QUhM0PhcgHcbE4hm9RVIzRCFZGyq',0,0,'default-image.png','ADMIN');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -198,4 +116,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-20  5:19:45
+-- Dump completed on 2022-06-24  4:08:23

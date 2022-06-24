@@ -1,5 +1,5 @@
 const {getProducts} = require("../data")
-const { search } = require("../routers/productRouter")
+/* const { search } = require("../routers/productRouter") */
 const thousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
 const db = require("../database/models")
 module.exports = {

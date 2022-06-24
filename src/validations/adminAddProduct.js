@@ -15,7 +15,7 @@ const validateAddProduct = [
         }
         return false
     }).withMessage("El descuento tiene que ser un valor entre 0 y 100"),
-    check("categoryId")
+    check("id_categoria")
         .notEmpty().withMessage("Seleccione una categoria"),
     check("stock")
         .isString("on").withMessage("Seleccione stock"),

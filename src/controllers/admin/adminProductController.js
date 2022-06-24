@@ -18,15 +18,19 @@ module.exports = {
             res.send(error)
         }) 
         },
-    productAdd:(req,res)=>{
-        res.render("admin/products/addProduct",{
-            title: "Agregar productos",
-            session:req.session
-        })
+        productAdd:(req,res)=>{
+            db.Category.findAll()
+            .then(categories => {
+                res.render("admin/products/addProduct",{
+                    title: "Agregar productos",
+                    session:req.session,
+                    categories
+                })
+            })
     },
     productCreate:(req,res)=>{
         let errors = validationResult(req);
-        if(errors.isEmpty()){
+        /* if(errors.isEmpty()){ */
             db.Producto.create({
                
                 name: req.body.name,
@@ -35,87 +39,24 @@ module.exports = {
                 description: req.body.description,
                 id_categoria: req.body.id_categoria,
                 shipment:req.body.shipment ? true : false,
-                stock: req.body.stock ? true : false
+                stock: req.body.stock ? true : false,
+                image : req.file ? req.file.filename : ""
             })
-                .then((product) => {
-                    db.ProductImage.create({
-                        imageName: req.file ? req.file.filename : "default-image.png",
-                        id_producto: product.id
-                    })
-                        .then(() => {
-                            res.redirect('/admin/products/listaProductos')
-                        })
-                        .catch((error) => res.send(error))
-                })
-                .catch((error) => res.send(error))
-
-            }
-
-
-
-
-
-
-
-/* 
-
-           db.Producto.create({include:[{association:'Category'}], 
-             ...req.body,
-             stock: req.body.stock ? req.body.stock = 1 : req.body.stock = 0,
-             shipment: req.body.shipment ? req.body.shipment = 1 : req.body.shipment = 0,
-             image: req.file ? req.file.filename : "default-image.png"
-
-          })
-          
-        .then(() => res.redirect('/admin/products/listaProductos'))
-
-           .catch(error => res.send(error))
-        }else{
-          res.render('admin/products/addProduct', { 
-            titulo: "Agregar producto",
-            errors: errors.mapped(),
-            old: req.body
-           })
-        }  */
-       },
-
-
-
-
-
-
-
-
-
-
-
-/* 
-        let errors = validationResult(req)
-        if(errors.isEmpty()){
-             db.Producto.create(
-                {include:[{association:'Category'}],
-                 ...req.body,
-                 image: req.file ? req.file.filename : "default-image.png" ,
-                 shipment: req.body.shipment ? 1 : 0,
-                 stock: req.body.stock ? req.body.stock = 1 : req.body.stock = 0
-             })
-             .then((result) => {
+            .then((product) => {
                 res.redirect("/admin")
             })
-            .catch((error) => {
-            res.send(error)
-            })
-         
-        }
-        else{
-            res.render("admin/products/addProduct",{
-             title: "Agregar productos",
-             errors: errors.mapped(),
-             old: req.body
-            })
-        }    
-    },*/
-       
+            .catch((error) => res.send(error))
+            /* } 
+            else{
+                res.render("admin/products/addProduct", { 
+                      titulo: "Agregar producto",
+                      errors: errors.mapped(),
+                      old: req.body,
+                      session:req.session,
+             })
+            } */
+        },
+        
     productEdit:(req,res)=>{
         // 1- Obtener el id del producto
 
