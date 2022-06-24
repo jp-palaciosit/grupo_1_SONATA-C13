@@ -1,6 +1,6 @@
 <div align="center">
     <h1 text-aling="center" style="font-size: 60px;"> 🎼SONATA <h1>
-    <h1 text-aling="center" style="font-size: 50px;">Sprint IX<h1>
+    <h1 text-aling="center" style="font-size: 50px;">Sprint V<h1>
 </div>
 <h2>💪 SEGUIR HACIENDO:</h2>
 <p>*Comunicandonos.</p>

@@ -37,6 +37,8 @@ router.put("/products/:id", uploadFile.single("image"), adminProductController.p
 
 router.delete("/products/eliminar/:id", adminProductController.productDelete)
 
+/* router.get("/products/search", adminProductController.search) */
+
 /* Sin permiso Mati y Jona*/
 
 router.get("/sinPermiso", adminController.sinPermiso)

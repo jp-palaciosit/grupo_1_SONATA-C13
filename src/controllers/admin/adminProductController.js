@@ -1,5 +1,8 @@
 /* const {getProducts, writeProducts} = require("../../data") */
 const {validationResult} = require("express-validator")
+/* const removeAccents = (str) => {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+} */
 const db = require("../../database/models")
 
 module.exports = {
@@ -115,5 +118,25 @@ module.exports = {
             }
         })
         .catch(error=>res.send(error))
-    } 
+    },
+    /* search: (req, res) => {
+        let searchResult = req.query.search;
+        let search = searchResult.toLowerCase()
+        db.Producto.findAll({
+            where:{
+                name:{[Op.like]:`%${search}%`}
+            }
+        })
+        .then(producto=>{
+
+            res.render("admin/products/resultsSearch",{
+                titulo: `resultados de ${searchResult}`,
+                producto,
+                searchResult:producto,
+                toThousand,
+                session: req.session
+             })
+        })
+        .catch((error)=>{res.send(error)})
+    } */
 }
