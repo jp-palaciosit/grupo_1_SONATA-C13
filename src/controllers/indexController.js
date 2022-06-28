@@ -1,5 +1,6 @@
-
-const {getProducts} = require("../data")
+const {validationResult} = require("express-validator")
+const db = require("../database/models")
+const {Op} = db.Sequelize;
 
 /* Para poner los puntos cada 3 cifras/miles */
 const thousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
@@ -16,38 +17,57 @@ module.exports = {
             session: req.session
         })
     },
-    home:(req, res) => {
-        res.render("generalFolder/home",{
-            producto:getProducts,
-            thousand, 
-            session: req.session
+    home:(req,res)=>{
+        db.Producto.findAll()
+        .then(productos=>{
+            res.render("generalFolder/productDB",{
+                session:req.session,
+                product:productos,
+                thousand
+            })
         })
+        .catch((error) => { res.send(error)})
     },
     details:(req, res) =>{
         let reqPar = +req.params.id
-        let idProducto = getProducts.find(buscoId => buscoId.id === reqPar)
-        res.render("products/productDetail",{
-            title: idProducto.name,
-            producto: idProducto,
-            thousand,
-            session: req.session
+
+        db.Producto.findByPk({
+            where: {
+                id: reqPar
+            },
+            include: [{ association: "image"}]
         })
+        .then((producto) => {
+            res.render("products/productDetail", {
+                titulo: "Detalle del producto",
+                product:producto,
+                session:req.session,
+                thousand
+            })
+        })
+        .catch((error) => { res.send(error)})        
     },
-    search:(req, res)=>{
-        let searchResult = []
-        getProducts.forEach(producto => {
-            if(removeAccents(producto.name.toLowerCase()).includes(req.query.keywords.toLowerCase())){
-                searchResult.push(producto)
+    search: (req, res) => {
+        let searchResult = req.query.keywords;
+        let search = searchResult.toLowerCase()
+        db.Producto.findAll({
+            where:{
+                name:{[Op.like]:`%${search}%`}
             }
+        })
+        .then(producto=>{
 
-        });
-        res.render("generalFolder/search",{
-            searchResult,
-            keyword: req.query.keywords,
-            thousand,
-            session: req.session
-        } )
-
-        
+            res.render("generalFolder/search",{
+                titulo: `resultados de ${searchResult}`,
+                producto,
+                searchResult:producto, 
+                thousand,
+                session: req.session
+             })
+        })
+        .catch((error)=>{
+            res.send(error)
+        })
     }
-}
+    
+} 

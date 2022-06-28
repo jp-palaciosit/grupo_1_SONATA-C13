@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<%-include("../partials/head")%> 
+<body>
+    <%-include("../partials/header")%>
+
+    <main>
+        <article class="art-title">
+        </article>
+        <article>
+            <button class="btn-add">
+                <a href="/admin/categories/addCategory">
+                    <i class="fa-solid fa-plus"></i> Nuevo Producto
+                </a>
+            </button>
+        </article>
+        <article class="art-search">
+            <form action="/admin/categories/searchCategory" method="get">
+                <input type="text" name="search" id="search" placeholder="Buscar Categoría">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </article>
+
+        <article class="container-fluid">
+            <table class="table table-striped table-hover">
+                <thead>
+                  <tr class="text-center">
+                    <th scope="col">id</th>
+                    <th scope="col">Nombre</th>
+
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <% categorias.forEach(categoria => { %>
+                        <tr class="text-center">
+                            <th scope="row"><%=categoria.id%></th>
+                            <td class="texto-corto"><%=categoria.name%></td>
+                            <td>$<%=categoria.price%></td>
+                            <td class="btn-edit">
+                              <a href="/admin/categories/editCategory<%- categoria.id %>" class="btn btn-success">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                              </a>
+                              <form action="/admin/categories/delete/<%- categoria.id %>?_method=DELETE" method="POST">
+                                <button class="btn btn-danger" type="submit">
+                                  <i class="fa-solid fa-trash-can"></i>
+                                </button>
+                              </form>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+              </table>
+        </article>
+
+        <a href="/" class="backToHome">Salir del administrador</a>
+    </main>
+
+    <%-include("../partials/footerAdmin")%>
+</body>
+</html>

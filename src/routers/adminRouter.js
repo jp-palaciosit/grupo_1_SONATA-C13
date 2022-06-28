@@ -3,6 +3,7 @@ const router = express.Router()
 /* const methodOverrise */
 const adminController = require("../controllers/admin/adminController")
 const adminProductController = require("../controllers/admin/adminProductController")
+const adminCategoryController = require("../controllers/admin/adminCategoryController");
 const uploadFile = require("../middlewares/uploadProductImg")
 const validateAddProduct = require("../validations/adminAddProduct")
 const userSession = require("../middlewares/userSession")
@@ -17,27 +18,36 @@ router.get("/search", userSession, adminCheck, adminController.search)
 
 /* CRUD  PRODUCTS*/
 
-// Get - Lista productos
+    // Get - Lista productos
 router.get("/products", userSession, adminCheck, adminProductController.list)
-
-// Get - Agregar producto (Pero no los crea)
+    // Get - Agregar producto (Pero no los crea)
 router.get("/products/create", userSession, adminCheck, adminProductController.productAdd)
-
-// Post - Crear un producto en DB
+    // Post - Crear un producto en DB
 router.post("/products", uploadFile.single("image"), validateAddProduct ,adminProductController.productCreate)
-
-
-// Get - Editar producto
-
+    // Get - Editar producto
 router.get("/products/edit/:id", userSession, adminCheck, adminProductController.productEdit)
-
-//Put - actualizar producto
-
+    //Put - actualizar producto
 router.put("/products/:id", uploadFile.single("image"), adminProductController.productUpdate)
-
+    //Delete - Eliminar producto
 router.delete("/products/eliminar/:id", adminProductController.productDelete)
 
 /* router.get("/products/search", adminProductController.search) */
+
+
+/* CRUD CATEGORIA */
+
+router.get('/categories', userSession, adminCheck, adminCategoryController.list );
+
+router.get('/categories/addCategory', userSession, adminCheck,  adminCategoryController.categoryAdd );
+
+router.post('/categories', adminCategoryController.categoryCreate );
+
+router.get('/categories/editCategory/:id', userSession, adminCheck, adminCategoryController.categoryEdit );
+
+router.put('/categories/editCategory/:id', adminCategoryController.categoryUpdate );
+
+router.delete('/categories/delete/:id', adminCategoryController.categoryDelete);
+
 
 /* Sin permiso Mati y Jona*/
 

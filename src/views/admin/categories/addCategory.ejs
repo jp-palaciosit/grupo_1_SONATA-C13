@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+    <%-include("../partials/head")%>
+<body>
+    <%-include("../partials/header")%>
+
+    <main class="addP">
+        <form action="/admin/categories" method="POST">
+            <div class="inp-cont">
+                <label for="name">Nombre de la Categoría</label>
+                <input type="text" name="name" placeholder="Ej: Accesorios" id="name">
+            </div>
+
+            <div class="inp-cont">
+                <button type="submit" class="btn-add">Crear</button>
+            </div>
+        </form>
+
+        <div class="backTo">
+            <a href="/admin/categories">Volver</a>
+        </div>
+    </main>
+
+    <%-include("../partials/footer")%>
+</body>
+</html>

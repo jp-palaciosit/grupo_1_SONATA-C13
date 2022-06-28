@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+    <%-include("../partials/head")%>
+<body>
+    <%-include("../partials/header")%>
+    
+    <main>
+        <form action="/admin/categories/editCategory/<%-category.id%>?_method=PUT" method="POST">
+            <div>
+                <label for="name">Nombre de la categoría</label>
+                <input type="text" name="name" value="<%=category.name%>" id="name">
+            </div>
+            
+            <div>
+                <button type="submit" class="btn-add">Guardar</button>
+            </div>
+        </form>
+
+        <div>
+            <a href="/admin/categories">Volver</a>
+        </div>
+    </main>
+
+    <%-include("../partials/footer")%>
+</body>
+</html>

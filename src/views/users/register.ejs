@@ -32,6 +32,9 @@
                     <% } %>
                     <label for="file">Ingrese un avatar</label>
                     <input type="file" name="avatar" id="file" value=""  class="input-empuje input-imagen">
+                    <% if (locals.errors && errors.avatar) { %>
+                        <p style="color:red;"><%= errors.avatar.msg %></p>
+                    <% } %>
                     <label for="captcha" class="checkbox1">Captcha
                         <span class="captcha-robot">
                             <input type="checkbox" name="captcha" id="captcha" value="" class="input-captcha">

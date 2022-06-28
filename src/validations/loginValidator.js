@@ -24,6 +24,7 @@ const validateLogin = [
 }),
     check("passwd")
         .notEmpty().withMessage("Ingrese una contraseña")
+        
 ]
 
 module.exports = validateLogin

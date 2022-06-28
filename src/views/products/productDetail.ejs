@@ -15,8 +15,8 @@
                     <article class="produc-detail">
                         <div class="container">
                             <div class="precio">
-                                <p class="producto-precio">$ <%-thousand(product.price)%> </p>
-                                <p class="producto-anterior"><%-thousand(product.price + product.price * product.discount / 100) %></p>
+                                <p class="producto-precio">$ <%-thousand((product.price - product.price * product.discount / 100).toFixed(0))%> </p>
+                                <p class="producto-anterior"><%-thousand((product.price + product.price * product.discount / 100).toFixed(0)) %></p>
                             </div>
                             <p class="producto-descuento"><%-product.discount ? `${product.discount}% OFF` : ""%></p>
                         </div>

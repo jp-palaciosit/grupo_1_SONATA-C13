@@ -42,7 +42,7 @@
                                 <%-producto.discount !== 0 ? `${producto.discount} % OFF` : ""%>
                                 <%-producto.shipment ? "Envios gratis" : "" %>
                             </span>
-                            <p class="precio">$ <%- thousand(producto.price - producto.price * producto.discount / 100) %></p>
+                            <p class="precio">$ <%- thousand((producto.price - producto.price * producto.discount / 100).toFixed(0)) %></p>
                             <!-- <a href="productCart" class="ancla-carrito"> -->
                             <i class="fa-solid fa-cart-shopping"></i>
                             <!-- </a> -->

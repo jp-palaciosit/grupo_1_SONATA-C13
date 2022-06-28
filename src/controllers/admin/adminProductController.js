@@ -32,10 +32,10 @@ module.exports = {
             })
     },
     productCreate:(req,res)=>{
-        let errors = validationResult(req);
-        /* if(errors.isEmpty()){ */
+         let errors = validationResult(req);
+       if(errors.isEmpty()){
             db.Producto.create({
-               
+                /* include:[{association:'Category'}] ,*/
                 name: req.body.name,
                 price: req.body.price,
                 discount:req.body.discount,
@@ -49,15 +49,19 @@ module.exports = {
                 res.redirect("/admin")
             })
             .catch((error) => res.send(error))
-            /* } 
-            else{
+            } 
+           /*  else{
+                db.Category.findAll()
+                .then(categories => {
                 res.render("admin/products/addProduct", { 
                       titulo: "Agregar producto",
                       errors: errors.mapped(),
                       old: req.body,
-                      session:req.session,
+                      session:req.session
              })
+            })
             } */
+         
         },
         
     productEdit:(req,res)=>{
