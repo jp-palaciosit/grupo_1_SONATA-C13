@@ -2,6 +2,7 @@
 <html lang="en">
     <%-include("../partials/head.ejs") %>
     <link rel="stylesheet" href="/css/login.css">
+    <script src="/js/loginValidatorFront.js" ></script>
 <body>
     <%-include("../partials/header.ejs") %>
     <main>
@@ -15,11 +16,13 @@
                     <% if (locals.errors && errors.email) { %>
                         <p style="color:red;"><%=errors.email.msg%></p>
                     <% } %>
+                    <small id="errorEmail" style="color: pink;"></small>
                     <label for="passwd">Contraseña</label>
                     <input type="password" name="passwd" id="passwd" value="" placeholder="  Ingrese su contraseña" class="input-empuje">
                     <% if (locals.errors && errors.passwd) { %>
                         <p style="color:red;"><%=errors.passwd.msg%></p>
                     <% } %>
+                    <small id="errorPasswd" style="color: pink;"></small>
                     <label for="captcha" class="checkbox1">
                         <input type="checkbox" name="captcha" id="captcha" class="input-recordar">
                         <p>Recordar</p>                          
