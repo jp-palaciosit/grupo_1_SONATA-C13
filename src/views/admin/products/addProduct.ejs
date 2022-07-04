@@ -1,4 +1,5 @@
-<%-include("../partials/head")%> 
+<%-include("../partials/head")%>
+<script src="/js/admin/addProductValidatorFront.js" ></script> 
 <body>
     <%-include("../partials/header")%>
     <main class="container min-vh-100 pt-5">
@@ -12,6 +13,7 @@
 						<% if (locals.errors && errors.name) { %>
 							<p style="color: red;"><%= errors.name.msg %>  </p>
 						<% } %>
+						<small id="errorName" style="color: pink;"></small>
 					</div>
 					<div class="mb-3 col-md-6 caja_separada">
 						<label for="price" class="form-label">Precio</label>
@@ -20,6 +22,7 @@
 							<p style="color: red;"><%= errors.price.msg %>  </p>
 						<% } %>
 					</div>
+					<small id="errorPrice" style="color: pink;"></small>
 					<div class="mb-3 col-md-6 caja_separada">
 						<label for="discount" class="form-label">Descuento</label>
 						<input type="number" name="discount" class="form-control" id="discount" placeholder="Ej: 5000" value="<%= locals.old && old.discount ? old.discount : "" %>">
@@ -27,6 +30,7 @@
 							<p style="color: red;"><%= errors.discount.msg %>  </p>
 						<% } %>
 					</div>
+					<small id="errorDiscount" style="color: pink;"></small>
 					<div class="mb-3 col-md-6 caja_separada">
 						<label for="category" class="form-label">Categoria</label>
 						<select name="id_categoria" class="form-select" id="id_categoria" aria-label="Default select example">
@@ -38,10 +42,12 @@
 							<p style="color: red;"><%= errors.id_categoria.msg %>  </p>
 						<% } %>
 					</div>
+					<small id="errorId_categoria" style="color: pink;"></small>
 					<div class="input-group mb-3 input-imagen-producto">
 						<label class="input-group-text" for="inputGroupFile01">Upload</label>
 						<input type="file" class="form-control" name="image" id="inputGroupFile01">
 					</div>
+					<small id="errorImage" style="color: pink;"></small>
 				</div>
 				
 				<div class="div-StockyEnvios-agregar">
@@ -52,6 +58,7 @@
 							<p style="color: red;"><%= errors.stock.msg %></p>
 						<% } %>		
 					</div>
+					<small id="errorStock" style="color: pink;"></small>
 					<div class="form-check mb-3 form-switch" id="add-product-envio">
 						<input class="form-check-input" name="shipment" type="checkbox" role="switch" id="envio" <%= locals.old && old.shipment ? "checked" : "" %>>
 						<label class="form-check-label" for="envio" id="label-form-agregar">Envios gratis</label>
@@ -59,11 +66,13 @@
 							<p style="color: red;"><%= errors.shipment.msg %></p>
 						<% } %>
 					</div>
+					<small id="errorShipment style="color: pink;"></small>
 				</div>
 				<div class="mb-3 caja-text-area">
 					<label for="description" class="form-label">Descripción</label>
 					<textarea name="description" class="form-control caja-textarea" id="description" rows="3"><%=locals.old && old.description ? old.description : ""%></textarea>
 				</div>
+				<small id="errorDescription" style="color: pink;"></small>
 				<div class="col-12" id="btn-crearProducto">
 					<button class="btn btn-primary" type="submit">Crear</button>
 				</div>
