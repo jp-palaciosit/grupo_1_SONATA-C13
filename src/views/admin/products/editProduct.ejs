@@ -1,8 +1,9 @@
-<%-include("../partials/head")%> 
+<%-include("../partials/head")%>
+<script src="/js/admin/editProductValidatorFront.js" ></script>  
 <body>
     <%-include("../partials/header")%>
     <main class="container min-vh-100 pt-5">
-        <form action="/admin/products/<%=producto.id%>?_method=PUT" method="post" enctype="multipart/form-data">
+        <form action="/admin/products/<%=producto.id%>?_method=PUT" method="post" enctype="multipart/form-data" id="form">
               <fieldset class="rounded border w-75 mx-auto p-4" id="formulario-crear-fondo" >
                   <legend class="text-center">Editar producto:<%=producto.name%></legend>
                   <div class="caja-contenedora-formAgregar">
@@ -10,26 +11,31 @@
                           <label for="name" class="form-label">Nombre del producto</label>
                           <input type="text" name="name" class="form-control" id="name" value="<%=producto.name%>">
                       </div>
+                      <small id="errorName" style="color: pink;"></small>
                       <div class="mb-3 col-md-6 caja_separada">
                           <label for="price" class="form-label">Precio</label>
                           <input type="number" name="price" class="form-control" id="price" value="<%=producto.price%>">
                       </div>
+                      <small id="errorPrice" style="color: pink;"></small>
                       <div class="mb-3 col-md-6 caja_separada">
                           <label for="discount" class="form-label">Descuento</label>
                           <input type="number" name="discount" class="form-control" id="discount" value="<%=producto.discount%>">
                       </div>
+                      <small id="errorDiscount" style="color: pink;"></small>
                       <div class="mb-3 col-md-6 caja_separada">
                           <label for="category" class="form-label">Categoria</label>
-                          <select name="categoryId" class="form-select" id="category" aria-label="Default select example" value="<%= producto.categoryId %>">
+                          <select name="categoryId" class="form-select" id="id_categoria" aria-label="Default select example" value="<%= producto.categoryId %>">
                               <option selected hidden>Categoría</option>
                               <option value="1">Instrumento</option>
                               <option value="2">Accesorios</option>
                           </select>
                       </div>
+                      <small id="errorId_categoria" style="color: pink;"></small>
                         <div class="input-imagen-producto mb-3" style="text-align: center;">
                             <label class="input-group-text" for="inputGroupFile01">Upload</label>
                             <input type="file" class="form-control" name="image" id="inputGroupFile01" value="<%=producto.image%>">
                         </div>
+                        <small id="errorImage" style="color: pink;"></small>
                   </div>
                   
                   <div class="div-StockyEnvios-agregar">
@@ -37,15 +43,18 @@
                           <input <%-producto.stock ? "checked" : " "%>  class="form-check-input" name="stock" type="checkbox" role="switch" id="stock"> 
                           <label class="form-check-label" for="stock" id="label-form-agregar">Stock disponible</label>		
                       </div>
+                      <small id="errorStock" style="color: pink;"></small>
                       <div class="form-check mb-3 form-switch" id="add-product-envio">
                           <input <%-producto.shipment ? "checked" : " "%> class="form-check-input" name="shipment" type="checkbox" role="switch" id="envio"> 
                           <label class="form-check-label" for="envio" id="label-form-agregar">Envios gratis</label>
                       </div>
+                      <small id="errorShipment" style="color: pink;"></small>
                   </div>
                   <div class="mb-3 caja-text-area">
                       <label for="description" class="form-label">Descripción</label>
                       <textarea name="description" class="form-control caja-textarea" id="description" rows="3"><%=producto.description%></textarea>
                   </div>
+                  <small id="errorDescription" style="color: pink;"></small>
                   <div class="col-12" id="btn-crearProducto">
                       <button class="btn btn-primary" type="submit">Editar</button>
                   </div>

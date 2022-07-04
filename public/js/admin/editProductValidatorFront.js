@@ -1,8 +1,8 @@
 const QS = (element)=>document.querySelector(element)
-
 window.addEventListener("load", ()=>{
 
-    let $inputName = QS("#name"),
+    let $formulario = QS("form"), 
+    $inputName = QS("#name"),
     $inputPrice = QS("#price"),
     $inputDiscount = QS("#discount"),
     $inputCategory = QS("#id_categoria"),
@@ -71,7 +71,7 @@ window.addEventListener("load", ()=>{
             case !$inputCategory.value.trim():
                 $errorCategory.innerHTML = "Seleccione una categoria"
                 break;
-            /* case !validation.vali.test($inputCategory.value):
+            /* case !validation.valiCategory.test($inputCategory.value):
                 $errorCategory.innerHTML = "La categoria no fue seleccionada"   
                 break; */
             default:
@@ -105,6 +105,21 @@ window.addEventListener("load", ()=>{
             $inputFile.value = ""
             return false
         }
+    })
+    $formulario.addEventListener("submit", function(e){
+        e.preventDefault();
+        let form = this.elements
+        console.log(form)
+        for(let i = 0; i < form.length -1; i ++){
+            if(form[i].value ==""){
+                
+                $errorSubmit.innerHTML = "Los datos señalados son obligatorios"
+            }
+            else{
+            alert("Hay errores en el formulario")
+            }
+        }
+         
     })
 
 })
