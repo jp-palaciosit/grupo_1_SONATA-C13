@@ -2,6 +2,7 @@
 <html lang="en">
     <%-include("../partials/head.ejs") %>
     <link rel="stylesheet" href="/css/register.css">
+    
 <body>
     <%-include("../partials/header.ejs") %>
     <main class="main-register">
@@ -15,26 +16,34 @@
                     <% if (locals.errors && errors.name) { %>
                         <p style="color:red;"><%= errors.name.msg %></p>
                     <% } %>
-                    <label for="apellido">Apellido</label>
-                    <input type="text" name="lastname" placeholder="  Ingrese su apellido" class="input-empuje" value="<%= locals.old && old.lastname ? old.lastname : "" %>">
+                    <small id="errorName" style="color: pink;"></small>
+                    <label for="lastname">Apellido</label>
+                    <input type="text" name="lastname" id="lastname" placeholder="  Ingrese su apellido" class="input-empuje" value="<%= locals.old && old.lastname ? old.lastname : "" %>">
                     <% if (locals.errors && errors.lastname) { %>
                         <p style="color:red;"><%= errors.lastname.msg %></p>
                     <% } %>
+                    <small id="errorLastName" style="color: pink;"></small>
                     <label for="email" class="correo">Email</label>
                     <input type="email" name="email" id="email" value="" placeholder="  Ingrese su email" class="input-empuje" value="<%= locals.old && old.email ? old.email : "" %>">
                     <% if (locals.errors && errors.email) { %>
                         <p style="color:red;"><%= errors.email.msg %></p>
                     <% } %>
+                    <small id="errorEmail" style="color: pink;"></small>
                     <label for="passwd">Contraseña</label>
                     <input type="password" name="passwd" id="passwd" value="" placeholder="  Ingrese su contraseña" class="input-empuje"  >
                     <% if (locals.errors && errors.passwd) { %>
                         <p style="color:red;"><%= errors.passwd.msg %></p>
                     <% } %>
+                    <small id="errorPasswd" style="color: pink;"></small>
+                    <!-- <div style="width: 100px; height: 100px; border:1px solid black; border-radius:10px;" id="viewFile">
+
+                    </div> -->
                     <label for="file">Ingrese un avatar</label>
                     <input type="file" name="avatar" id="file" value=""  class="input-empuje input-imagen">
                     <% if (locals.errors && errors.avatar) { %>
                         <p style="color:red;"><%= errors.avatar.msg %></p>
                     <% } %>
+                    <small id="errorFile" style="color: pink;"></small>
                     <label for="captcha" class="checkbox1">Captcha
                         <span class="captcha-robot">
                             <input type="checkbox" name="captcha" id="captcha" value="" class="input-captcha">
@@ -44,6 +53,7 @@
                             <p>No soy un robot</p>                           
                         </span>
                     </label>
+                    <small id="errorCaptcha" style="color: pink;"></small>
                     <div class="div-TC">
                         <input type="checkbox" name="terCondi" id="TerminoCondicion" class="input-TC">
                         <% if (locals.errors && errors.terCondi) { %>
@@ -60,6 +70,7 @@
                             </span>
                         </label>
                     </div>
+                    <small id="errorTC" style="color: pink;"></small>
                     <button type="submit" class="btn-inicio" id="button-register">
                         <!--  <a href="https://www.google.com/" target="_blank" class="a-button">Iniciar Sesión</a> -->
                          <p>Iniciar Sesión</p>
@@ -68,6 +79,7 @@
                          <span class="span3"></span>
                          <span class="span4"></span>
                  </button>
+                 <small id="errorSubmit" style="color: pink;"></small>
                     <span class="tengo-cuenta">
                         <a href="<%-"/usuario"%>">Ya tengo cuenta</a>
                     </span>
@@ -76,6 +88,7 @@
             </article> 
         </section>
     </main>
+    <script src="../../validations/registerValidatorFront.js"></script>
     <%-include("../partials/footer.ejs") %>
 </body>
 </html>

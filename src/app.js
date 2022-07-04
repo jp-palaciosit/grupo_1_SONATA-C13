@@ -8,7 +8,7 @@ const cookieParser = require("cookie-parser")
 const cookieSession = require("./middlewares/cookieSession")
 /* se tiene que instalar el dotenv: npm install dotenv */
 require('dotenv').config()
-const PORT = process.env.PORT || 3000
+const PORT = 3000
 
 /* Path para el rutear el public */
 const pathResolve = path.join(__dirname, "../public")

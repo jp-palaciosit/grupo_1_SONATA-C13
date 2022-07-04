@@ -1,5 +1,4 @@
-const {check, body} = require("express-validator")
-/* const {getUsers} = require("../data") */
+/* const {check, body} = require("express-validator")
 const bcryptjs = require("bcryptjs")
 const db = require("../database/models")
 
@@ -20,4 +19,4 @@ const validatorPerfil = [
         .notEmpty().withMessage('Se require nombre completo')
 ];
 
-module.exports = validatorPerfil 
+module.exports = validatorPerfil  */
