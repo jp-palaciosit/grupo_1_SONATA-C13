@@ -17,8 +17,8 @@
                         <p style="color:red;"><%= errors.name.msg %></p>
                     <% } %>
                     <small id="errorName" style="color: pink;"></small>
-                    <label for="lastname">Apellido</label>
-                    <input type="text" name="lastname" id="lastname" placeholder="  Ingrese su apellido" class="input-empuje" value="<%= locals.old && old.lastname ? old.lastname : "" %>">
+                    <label for="lastName">Apellido</label>
+                    <input type="text" name="lastName" id="lastName" placeholder="  Ingrese su apellido" class="input-empuje" value="<%= locals.old && old.lastname ? old.lastname : "" %>">
                     <% if (locals.errors && errors.lastname) { %>
                         <p style="color:red;"><%= errors.lastname.msg %></p>
                     <% } %>

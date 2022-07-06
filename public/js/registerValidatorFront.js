@@ -3,7 +3,7 @@ const QS = (element)=>document.querySelector(element)
 window.addEventListener("load", ()=>{
     let $formulario = QS("form")
     let $inputName = QS("#name")
-    let $inputLastName = QS("#lastname")
+    let $inputLastName = QS("#lastName")
     let $inputEmail = QS("#email")
     let $inputPasswd = QS("#passwd")
     let $inputFile = QS("#file")

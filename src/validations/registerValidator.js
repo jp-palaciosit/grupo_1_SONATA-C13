@@ -7,7 +7,7 @@ const validateRegister = [
     body("name")
         .notEmpty().withMessage("Ingrese su nombre").bail()
         .isLength({min:2}).withMessage("Ingrese un nombre válido"),
-    body("lastname")
+    body("lastName")
         .notEmpty().withMessage("Ingrese su apellido").bail()
         .isLength({min:2}).withMessage("Ingrese un nombre valido"),
     body("email")
