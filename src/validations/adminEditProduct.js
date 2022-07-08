@@ -18,26 +18,12 @@ const validateAddProduct = [
     check("id_categoria")
         .notEmpty().withMessage("Seleccione una categoria"),
     check("description")
-    .notEmpty().withMessage("Ingrese una descripcion").bail()
-    .isLength({min:20}).withMessage("La descripcion tiene que tener entre 20 a 100 caracteres."),
+        .notEmpty().withMessage("Ingrese una descripcion").bail()
+        .isLength({min:20}).withMessage("La descripcion tiene que tener entre 20 a 100 caracteres."),
     check("stock")
         .isString("on").withMessage("Seleccione stock"),
     check("shipment")
         .isString("on").withMessage("Seleccione modo de envio"),
-    check("image").custom((value, {req}) => {
-        let file = req.file
-        let extensionesPermitidas = ["jpg","jpeg","png", "gif"];
-            if(!file){
-                /* return Promise.reject("Subir una imagen") */
-                return true
-            }
-            let extensionOriginal = req.file.mimetype.split("/").pop()
-            if(!extensionesPermitidas.includes(extensionOriginal)){
-                /* throw new Error(`Las extensiones permitidas son ${extensionesPermitidas.join(', ')}`) */
-                return true
-            }
-            return false;
-        }).withMessage("Las extensiones permitidas son .jpg |.jpeg |.png |.gif") 
 ]
 
 module.exports = validateAddProduct

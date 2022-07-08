@@ -106,7 +106,7 @@ window.addEventListener("load", ()=>{
             return false
         }
     })
-    $formulario.addEventListener("submit", function(e){
+    /* $formulario.addEventListener("submit", function(e){
         e.preventDefault();
         let form = this.elements
         console.log(form)
@@ -120,6 +120,6 @@ window.addEventListener("load", ()=>{
             }
         }
          
-    })
+    }) */
 
 })

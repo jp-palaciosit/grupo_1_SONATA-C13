@@ -35,6 +35,9 @@
                             <label class="input-group-text" for="inputGroupFile01">Upload</label>
                             <input type="file" class="form-control" name="image" id="inputGroupFile01" value="<%=producto.image%>">
                         </div>
+                        <% if (locals.errors && errors.image) { %>
+                            <p style="color: red;"><%= errors.image.msg %></p>
+                        <% } %>	
                         <small id="errorImage" style="color: pink;"></small>
                   </div>
                   

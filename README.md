@@ -79,6 +79,8 @@ Me llamo Luis, soy una persona divertida, apasionada por la tecnologia y la musi
 
 [Sprint 6](./retro_daily/sprint_VI.md)
 
+[Sprint 7](./retro_daily/sprint_VII.md)
+
 <h2>Daily de Sprint:</h2>
 
 [Sprint 4](./retro_daily/daily_IV.md)
@@ -86,6 +88,8 @@ Me llamo Luis, soy una persona divertida, apasionada por la tecnologia y la musi
 [Sprint 5](./retro_daily/daily_V.md)
 
 [Sprint 6](./retro_daily/daily_VI.md)
+
+[Sprint 7](./retro_daily/daily_VII.md)
 
 
 

@@ -47,9 +47,11 @@
 						<label class="input-group-text" for="inputGroupFile01">Upload</label>
 						<input type="file" class="form-control" name="image" id="inputGroupFile01">
 					</div>
+					<% if (locals.errors && errors.image) { %>
+						<p style="color: red;"><%= errors.image.msg %></p>
+					<% } %>	
 					<small id="errorImage" style="color: pink;"></small>
 				</div>
-				
 				<div class="div-StockyEnvios-agregar">
 					<div class="form-check mb-3 form-switch" id="add-product-stock">
 						<input class="form-check-input" name="stock" type="checkbox" role="switch" id="stock" <%= locals.old && old.stock ? "checked" : "" %>>	
@@ -71,6 +73,9 @@
 				<div class="mb-3 caja-text-area">
 					<label for="description" class="form-label">Descripción</label>
 					<textarea name="description" class="form-control caja-textarea" id="description" rows="3"><%=locals.old && old.description ? old.description : ""%></textarea>
+					<% if (locals.errors && errors.description) { %>
+						<p style="color: red;"><%= errors.description.msg %></p>
+					<% } %>
 				</div>
 				<small id="errorDescription" style="color: pink;"></small>
 				<div class="col-12" id="btn-crearProducto">

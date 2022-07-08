@@ -6,6 +6,7 @@ const adminProductController = require("../controllers/admin/adminProductControl
 const adminCategoryController = require("../controllers/admin/adminCategoryController");
 const uploadFile = require("../middlewares/uploadProductImg")
 const validateAddProduct = require("../validations/adminAddProduct")
+const validateEditProduct = require("../validations/adminEditProduct")
 const userSession = require("../middlewares/userSession")
 const adminCheck = require("../middlewares/admincheck")
 
@@ -25,9 +26,9 @@ router.get("/products/create", userSession, adminCheck, adminProductController.p
     // Post - Crear un producto en DB
 router.post("/products", uploadFile.single("image"), validateAddProduct ,adminProductController.productCreate)
     // Get - Editar producto
-router.get("/products/edit/:id", userSession, adminCheck, adminProductController.productEdit)
+router.get("/products/edit/:id", userSession, adminCheck,validateEditProduct, adminProductController.productEdit)
     //Put - actualizar producto
-router.put("/products/:id", uploadFile.single("image"), adminProductController.productUpdate)
+router.put("/products/:id", uploadFile.single("image"), validateAddProduct, adminProductController.productUpdate)
     //Delete - Eliminar producto
 router.delete("/products/eliminar/:id", adminProductController.productDelete)
 
