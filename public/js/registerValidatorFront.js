@@ -1,7 +1,7 @@
 const QS = (element)=>document.querySelector(element)
 
 window.addEventListener("load", ()=>{
-    let $formulario = QS("form")
+    let $formulario = QS("#form")
     let $inputName = QS("#name")
     let $inputLastName = QS("#lastName")
     let $inputEmail = QS("#email")
@@ -28,7 +28,8 @@ window.addEventListener("load", ()=>{
     let $errorFile = QS("#errorFile")
     let $errorCaptcha = QS("#errorCaptcha")
     let $errorTC = QS("#errorTC")
-    let $errorSubmit=QS("#errorSubmit") 
+    let $errorSubmit= QS("#errorSubmit")
+    let $errorForm = QS("#errorForm") 
 
     let errors = {
         name:false,
@@ -114,59 +115,21 @@ window.addEventListener("load", ()=>{
         } */
     })
     
-    /* 
-    $formulario.addEventListener("submit", function(e){
+
+    /* $formulario.addEventListener("submit", function(e){
         e.preventDefault();
         let form = this.elements
-        console.log(form)
         for(let i = 0; i < form.length -1; i ++){
             if(form[i].value ==""){
-                
                 $errorSubmit.innerHTML = "Los datos señalados son obligatorios"
             }
             else{
-            alert("Hay errores en el formulario")
+                $errorSubmit.innerHTML = "Hay errores en el formulario"
             }
         }
          
-    })
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /* $inputPasswd.addEventListener("focus", ()=>{
-        let passwdCorrect = $inputPasswd.value.length;
-        if(passwdCorrect < 8){
-        $errorPasswd.innerText = "Introduce por lo menos 8 caracteres"
-        errors.passwd = true
-        }
-        else{
-            $errorPasswd.innerText = ""
-            errors.passwd = false
-        }
-        $inputPasswd.addEventListener("change", (e)=>{
-            if(e.target.value >= 8){
-                $errorPasswd.innerText = ""
-                errors.passwd = false
-            }
-        })
-        $inputPasswd.addEventListener("blur", (e)=>{
-            if(e.target.value == ""){
-                errorPasswd.innerText ="Tiene que escribir una contraseña"
-            }
-        })
-        $formulario.addEventListener("submit", e =>{
+    }) */
+        /* $formulario.addEventListener("submit", e =>{
             e.preventDefault();
             if(!errors.passwd){
                 $formulario.submit()
@@ -175,5 +138,5 @@ window.addEventListener("load", ()=>{
                 alert("Hay errores en el formulario")
             }
         })
-    }) */
+    })  */
 })

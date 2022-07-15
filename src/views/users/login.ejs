@@ -10,7 +10,7 @@
             <h1>Bienvenido a Sonata</h1>
             <hr>
             <article class="article-login">
-                <form action="/usuario/login" method="POST">
+                <form action="/usuario/login" method="POST" id="form">
                     <label for="email" class="correo">Email</label>
                     <input type="email" name="email" id="email" value="" placeholder="  Ingrese su email" class="input-empuje">
                     <% if (locals.errors && errors.email) { %>
@@ -31,7 +31,7 @@
                         <p style="color:red;"><%=errors.custom.msg%></p>
                     <% } %>
                     <button type="submit" class="btn-inicio" id="#button-login">
-                            <p> Iniciar Sesión</p>
+                            <p>Iniciar Sesión</p>
                             <span class="span1"></span>
                             <span class="span2"></span>
                             <span class="span3"></span>
@@ -42,8 +42,12 @@
                         <a href="<%-"/usuario/olvide-mi-passwd"%>">Olvide mi contraseña</a>
                     </span>
                     <span class="tengo-cuenta">
-                        <a href="<%-"/usuario/registro"%>">Crear cuenta</a>
+                        <a href="<%-"/usuario/registro"%>">
+                            Crear cuenta
+                        </a>
                     </span>
+                    <small id="errorSubmit" style="color: pink;"></small>
+                    <!-- <small id="errorForm" style="color: pink;"></small> -->
                 </form>
             </article> 
         </section>

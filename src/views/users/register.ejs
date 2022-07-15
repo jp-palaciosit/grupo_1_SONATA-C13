@@ -10,7 +10,7 @@
             <h1 class="h1-crearCuenta">Crear cuenta</h1>
             <hr>
             <article class="article-register">
-                <form action="/usuario/registro" method="post" enctype="multipart/form-data">
+                <form action="/usuario/registro" method="post" enctype="multipart/form-data" id="form">
                     <label for="name">Nombre</label>
                     <input type="text" name="name" id="name" value="" placeholder="  Ingrese su nombre" class="input-empuje" value="<%=locals.old && old.name ? old.name : "" %>">
                     <% if (locals.errors && errors.name) { %>
@@ -19,8 +19,8 @@
                     <small id="errorName" style="color: pink;"></small>
                     <label for="lastName">Apellido</label>
                     <input type="text" name="lastName" id="lastName" placeholder="  Ingrese su apellido" class="input-empuje" value="<%= locals.old && old.lastname ? old.lastname : "" %>">
-                    <% if (locals.errors && errors.lastname) { %>
-                        <p style="color:red;"><%= errors.lastname.msg %></p>
+                    <% if (locals.errors && errors.lastName) { %>
+                        <p style="color:red;"><%= errors.lastName.msg %></p>
                     <% } %>
                     <small id="errorLastName" style="color: pink;"></small>
                     <label for="email" class="correo">Email</label>
@@ -73,7 +73,7 @@
                     <small id="errorTC" style="color: pink;"></small>
                     <button type="submit" class="btn-inicio" id="button-register">
                         <!--  <a href="https://www.google.com/" target="_blank" class="a-button">Iniciar Sesión</a> -->
-                         <p>Iniciar Sesión</p>
+                         <p>Crear cuenta</p>
                          <span class="span1"></span>
                          <span class="span2"></span>
                          <span class="span3"></span>
@@ -83,6 +83,7 @@
                     <span class="tengo-cuenta">
                         <a href="<%-"/usuario"%>">Ya tengo cuenta</a>
                     </span>
+                    <small id="errorForm" style="color: pink;"></small>
                 </form>
                 
             </article> 

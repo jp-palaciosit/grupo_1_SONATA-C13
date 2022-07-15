@@ -13,7 +13,8 @@ window.addEventListener("load", ()=>{
 
     /* Expresiones */
     const validation = {
-        valiName :/^[a-zA-ZÀ-ÿ\s]{5,40}$/,
+        valiName :/^[A-Za-z0-9\s]{5,40}$/g
+        /* /^[a-zA-ZÀ-ÿ\s]$/ */,
         valiDescription: /^[a-zA-ZÀ-ÿ\s]{20,90}$/,
         valiPrice:/^[1-9]*(\.?)[0-9]+$/,
         valiDiscount:/^\d{1,100}$/

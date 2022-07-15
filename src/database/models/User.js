@@ -22,14 +22,6 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(70),
             allowNull: false,
         },
-        captcha:{
-            type:dataTypes.BOOLEAN,
-            allowNull:false
-        },
-        terminosCoindiciones:{
-            type:dataTypes.BOOLEAN,
-            allowNull:false
-        },
         avatar: {
             type: dataTypes.STRING(100),
             allowNull:false

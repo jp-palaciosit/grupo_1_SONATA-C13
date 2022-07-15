@@ -88,7 +88,6 @@ module.exports = {
             db.User.create({
                 ...req.body,
                 passwd: BCRYPT.hashSync(req.body.passwd, 10),
-                terminosCoindiciones: req.body.terCondi,
                 avatar: req.file ? req.file.filename : "default-image.png",
                 rol: "USER"
             })
