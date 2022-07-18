@@ -35,10 +35,11 @@
                             <label class="input-group-text" for="inputGroupFile01">Upload</label>
                             <input type="file" class="form-control" name="image" id="inputGroupFile01" value="<%=producto.image%>">
                         </div>
-                        <% if (locals.errors && errors.image) { %>
-                            <p style="color: red;"><%= errors.image.msg %></p>
-                        <% } %>	
-                        <small id="errorImage" style="color: pink;"></small>
+                        <small id="errorImage" style="color: pink;">
+                            <% if (locals.errors && errors.image) { %>
+                                <p style="color: red;"><%= errors.image.msg %></p>
+                            <% } %>	
+                        </small>
                   </div>
                   
                   <div class="div-StockyEnvios-agregar">
@@ -61,6 +62,7 @@
                   <div class="col-12" id="btn-crearProducto">
                       <button class="btn btn-primary" type="submit">Editar</button>
                   </div>
+                  <small id="errorSubmit" style="color: red;"></small>
               </fieldset>
             </form>
       </main>

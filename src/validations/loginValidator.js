@@ -24,6 +24,8 @@ const validateLogin = [
 }),
     check("passwd")
         .notEmpty().withMessage("Ingrese una contraseña")
+        .isLength({min:8, max:16}).withMessage("La contraseña debe tener entre 8 a 16 caracteres")
+        .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&#.$($)$-$_])[A-Za-z\d$@$!%*?&#.$($)$-$_]{8,16}$/, "i").withMessage("Contraseña incorrecta")
         
 ]
 

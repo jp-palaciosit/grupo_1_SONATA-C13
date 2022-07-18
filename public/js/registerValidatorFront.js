@@ -1,7 +1,7 @@
 const QS = (element)=>document.querySelector(element)
 
 window.addEventListener("load", ()=>{
-    let $formulario = QS("#form")
+    let $formulario = QS("form#form")
     let $inputName = QS("#name")
     let $inputLastName = QS("#lastName")
     let $inputEmail = QS("#email")
@@ -28,7 +28,7 @@ window.addEventListener("load", ()=>{
     let $errorFile = QS("#errorFile")
     let $errorCaptcha = QS("#errorCaptcha")
     let $errorTC = QS("#errorTC")
-    let $errorSubmit= QS("#errorSubmit")
+    let errorSubmit= QS("#errorSubmit")
     let $errorForm = QS("#errorForm") 
 
     let errors = {
@@ -102,33 +102,32 @@ window.addEventListener("load", ()=>{
             $inputFile.value = ""
             $viewFile.innerHTML = ""
             return false
-        }/* 
+        }
         else{
-            if($inputFile.files && $inputFile.files[0]){
-                let reader = new FileReader()
-                reader.onload = function(e){
-                    $viewFile.innerHTML =`<img src"${e.target.result}"/>`
-                }
-                reader.readAsDataURL($inputFile.files[0])
-                $errorFile.innerHTML = ""
-            }
-        } */
+            $errorFile.innerHTML = ""
+        }
     })
     
 
-    /* $formulario.addEventListener("submit", function(e){
-        e.preventDefault();
+    $formulario.addEventListener("submit", function(e){
+        e.preventDefault()
+
         let form = this.elements
+        let errores = false
+
         for(let i = 0; i < form.length -1; i ++){
-            if(form[i].value ==""){
-                $errorSubmit.innerHTML = "Los datos señalados son obligatorios"
-            }
-            else{
-                $errorSubmit.innerHTML = "Hay errores en el formulario"
+            if(form[i].value =="" 
+            && form[i].name !== "avatar"
+            && form[i].type !== "file"){
+                errorSubmit.innerHTML= "Los datos señalados son obligatorios"
+                errores = true
             }
         }
+        if(!errores){
+            $formulario.submit()
+        }
          
-    }) */
+    })
         /* $formulario.addEventListener("submit", e =>{
             e.preventDefault();
             if(!errors.passwd){

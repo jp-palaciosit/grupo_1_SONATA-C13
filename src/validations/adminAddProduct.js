@@ -5,7 +5,7 @@ const validateAddProduct = [
     check("name")
         .notEmpty().withMessage("Ingrese un nombre del producto").bail()
         .isAlphanumeric().withMessage("Ingrese un nombre valido").bail()
-        .isLength({min:6}).withMessage("El nombre tiene que tener al menos 6 caracteres"),
+        .isLength({min:5, max:40}).withMessage("El nombre tiene que tener al menos 5 caracteres"),
     check("price")
         .notEmpty().withMessage("Ingrese precio del producto").bail()
         .isNumeric().withMessage("Solo numeros"),
@@ -26,18 +26,18 @@ const validateAddProduct = [
         .isString("on").withMessage("Seleccione modo de envio"),
     check("image").custom((value, {req}) => {
         let file = req.file
-        let extensionesPermitidas = ["jpg","jpeg","png", "gif"];
+        let extensionesPermitidas = /(.jpg|.jpeg|.png|.gif)$/i
             if(!file){
-                /* return Promise.reject("Subir una imagen") */
                 return true
             }
-            let extensionOriginal = req.file.mimetype.split("/").pop()
-            if(!extensionesPermitidas.includes(extensionOriginal)){
-                /* throw new Error(`Las extensiones permitidas son ${extensionesPermitidas.join(', ')}`) */
+            /* let extensionOriginal = req.file.mimetype.split("/").pop() */
+            if(!extensionesPermitidas.exec(req.file.filename)){
+                return Promise.reject(`Las extensiones permitidas son ${extensionesPermitidas.join(', ')}`)
+            }
+            else{
                 return true
             }
-            return false;
-        }).withMessage("Las extensiones permitidas son .jpg |.jpeg |.png |.gif") 
+        })
 ]
 
 module.exports = validateAddProduct

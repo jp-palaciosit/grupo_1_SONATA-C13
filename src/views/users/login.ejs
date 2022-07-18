@@ -13,16 +13,18 @@
                 <form action="/usuario/login" method="POST" id="form">
                     <label for="email" class="correo">Email</label>
                     <input type="email" name="email" id="email" value="" placeholder="  Ingrese su email" class="input-empuje">
-                    <% if (locals.errors && errors.email) { %>
-                        <p style="color:red;"><%=errors.email.msg%></p>
-                    <% } %>
-                    <small id="errorEmail" style="color: pink;"></small>
+                    <small id="errorEmail" style="color: pink;">
+                        <% if (locals.errors && errors.email) { %>
+                            <p style="color:red;"><%=errors.email.msg%></p>
+                        <% } %>
+                    </small>
                     <label for="passwd">Contraseña</label>
                     <input type="password" name="passwd" id="passwd" value="" placeholder="  Ingrese su contraseña" class="input-empuje">
-                    <% if (locals.errors && errors.passwd) { %>
-                        <p style="color:red;"><%=errors.passwd.msg%></p>
-                    <% } %>
-                    <small id="errorPasswd" style="color: pink;"></small>
+                    <small id="errorPasswd" style="color: pink;">
+                        <% if (locals.errors && errors.passwd) { %>
+                            <p style="color:red;"><%=errors.passwd.msg%></p>
+                        <% } %>
+                    </small>
                     <label for="captcha" class="checkbox1">
                         <input type="checkbox" name="captcha" id="captcha" class="input-recordar">
                         <p>Recordar</p>                          
@@ -38,6 +40,7 @@
                             <span class="span4"></span>
                     </button>
                     <br>
+                    <small id="errorSubmit" style="color: red;"></small>
                     <span class="tengo-cuenta">
                         <a style="color: black;" href="<%-"/usuario/olvide-mi-passwd"%>">Olvide mi contraseña</a>
                     </span>
@@ -46,7 +49,6 @@
                             Crear cuenta
                         </a>
                     </span>
-                    <small id="errorSubmit" style="color: pink;"></small>
                     <!-- <small id="errorForm" style="color: pink;"></small> -->
                 </form>
             </article> 

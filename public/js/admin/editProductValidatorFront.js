@@ -1,7 +1,7 @@
 const QS = (element)=>document.querySelector(element)
 window.addEventListener("load", ()=>{
 
-    let $formulario = QS("form"), 
+    let $formulario = QS("form#form"), 
     $inputName = QS("#name"),
     $inputPrice = QS("#price"),
     $inputDiscount = QS("#discount"),
@@ -29,6 +29,7 @@ window.addEventListener("load", ()=>{
     $errorStock = QS("#errorStock"),
     $errorShipment = QS("#errorShipment"),
     $errorDescription = QS("#errorDescription")
+    $errorSubmit = QS("#errorSubmit")
 
     $inputName.addEventListener("blur", e =>{
         switch(true){
@@ -106,20 +107,24 @@ window.addEventListener("load", ()=>{
             return false
         }
     })
-    /* $formulario.addEventListener("submit", function(e){
-        e.preventDefault();
+    $formulario.addEventListener("submit", function(e){
+        e.preventDefault()
+
         let form = this.elements
-        console.log(form)
+        let errores = false
+
         for(let i = 0; i < form.length -1; i ++){
-            if(form[i].value ==""){
-                
-                $errorSubmit.innerHTML = "Los datos señalados son obligatorios"
-            }
-            else{
-            alert("Hay errores en el formulario")
+            if(form[i].value =="" 
+            && form[i].name !== "discount"
+            && form[i].type !== "checkbox"){
+                $errorSubmit.innerHTML= "Los datos señalados son obligatorios"
+                errores = true
             }
         }
+        if(!errores){
+            $formulario.submit()
+        }
          
-    }) */
+    })
 
 })

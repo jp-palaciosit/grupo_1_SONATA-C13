@@ -3,7 +3,7 @@ const QS = (element)=>document.querySelector(element)
 window.addEventListener("load",()=>{
     let $inputEmail = QS("#email")
     let $inputPasswd = QS("#passwd")
-    let $formulario = QS("#form")
+    let $formulario = QS("form#form")
 
     const validation = {
         valiPasswd:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&#.$($)$-$_])[A-Za-z\d$@$!%*?&#.$($)$-$_]{8,16}$/,
@@ -38,17 +38,21 @@ window.addEventListener("load",()=>{
                 $errorPasswd.innerHTML = ""
         }
     })
-    /* $formulario.addEventListener("submit", function(e){
-        e.preventDefault();
+    $formulario.addEventListener("submit", function(e){
+        e.preventDefault()
+
         let form = this.elements
+        let errores = false
+
         for(let i = 0; i < form.length -1; i ++){
-            if(form[i].value ==""){
-                $errorSubmit.innerHTML = "Los datos señalados son obligatorios"
-            }
-            else{
-                $errorSubmit.innerHTML = "Hay errores en el formulario"
+            if(form[i].value ==""
+            && form[i].type !== "checkbox"){
+                $errorSubmit.innerHTML= "Los datos señalados son obligatorios"
+                errores = true
             }
         }
-         
-    }) */
+        if(!errores){
+            $formulario.submit()
+        }
+    })
 })

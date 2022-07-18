@@ -10,11 +10,12 @@ window.addEventListener("load", ()=>{
     $inputStock = QS("#stock"),
     $inputShipment = QS("#envio"),
     $inputDescription = QS("#description")
+    $formulario = QS("form#form")
 
     /* Expresiones */
     const validation = {
         valiName :/^[A-Za-z0-9\s]{5,40}$/g
-        /* /^[a-zA-ZÀ-ÿ\s]$/ */,
+        /* /^[a-z0-9_-]{5,40}$/ */,
         valiDescription: /^[a-zA-ZÀ-ÿ\s]{20,90}$/,
         valiPrice:/^[1-9]*(\.?)[0-9]+$/,
         valiDiscount:/^\d{1,100}$/
@@ -30,6 +31,7 @@ window.addEventListener("load", ()=>{
     $errorStock = QS("#errorStock"),
     $errorShipment = QS("#errorShipment"),
     $errorDescription = QS("#errorDescription")
+    $errorSubmit = QS("#errorSubmit")
 
     $inputName.addEventListener("blur", e =>{
         switch(true){
@@ -106,6 +108,25 @@ window.addEventListener("load", ()=>{
             $inputFile.value = ""
             return false
         }
+    })
+    $formulario.addEventListener("submit", function(e){
+        e.preventDefault()
+
+        let form = this.elements
+        let errores = false
+
+        for(let i = 0; i < form.length -1; i ++){
+            if(form[i].value =="" 
+            && form[i].name !== "discount"
+            && form[i].type !== "checkbox"){
+                $errorSubmit.innerHTML= "Los datos señalados son obligatorios"
+                errores = true
+            }
+        }
+        if(!errores){
+            $formulario.submit()
+        }
+         
     })
 
 })

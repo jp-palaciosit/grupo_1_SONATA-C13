@@ -27,18 +27,21 @@ const validateRegister = [
     }),
     body("passwd")
         .notEmpty().withMessage("Ingrese una contraseña").bail()
-        .isLength({min:8}).withMessage("La contraseña debe tener minimo 8 caracteres."),
+        .isLength({min:8, max:16}).withMessage("La contraseña debe tener entre 8 a 16 caracteres")
+        .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&#.$($)$-$_])[A-Za-z\d$@$!%*?&#.$($)$-$_]{8,16}$/, "i"),
     body("avatar").custom((value, {req}) => {
         let file = req.file
         let extensionesPermitidas = ["jpg","jpeg","png", "gif"];
             if(!file){
-                return Promise.reject("Subir un avatar")
+                return true
             }
-            let extensionOriginal = req.file.mimetype.split("/").pop()
-            if(!extensionesPermitidas.includes(extensionOriginal)){
-                throw new Error(`Las extensiones permitidas son ${extensionesPermitidas.join(', ')}`)
+            /* let extensionOriginal = req.file.mimetype.split("/").pop() */
+            if(!extensionesPermitidas.exec(req.file.filename)){
+                return Promise.reject(`Las extensiones permitidas son ${extensionesPermitidas.join(', ')}`)
             }
-            return true;
+            else{
+                return true
+            }
         }),
     body("captcha")
         .isString("on").withMessage("Acepte el captcha"),
