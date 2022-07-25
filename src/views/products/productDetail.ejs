@@ -8,9 +8,11 @@
     <main>
         <section class="productDetail">
                 <h2><%-product.name%></h2>
+                <div style="display: flex; flex-direction: column;">
+                
                 <div class="div-separador-productos">
                     <div class="caja-imagen">
-                        <img src="/img/productos/<%-product.image%>" alt="<%-product.name%>">
+                        <img src="/img/productos/<%-product.image%>" alt="<%-product.name%>" id="imageBox">
                     </div>
                     <article class="produc-detail">
                         <div class="container">
@@ -41,15 +43,23 @@
                                 <span class="span4"></span>
                             </button>
                             <span class="caja-carrito">
-                                <a href="productCart" class="det-carrito">Agregar Carrito</a>
+                                <a href="/carrito" class="det-carrito">Agregar Carrito</a>
                             </span>
                         </div>
-                        
                     </article>
                 </div>
+                <div class="product-small-img">
+                    <!-- <div class="cajita-imagen"> -->
+                        <img class="""img10" src="/img/productos/<%-product.image%>" alt="<%-product.name%>" alt="" onclick="myFunction(this)">
+                        <img class="img10" src="/img/productos/1651120573274_img_.jpeg" alt="<%-product.name%>" alt="" onclick="myFunction(this)">
+                        <img class="img10" src="/img/productos/1651188524368_img_.jpg" alt="<%-product.name%>" alt="" onclick="myFunction(this)">
+                    <!-- </div> -->
+                </div>
+            </div>
         </section>
         
     </main>
     <%-include("../partials/footer.ejs") %>
+    <script src="/js/productDetail.js"></script>
 </body>
 </html>

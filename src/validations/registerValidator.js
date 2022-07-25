@@ -31,12 +31,13 @@ const validateRegister = [
         .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&#.$($)$-$_])[A-Za-z\d$@$!%*?&#.$($)$-$_]{8,16}$/, "i"),
     body("avatar").custom((value, {req}) => {
         let file = req.file
-        let extensionesPermitidas = ["jpg","jpeg","png", "gif"];
+        let extensionesPermitidas = /(.jpg|.jpeg|.png|.gif)$/i;
             if(!file){
                 return true
             }
             /* let extensionOriginal = req.file.mimetype.split("/").pop() */
             if(!extensionesPermitidas.exec(req.file.filename)){
+                /* return Promise.reject('Solo archivos con estas extensiones .jpeg/.jpg/.png/.gif') */
                 return Promise.reject(`Las extensiones permitidas son ${extensionesPermitidas.join(', ')}`)
             }
             else{

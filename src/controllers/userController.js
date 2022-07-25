@@ -3,6 +3,8 @@ const {validationResult} = require("express-validator")
 const BCRYPT = require("bcryptjs")
 const db = require("../database/models")
 const {Op} = db.Sequelize;
+let fs = require('fs')
+let path = require('path')
 /* const sequelize = db.sequelize */
 
 
@@ -12,13 +14,13 @@ module.exports = {
             title:"Login",
             session: req.session
         })
-    },
+    },/* 
     perfilUser:(req,res)=>{
         res.render("users/perfilUser",{
             title:"Perfil",
             session: req.session
         })
-    },
+    }, */
     //Simulacion de logeo
     loginProcess:(req, res)=>{
         let errors = validationResult(req)
@@ -113,105 +115,76 @@ module.exports = {
         res.redirect("/")
 
     }, 
-
-
-   /*  perfil:(req,res)=>{
-        
-        db.User.findByPk(
-            req.params.id,{
+    perfil:(req,res)=>{
+        let id= +req.session.userActive.id;
+        db.User.findOne({
+            where: {
+                id 
+            },
         })
         .then((user) => {
-            res.render("users/perfilUser2",{
-                    titulo:`Perfil`,
-                    session: req.session,
-                    user
-                })
+            res.render('users/perfilUser', {
+                title: "Perfil",
+                old: req.body,
+                user,
+                session: req.session
+            })
         })
-        .catch((error) => { res.render(error)})
-
-    } */
-    /* 
-    perfil : (req, res)=>{
+        .catch(error => res.send(error))
+    }, 
+    perfilEdit:(req, res)=>{
         let id = +req.session.userActive.id;
         db.User.findOne({
             where: {
                 id
-            },
+            }
         })
         .then((user) => {
-            res.render("users/perfilUser2", {
-                title: `Perfilde ${user.name}`,
+            res.render('users/perfilEdit', {
+                title: "Perfil",
+                old: req.body,
                 user,
-                session: req.session,
-                old: req.body
-            })
+                session: req.session
+            }) 
         })
         .catch(error => res.send(error))
     },
-    perfilEdit :(req, res)=>{
-        let errors = validationResult(req)
-        db.User.findByPk(req.params.id)
-        .then((user) => {
-            ,
-            }, {
-                where: {
-                    id: user.address_id
-                }
-            })
-            .then((address) => {
-                db.users.update({
-                    name: req.body.name,
-                    surname: req.body.surname,
-                    email: req.body.email,
-                    rol: req.body.rol,
-                    avatar: req.file ? req.file.filename : user.avatar,
-                    // address_id: address.id
-                },{
-                    where: {
-                        id: req.params.id
-                    }
-                })
-                .then(() =>{
-                    res.redirect('/admin/users')
-                })
-                .catch((error) => { console.log(error)})
-                
-            })
-                .catch((error) => { console.log(error)})
-        })
-        .catch((error) => { res.send(error)})
-    }
-},
-
-    },
-    perfilActualizado: (req, res) => {
+    perfilUpdate:(req, res) => {
         let errors = validationResult(req);
         if(errors.isEmpty()){
             db.User.update({
                 ...req.body,
-                avatar: req.file ? req.file.filename : req.session.userActive.image 
+                image: req.file ? req.file.filename : req.session.userActive.avatar
             },{
                 where: {
-                    id: req.session.userActive.id
+                    id: req.session.user.id
                 }
             })
-            .then(() => res.redirect('/'))
+            .then(() => res.redirect('/home'))
             .catch(error => res.send(error))
         }else{
             db.User.findOne({
                 where: {
-                    id: req.session.userActive.id
+                    id: req.session.user.id
                 }
             })
-            .then(() => {
+            .then((user) => {
                 res.render('users/perfilEdit', {
-                    title: "Editar Perfil",
-                    session: req.session,
+                    title: "EditarPerfil",
+                    user,
+                    errors: errors.mapped(),
                     old: req.body,
-                    errors: errors.mapped()
+                    session: req.session,
                 }) 
             })
         }
-    }, */
+    },
+    userDelete: (req, res) => {
+        req.session.destroy();
+        if(req.cookies.CookieSonata){
+            res.cookie('CookieSonata', '', {maxAge: -1}) 
+        }
+        res.redirect('/home')
+    }
 
 }

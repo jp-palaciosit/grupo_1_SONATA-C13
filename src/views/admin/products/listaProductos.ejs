@@ -11,9 +11,10 @@
                         <th scope="col">Precio</th>
                         <th scope="col">Categoria</th>
                         <!-- <th scope="col">Emprendimiento</th> -->
-                        <th scope="col">stock</th>
+                        <th scope="col">Stock</th>
                         <!-- <th scope="col">Envio Gratis</th> -->
-                        <th scope="col"></th>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Eliminar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -23,23 +24,24 @@
                                 <th scope="row"><%-producto.id%></td>
                                 <td><%-producto.name%></td>
                                 <td><%-producto.price%></td>
-                                <td><%-producto.categoryId%></td>
-                                <!-- <td><%-producto.projectId%></td> -->
+                                <td><%-producto.id_categoria%></td>
                                 <td><%-producto.stock%></td>
                                 <!-- <td><%-producto.shipment%></td> -->
                                 <td>
-                                    <a href="/admin/products/edit/<%-producto.id%> " class="btn" id="btn-admin-modificacion">
-                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    <a href="/admin/products/edit/<%-producto.id%> " id="btn-admin-modificacion">
+                                        <i class="fa-solid fa-pen-to-square" id="i-edit"></i>
                                     </a>
+                                </td>
+                                <td>
                                     <form action="/admin/products/eliminar/<%-producto.id%>?_method=delete" method="post">
-                                        <button type="submit" class="btn" id="btn-admin-borrar"> 
-                                            <i class="fa-regular fa-trash-can"></i>
+                                        <button type="submit">
+                                            <i class="fa-regular fa-trash-can" id="i-delete"></i>
                                         </button>
+                                        
                                     </form>
                                 </td>
                         </tr>
                         </a> 
-
                     <% }) %>                
 
                 </tbody>

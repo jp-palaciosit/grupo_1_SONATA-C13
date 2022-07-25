@@ -1,6 +1,6 @@
-#body-listadoProducto{
+/* #body-listadoProducto{
     background: linear-gradient(to bottom, #9BC5C3, #616161);
-}
+} */
 #main-listadoProducto{
    /*  background-color: red; */
     margin-top: 15px;
@@ -22,17 +22,28 @@
     width: 3.5rem;
 }
 #btn-admin-modificacion{
-    border-radius: 13px;
-    color: white;
-    background-color: #146C43;
-    margin: 1px;
+    color: #146C43;
+    /* margin: 14px; */
 }
-#btn-admin-borrar{
+/* #btn-admin-borrar{
     border-radius: 13px;
     color: white;
     background-color: #B02A37;
     margin: 1px;
-}
+} */
 h6{
     color: white;
+}
+button{
+    border-radius:10px;
+    border-color: transparent;
+    outline:none;
+    color: red;
+}
+#i-edit{
+    margin-top: 4px;
+    margin-left: 15px;
+}
+#i-delete{
+    margin-top: 3px;
 }

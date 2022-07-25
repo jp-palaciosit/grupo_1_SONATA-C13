@@ -17,8 +17,7 @@ router.get("/registro", userInSession, userController.register)
 router.get("/registro/correctamente", userInSession, userController.registrado)
 // GET - ruta recuperar passwd
 router.get("/olvide-mi-passwd",  userInSession, userController.recPasswd)
-// GET - Perfil User
-router.get("/perfil",  userController.perfilUser)
+
 // /* POST - Ruta crear nuevo registro de usuario*/
 router.post("/registro", uploadFile.single("avatar"), registerValidator,userController.processRegister)
 // GET - Cerrar sesion
@@ -26,8 +25,8 @@ router.get("/logout", userController.logOut)
 
 /* PERFIL */
 
-/* router.get("/perfil", /* userInSession,  userController.perfil); */
-/* router.get("/perfil/editar/:id", userInSession, userController.perfilEdit); */
-/* router.put("/perfil/editar/:id", uploadFile.single('avatar'),  /* -profileValidator-,   userInSession, userController.perfilActualizado) */
-
+router.get("/perfil", userController.perfil);
+router.put("/perfil/:id", userController.perfilEdit);
+router.put("/perfil/editar/:id", uploadFile.single('avatar'),   userInSession, userController.perfilUpdate)  
+router.delete('userDelete/:id', userController.userDelete)
 module.exports = router

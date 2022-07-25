@@ -139,10 +139,10 @@ article.redes-sociales-main ul li a i{
 article.redes-sociales-main{
     display: flex;
     flex-direction: column;
-    margin-top: 5px;
+    margin-top: 9px;
     position: absolute;
-    right: 63px;
-    bottom: 207px;
+    right: 9px;
+    bottom: 33px;
 }
 .btn-inicio{
     position: relative;
@@ -239,6 +239,35 @@ i#twitter{
     /* text-align: center; */
     margin:15px 0 15px;
 }
+.product-small-img img{
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0,0,0,.2);
+    /* padding: 8px; */
+    margin: 0px 8px 15px;
+    cursor: pointer;
+    color: white;
+    
+}/* 
+.cajita-imagen{
+    display: flex;
+    height: 140px;
+} */
+.product-small-img{
+  /*   height: 140px; */
+    width: 20%;
+    display: flex;
+    /* flex-direction: column; */
+    object-fit:contain;
+    color: white;
+}
+/* .img-container img{
+    height: 200px;
+} */
+/* .img-container{
+    padding: 10px;
+    width: 45%;
+} */
 
 
 @media (min-width: 769px){
@@ -301,8 +330,15 @@ i#twitter{
     }
 
     article.redes-sociales-main{
-        right: 5px;
-        bottom: 304px;
+        right: 30px;
+        bottom: 55px;
+    }
+    .product-small-img img{
+        padding: 8px;
+        margin: 10px 10px 15px;
+        cursor: pointer;
+        
+        
     }
      /*.producto-descuento{
         width: 100%;

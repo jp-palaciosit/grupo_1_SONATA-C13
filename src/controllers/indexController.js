@@ -28,6 +28,12 @@ module.exports = {
         })
         .catch((error) => { res.send(error)})
     },
+    carrito:(req,res)=>{
+        res.render("products/productCart", {
+            title: "Carrito",
+            session: req.session
+        })
+    },
     details:(req, res) =>{
         let reqPar = +req.params.id
 
@@ -68,6 +74,12 @@ module.exports = {
         .catch((error)=>{
             res.send(error)
         })
-    }
+    },
+    faq:(req, res) => {
+        res.render("generalFolder/faq", {
+            title: "Preguntas Frecuentes",
+            session: req.session
+        })
+    },
     
 } 
