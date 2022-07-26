@@ -59,29 +59,22 @@ header div.div-header div.nav-burguer ul{
     color: white;
     left: 0;
     width: 100%;
+    text-transform: uppercase;
     height: 100%;
+    font-family: sans-serif;
+    padding: 1rem;
 }
 header div.div-header div.nav-burguer ul li a{
     color: white;
+    
 }
-header div.div-header div.nav-burguer{
-    position: absolute;
-    top: 3.7rem;
-    left: 0;
-    background-color: #333333;
-    width: 220px;
-    height: 400px;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    list-style: none;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    user-select: none;
-    animation-name: burgerNav-out;
-    animation-duration: 2s;
+header div.div-header div.nav-burguer ul li{
+    width: 90%;
+    border-bottom: 1px solid;
+    padding-bottom: 1rem;
 }
+
+
 @keyframes burgerNav-in {
     0%{
         left: -100%;
@@ -102,9 +95,27 @@ header div.div-header div.nav-burguer{
         opacity: 0;
     }
 }
-
+header div.div-header div.nav-burguer{
+    position: absolute;
+    top: 3.7rem;
+    left: 0;
+    background-color: #333333;
+    width: auto;
+    height: 400px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+    user-select: none;
+    animation-name: burgerNav-out;
+    animation-duration: 2s;
+}
 .nav_input:checked + .nav-burguer{
     opacity: 1;
+    display: block;
     animation-name: burgerNav-in;
     animation-duration: 2s;
 }
