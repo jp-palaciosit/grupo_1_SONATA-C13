@@ -16,34 +16,39 @@ footer section{
     align-items: center;
     margin-top: 2px;
 }
-footer section article h4{
+footer article h4{
     font-size: var(--font-h4-footer);
     color: white;
     margin:3px 0px;
 }
-footer section article ul li{
+footer  article ul li{
     list-style: none;
     font-size: var(--font-footer);
     padding-bottom: 2px;
 }
-footer section article ul li a{
+footer  article ul li a{
     text-decoration: none;
     color: white;
 
 }
-footer section article.redes-sociales{
+footer article.redes-sociales{
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
 }
-footer section article.redes-sociales h4{
+footer article.redes-sociales h4{
     font-size: var(--font-h4);
     color: white;
+    text-align: center;
 }
-footer section article.redes-sociales ul{
+footer article.redes-sociales ul{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 } 
-footer section article.redes-sociales ul li a i{
+footer article.redes-sociales ul li{
+    margin-right: 10px;
+}
+footer article.redes-sociales ul li a i{
     font-size: var(--font-redes-sociales);
 }
 footer div.div-p{
@@ -59,6 +64,10 @@ footer div.div-p{
     margin: 2px;
     width: 100%;
     text-align: center;
+}
+
+#article-des{
+    display: none;
 }
 
 /* END FOOTER */
@@ -79,6 +88,9 @@ footer div.div-p{
     
     footer section article h4{
         margin:5px 0px;
+    }
+    #article-des{
+        display: block;
     }
 }
 
