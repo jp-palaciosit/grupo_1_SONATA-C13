@@ -124,7 +124,11 @@ body {
     width: 100%;
     z-index: -1;
 }
-
+.perfil-usuario-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .seccion-perfil-usuario .perfil-usuario-bio {
     margin-bottom: 1.25rem;
     text-align: center;
@@ -152,38 +156,47 @@ body {
     display: flex;
     flex-direction: column;
 }
-
-.seccion-perfil-usuario .redes-sociales .boton-redes {
-    border: 0;
-    background-color: #fff;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
+.btn-editar{
+    margin-top: 10px;
+    width: fit-content;
+    background: #35E1BF;
+    transition: all 1s ease;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 1rem;
+    cursor: pointer;
+    border: none;
+    
+}
+.seccion-perfil-usuario{
+    margin-bottom: 10px;
+}
+.input-edit{
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .25);
+    text-align: center;
+}
+.input-file {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    color: #fff;
-    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
-    font-size: 1.3rem;
+    max-width: 300px;
+    position: relative;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .25);
+    padding: 0 1rem;
+    border-radius: .5rem;
+    width: 80%;
+    height: 40px;
+    text-align: center;
 }
-
-.seccion-perfil-usuario .redes-sociales .boton-redes+.boton-redes {
-    margin-top: .5rem;
+.input-file input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
 }
-
-.seccion-perfil-usuario .boton-redes.facebook {
-    background-color: #5955FF;
-}
-
-.seccion-perfil-usuario .boton-redes.twitter {
-    background-color: #35E1BF;
-}
-
-.seccion-perfil-usuario .boton-redes.instagram {
-    background: linear-gradient(45deg, #FF2DFD, #40A7FF);
-}
-
 /* adactacion a dispositivos */
 @media (max-width: 750px) {
     .seccion-perfil-usuario .lista-datos {
@@ -193,22 +206,5 @@ body {
     .seccion-perfil-usuario .perfil-usuario-portada,
     .seccion-perfil-usuario .perfil-usuario-body {
         width: 95%;
-    }
-
-    .seccion-perfil-usuario .redes-sociales {
-        position: relative;
-        flex-direction: row;
-        width: 100%;
-        left: 0;
-        text-align: center;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        align-items: center;
-        justify-content: center
-    }
-
-    .seccion-perfil-usuario .redes-sociales .boton-redes+.boton-redes {
-        margin-left: 1rem;
-        margin-top: 0;
     }
 }

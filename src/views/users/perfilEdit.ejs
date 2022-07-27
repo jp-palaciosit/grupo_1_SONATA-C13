@@ -5,6 +5,7 @@
         <%-include("../partials/header.ejs") %>
       <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
       <link rel="stylesheet" href="/css/perfilUsuario.css">
+      <link rel="stylesheet" href="/css/register.css">
     <body>
       <section class="seccion-perfil-usuario">
         <div class="perfil-usuario-header">
@@ -29,87 +30,54 @@
                 
             </div>
             <form action="/usuario/perfil/editar/<%= user.id %>?_method=PUT" method="post" enctype="multipart/form-data" id="form">
-            <div class="perfil-usuario-footer">
-                    <ul class="lista-datos ">
-                    <li>
-                    <label for="name">Nombre</label>
-                    <input type="text" name="name" id="name" value="" placeholder="  Ingrese su nombre" class="input-empuje" value="<%=locals.old && old.name ? old.name : "" %>">
-                    <br>
-                    <small id="errorName" style="color: pink;">
-                        <% if (locals.errors && errors.name) { %>
-                            <p style="color:red;"><%= errors.name.msg %></p>
-                        <% } %>
-                    
-                    </small>
-                    </li>
-                    <li>
-                      <label for="lastName">Apellido</label>
-                      <input type="text" name="lastName" id="lastName" placeholder="  Ingrese su apellido" class="input-empuje" value="<%= locals.old && old.lastname ? old.lastname : "" %>">
-                      <br>
-                      <small id="errorLastName" style="color: pink;">
-                        <% if (locals.errors && errors.lastName) { %>
-                          <p style="color:red;"><%= errors.lastName.msg %></p>
-                          <% } %>
-                        </small>
-                      </li>
-                      <li>
-                        <label for="file">Ingrese un avatar</label>
-                        <input type="file" name="avatar" id="file" value=""  class="input-empuje input-imagen">
-                        <br>
-                        <small id="errorFile" style="color: pink;">
-                          <% if (locals.errors && errors.avatar) { %>
-                            <p style="color:red;"><%= errors.avatar.msg %></p>
-                            <% } %>
-                          </small>
-                        </li>
-                  </ul>
-                  <ul class="lista-datos">
-                  <li>
-    
-                    <label for="passwd">Contraseña</label>
-                    <input type="password" name="passwd" id="passwd" value="" placeholder="  Ingrese su contraseña" class="input-empuje"  >
-                    <br>
-                    <small id="errorPasswd" style="color: pink;">
-                      <% if (locals.errors && errors.passwd) { %>
-                        <p style="color:red;"><%= errors.passwd.msg %></p>
-                        <% } %>
-                      </small>
-                    </li>
-                    <li>
-                      <label for="email" class="correo">Email</label>
-                      <input type="email" name="email" id="email" value="" placeholder="  Ingrese su email" class="input-empuje" value="<%= locals.old && old.email ? old.email : "" %>">
-                      <br>
-                      <small id="errorEmail" style="color: pink;">
-                        <% if (locals.errors && errors.email) { %>
-                          <p style="color:red;"><%= errors.email.msg %></p>
-                          <% } %>
-                        </small>
-                      </li>
-                    
-                    </ul>
-                </div>
-                <br>
-                <div class="perfil-usuario-bio" style="height: 100%; display: flex; justify-content: center;">
-                <button type="submit" class="btn-inicio" id="button-register" style="margin-right: 10px;">
-                     <p>Guardar</p>
-                     <span class="span1"></span>
-                     <span class="span2"></span>
-                     <span class="span3"></span>
-                     <span class="span4"></span>
-                </button>
-                <a href="/home" >
-                    <button class="btn-inicio" id="button-register" style="margin-left: 10px;">Ir al home</button>
-                </a>
-                
-                <small id="errorSubmit"" style="color: red;"></small>
-                <small id="errorForm" style="color: pink;"></small>
-            </div>
+              <div class="perfil-usuario-footer">
+              <h2 style="text-align: center;">Edita tu perfil</h2><label for="name">Nombre</label>
+              <input type="text" name="name" id="name" placeholder="  Ingrese su nombre" class="input-empuje input-edit"  value="<%=locals.old && old.name ? old.name : user.name %>">
+              <small id="errorName" style="color: pink;">
+                  <% if (locals.errors && errors.name) { %>
+                      <p style="color:red;"><%= errors.name.msg %></p>
+                  <% } %>
+              
+              </small>
+              <label for="lastName">Apellido</label>
+              <input type="text" name="lastName" id="lastName" placeholder="  Ingrese su apellido" class="input-empuje input-edit" value="<%= locals.old && old.lastname ? old.lastname : user.lastName %>">
+              <small id="errorLastName" style="color: pink;">
+                  <% if (locals.errors && errors.lastName) { %>
+                      <p style="color:red;"><%= errors.lastName.msg %></p>
+                  <% } %>
+              </small>
+              <label for="email" class="correo">Email</label>
+              <input type="email" name="email" id="email" value="<%= locals.old && old.email? old.email : user.email  %>" placeholder="  Ingrese su email" class="input-empuje input-edit" value="<%= locals.old && old.email ? old.email : user.lastName %>">
+              <small id="errorEmail" style="color: pink;">
+                  <% if (locals.errors && errors.email) { %>
+                      <p style="color:red;"><%= errors.email.msg %></p>
+                  <% } %>
+              </small>
+              <label for="passwd">Contraseña</label>
+              <input type="password" name="passwd" id="passwd" value="<%= locals.old && old.passwd ? old.passwd : user.passwd  %>" placeholder="  Ingrese su contraseña" class="input-empuje input-edit"  >
+              <small id="errorPasswd" style="color: pink;">
+                  <% if (locals.errors && errors.passwd) { %>
+                      <p style="color:red;"><%= errors.passwd.msg %></p>
+                  <% } %>
+              </small>
+              <!-- <div style="width: 100px; height: 100px; border:1px solid black; border-radius:10px;" id="viewFile">
+
+              </div> -->
+              <div class="input-file"> 
+                <p>Cambiar avatar</p>
+                <input type="file" name="avatar" value="<%= locals.old && old.avatar ? old.avatar : user.avatar  %>"  class="input-empuje input-edit">
+                <small id="errorFile" style="color: pink;">
+                    <% if (locals.errors && errors.avatar) { %>
+                        <p style="color:red;"><%= errors.avatar.msg %></p>
+                    <% } %>
+                </small>
+              </div>
             <div class="col-12">
-                <button type="submit" class="btn btn-primary">Modificar</button>
+                <button type="submit" class="btn-editar">Guardar</button>
             </div>
         </form>
         <form action="/users/deleteUser/<%= user.id%>?_method=DELETE" method="POST">
-            <button type="submit" class="btn btn-danger">Eliminarme</button>
+            <button type="submit" class="btn-editar">Eliminarme</button>
         </form>
     </section>
     </body>

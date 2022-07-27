@@ -132,8 +132,8 @@ module.exports = {
         })
         .catch(error => res.send(error))
     }, 
-    perfilEdit:(req, res)=>{
-        let id = +req.session.userActive.id;
+    perfilEdit:(req, res) => {
+        let id = +req.session.userActive.id
         db.User.findOne({
             where: {
                 id
@@ -160,7 +160,9 @@ module.exports = {
                     id: req.session.user.id
                 }
             })
-            .then(() => res.redirect('/home'))
+            .then((user) => {
+                res.redirect("/users/perfilUser");
+              })
             .catch(error => res.send(error))
         }else{
             db.User.findOne({

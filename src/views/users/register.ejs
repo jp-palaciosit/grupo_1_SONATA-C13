@@ -12,7 +12,7 @@
             <article class="article-register">
                 <form action="/usuario/registro" method="post" enctype="multipart/form-data" id="form">
                     <label for="name">Nombre</label>
-                    <input type="text" name="name" id="name" value="" placeholder="  Ingrese su nombre" class="input-empuje" value="<%=locals.old && old.name ? old.name : "" %>">
+                    <input type="text" name="name" id="name" value="" placeholder="  Ingrese su nombre" class="input-empuj input-login" value="<%=locals.old && old.name ? old.name : "" %>">
                     <small id="errorName" style="color: pink;">
                         <% if (locals.errors && errors.name) { %>
                             <p style="color:red;"><%= errors.name.msg %></p>
@@ -20,21 +20,21 @@
                     
                     </small>
                     <label for="lastName">Apellido</label>
-                    <input type="text" name="lastName" id="lastName" placeholder="  Ingrese su apellido" class="input-empuje" value="<%= locals.old && old.lastname ? old.lastname : "" %>">
+                    <input type="text" name="lastName" id="lastName" placeholder="  Ingrese su apellido" class="input-empuje input-login" value="<%= locals.old && old.lastname ? old.lastname : "" %>">
                     <small id="errorLastName" style="color: pink;">
                         <% if (locals.errors && errors.lastName) { %>
                             <p style="color:red;"><%= errors.lastName.msg %></p>
                         <% } %>
                     </small>
                     <label for="email" class="correo">Email</label>
-                    <input type="email" name="email" id="email" value="" placeholder="  Ingrese su email" class="input-empuje" value="<%= locals.old && old.email ? old.email : "" %>">
+                    <input type="email" name="email" id="email" value="" placeholder="  Ingrese su email" class="input-empuje input-login" value="<%= locals.old && old.email ? old.email : "" %>">
                     <small id="errorEmail" style="color: pink;">
                         <% if (locals.errors && errors.email) { %>
                             <p style="color:red;"><%= errors.email.msg %></p>
                         <% } %>
                     </small>
                     <label for="passwd">Contraseña</label>
-                    <input type="password" name="passwd" id="passwd" value="" placeholder="  Ingrese su contraseña" class="input-empuje"  >
+                    <input type="password" name="passwd" id="passwd" value="" placeholder="  Ingrese su contraseña" class="input-empuje input-login"  >
                     <small id="errorPasswd" style="color: pink;">
                         <% if (locals.errors && errors.passwd) { %>
                             <p style="color:red;"><%= errors.passwd.msg %></p>
@@ -44,7 +44,7 @@
 
                     </div> -->
                     <label for="file">Ingrese un avatar</label>
-                    <input type="file" name="avatar" id="file" value=""  class="input-empuje input-imagen">
+                    <input type="file" name="avatar" id="file" value=""  class="input-empuje input-imagen input-login">
                     <small id="errorFile" style="color: pink;">
                         <% if (locals.errors && errors.avatar) { %>
                             <p style="color:red;"><%= errors.avatar.msg %></p>
@@ -52,7 +52,7 @@
                     </small>
                     <label for="captcha" class="checkbox1">Captcha
                         <span class="captcha-robot">
-                            <input type="checkbox" name="captcha" id="captcha" value="" class="input-captcha">
+                            <input type="checkbox" name="captcha" id="captcha" value="" class="input-captcha input-login">
                             <p>No soy un robot</p>                           
                         </span>
                     </label>
@@ -62,7 +62,7 @@
                         <% } %>
                     </small>
                     <div class="div-TC">
-                        <input type="checkbox" name="terCondi" id="TerminoCondicion" class="input-TC">
+                        <input type="checkbox" name="terCondi" id="TerminoCondicion" class="input-TC input-login">
                         <label for="TerminoCondicion" class="label-TC">
                             <span>Acepto los</span>
                             <span>
