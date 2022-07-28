@@ -1,5 +1,4 @@
-
-    <!DOCTYPE html> -->
+<!DOCTYPE html> -->
     <html lang="en">
         <%-include("../partials/head.ejs") %> 
         <%-include("../partials/header.ejs") %>
@@ -75,10 +74,12 @@
             <div class="col-12">
                 <button type="submit" class="btn-editar">Guardar</button>
             </div>
+            
         </form>
         <form action="/users/deleteUser/<%= user.id%>?_method=DELETE" method="POST">
             <button type="submit" class="btn-editar">Eliminarme</button>
         </form>
+    </div>
     </section>
     </body>
     </html>

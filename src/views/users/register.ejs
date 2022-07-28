@@ -43,13 +43,15 @@
                     <!-- <div style="width: 100px; height: 100px; border:1px solid black; border-radius:10px;" id="viewFile">
 
                     </div> -->
-                    <label for="file">Ingrese un avatar</label>
+                    <div class="input-register-avatar">
+                    <p>Ingrese un avatar</p>
                     <input type="file" name="avatar" id="file" value=""  class="input-empuje input-imagen input-login">
                     <small id="errorFile" style="color: pink;">
                         <% if (locals.errors && errors.avatar) { %>
                             <p style="color:red;"><%= errors.avatar.msg %></p>
                         <% } %>
                     </small>
+                    </div>
                     <label for="captcha" class="checkbox1">Captcha
                         <span class="captcha-robot">
                             <input type="checkbox" name="captcha" id="captcha" value="" class="input-captcha input-login">

@@ -154,7 +154,8 @@ module.exports = {
         if(errors.isEmpty()){
             db.User.update({
                 ...req.body,
-                image: req.file ? req.file.filename : req.session.userActive.avatar
+                passwd: BCRYPT.hashSync(req.body.passwd, 10),
+                image: /* req.file ? */ req.file.filename /* : req.session.userActive.avatar */
             },{
                 where: {
                     id: req.session.user.id

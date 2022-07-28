@@ -4,6 +4,7 @@ const {validationResult} = require("express-validator")
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
 } */
 const db = require("../../database/models")
+const fs = require('fs');
 
 module.exports = {
     list:(req,res)=>{
@@ -35,7 +36,7 @@ module.exports = {
          let errors = validationResult(req);
        if(errors.isEmpty()){
             db.Producto.create({
-                /* include:[{association:'Category'}] , */
+                include:[{association:'Category'}] ,
                 name: req.body.name,
                 price: req.body.price,
                 discount:req.body.discount,
@@ -100,14 +101,15 @@ module.exports = {
         }
         )
         .then((result) => {
-            if(result){
-                res.redirect("/admin/products")
-            }else{
-                res.send("Hay un error")
+            if (req.file) {
+                if (fs.existsSync("/img/productos", result.image) && result.image !== "default-image.png"){
+                    fs.unlinkSync("/img/productos", result.image)
+                }
             }
-        })
-        .catch((error)=>{res.send(error)})
-    },
+            res.redirect('/admin/products/listaProductos')
+    })
+    .catch(errors => console.log(errors))
+} ,
     productDelete:(req,res)=>{
         db.Producto.destroy({
             where:{
