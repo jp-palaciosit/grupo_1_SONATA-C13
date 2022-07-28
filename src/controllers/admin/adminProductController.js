@@ -11,10 +11,11 @@ module.exports = {
         db.Producto.findAll(
             {include:[{association:'Category'}]}
         )
-        .then((producto)=>{
+        .then((productos)=>{
+           // return res.send(productos)
             res.render("admin/products/listaProductos", {
                 title:"Lista de productos",
-                productos: producto,
+                productos,
                 session:req.session
             })
         })
@@ -81,7 +82,6 @@ module.exports = {
          })
     },  
     productUpdate:(req,res)=>{
-        // 1- Obtener el id del producto
         let idProducto = +req.params.id 
 
         db.Producto.update({

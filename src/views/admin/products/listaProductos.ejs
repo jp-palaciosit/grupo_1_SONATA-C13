@@ -18,13 +18,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <% productos.forEach(producto => { %>
+                    <% productos.forEach((producto, i) => { %>
                         <a href="/products/productDetail/<%-producto.id%>">
                         <tr>
-                                <th scope="row"><%-producto.id%></td>
+                                <th scope="row"><%- i+1 %></td>
                                 <td><%-producto.name%></td>
                                 <td><%-producto.price%></td>
-                                <td><%-producto.id_categoria%></td>
+                                <td><%-producto.Category.name%></td>
                                 <td><%-producto.stock%></td>
                                 <!-- <td><%-producto.shipment%></td> -->
                                 <td>

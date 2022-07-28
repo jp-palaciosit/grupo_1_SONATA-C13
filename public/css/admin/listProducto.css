@@ -1,12 +1,12 @@
 /* #body-listadoProducto{
     background: linear-gradient(to bottom, #9BC5C3, #616161);
 } */
-#main-listadoProducto{
-   /*  background-color: red; */
+/* #main-listadoProducto{
+
     margin-top: 15px;
     display: flex;
     justify-content: center;
-}
+} */
 /* .div-caja-table{
     width: 95%;
     background-color: #146C43;
