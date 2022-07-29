@@ -72,14 +72,15 @@ body {
     box-shadow: 0 0 12px rgba(0, 0, 0, .2);
     position: absolute;
     bottom: -40px;
-    left: calc(50% - 90px);
-    z-index: 0;
+    left: calc(50% - 90px);/* 
+    z-index: 0; */
 }
 
 .seccion-perfil-usuario .perfil-usuario-avatar img {
     width: 100%;
     position: relative;
     border-radius: 50%;
+    z-index: 1;
 }
 
 .seccion-perfil-usuario .perfil-usuario-avatar .boton-avatar {
@@ -124,7 +125,7 @@ body {
     background-color: #fff;
     border-radius: 15px;
     width: 100%;
-    z-index: -1;
+    /* z-index: -1; */
 }
 .perfil-usuario-footer{
     display: flex;

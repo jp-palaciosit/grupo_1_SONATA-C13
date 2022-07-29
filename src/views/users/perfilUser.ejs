@@ -2,10 +2,10 @@
     <!DOCTYPE html>
 <html lang="en">
     <%-include("../partials/head.ejs") %> 
-    <%-include("../partials/header.ejs") %>
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-  <link rel="stylesheet" href="/css/perfilUsuario.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/perfilUsuario.css">
 <body>
+    <%-include("../partials/header.ejs") %>
   <section class="seccion-perfil-usuario">
     <div class="perfil-usuario-header">
         <div class="perfil-usuario-portada">
@@ -35,8 +35,8 @@
                 <p>Apellido: <%= user.lastName %></p>
                 <p>Email: <%= user.email %></p>
             </div>
-            <a href="/usuario/perfil/:id<%= user.id %>" class="btn-editar">EDITAR DATOS</a>
-            <a href="/index/home" class="btn-editar">Ir al home</a>
+            <a href="/usuario/perfil/editar/<%= user.id %>" class="btn-editar">EDITAR DATOS</a>
+            <a href="/home" class="btn-editar">Ir al home</a>
         </div> 
     </main>
 </section>
