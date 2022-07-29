@@ -3,7 +3,9 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color:var(--background-main);
+    background-color: #fbd38e;
+    padding-bottom: 10px;
+    /* background-color:var(--background-main); */
 }
 
 /* ---- Carrusel ------ */

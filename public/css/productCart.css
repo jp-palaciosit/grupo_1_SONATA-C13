@@ -11,7 +11,7 @@
     align-items: center;
     width: 100%;
     /* height: 100vw; */
-    background-color: #C4C4C4;
+    background-color: #fbd38e;
 }
 .section-carrito{
     width: 90%;
@@ -32,6 +32,7 @@
     height: 75px;
     border: 2px solid black;
     margin: 10px 10px 10px 0;
+    background-color: white;
 }
 .img-description{
     display: flex;
