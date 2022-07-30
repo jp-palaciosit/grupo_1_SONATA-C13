@@ -30,8 +30,8 @@
 
 @media (min-width: 768px) {
     .div-StockyEnvios-agregar{
-        display: flex;
-        align-items: center; 
+       /*  display: flex;/* 
+        align-items: center;  */ 
         width: 100%;
         justify-content: space-evenly;
         /* max-width: 470px; */
