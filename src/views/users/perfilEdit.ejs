@@ -46,12 +46,12 @@
               <input type="email" name="email" id="email" value="<%= locals.old && old.email? old.email : user.email  %>" placeholder="  Ingrese su email" class="input-empuje input-edit" value="<%= locals.old && old.email ? old.email : user.lastName %>">
               <figure class="text-center">
                 <div id="imagePreview">
-                    <img src="/img/avatar/<%= user.avatar %> " alt="" width="100px" height="100px">
+                    <img src="/img/avatar/<%=user.avatar %> " alt="" width="100px" height="100px">
                 </div>
                 </figure> 
               <div class="input-file">
-                <label for="inputFile">Cambiar avatar</label>
-                <input type="file" name="avatar" id="inputFile" onchange="fileValidation()" class="input-empuje input-edit">
+                <label for="inputFile" onchange="fileValidation()">Cambiar avatar</label>
+                <input type="file" name="avatar" id="inputFile"  class="input-empuje input-edit">
               </div>
             <div class="col-12">
                 <button type="submit" class="btn-editar">Guardar</button>

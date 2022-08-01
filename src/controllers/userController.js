@@ -92,7 +92,7 @@ module.exports = {
                 avatar: req.file ? req.file.filename : "default-image.png",
                 rol: "USER"
             })
-            .then((usuario) => {
+            .then((user) => {
                 req.session.userActive = {
                     id: user.id,
                     name: user.name,
@@ -159,7 +159,7 @@ module.exports = {
     },
     perfilUpdate: async (req, res) => {
         try {
-            let userEdit = await db.dUser.findByPk(req.params.id)
+            let userEdit = await db.User.findByPk(req.params.id)
             await db.User.update({
                 ...req.body,
                 avatar: req.file ? req.file.filename : req.session.userActive.avatar
