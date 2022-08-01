@@ -83,7 +83,6 @@ module.exports = {
     },
     processRegister: (req, res) =>{
         //verificar si hay error en el form
-        
         let errors = validationResult(req)
         if(errors.isEmpty()){ 
             /* {include:[{association:'Rol'}]} */
@@ -93,7 +92,16 @@ module.exports = {
                 avatar: req.file ? req.file.filename : "default-image.png",
                 rol: "USER"
             })
-            .then((user) => {
+            .then((usuario) => {
+                req.session.userActive = {
+                    id: user.id,
+                    name: user.name,
+                    lastName: user.lastName,
+                    email: user.email,
+                    avatar: user.avatar,
+                    rol: user.rol
+                }
+                res.locals.user = req.session.userActive
                 res.redirect("/usuario/login")
             })
             .catch(error => res.send(error))
@@ -149,37 +157,34 @@ module.exports = {
         })
         .catch(error => res.send(error))
     },
-    perfilUpdate:(req, res) => {
-        let errors = validationResult(req);
-        if(errors.isEmpty()){
-            db.User.update({
+    perfilUpdate: async (req, res) => {
+        try {
+            let userEdit = await db.dUser.findByPk(req.params.id)
+            await db.User.update({
                 ...req.body,
-                passwd: BCRYPT.hashSync(req.body.passwd, 10),
-                image: /* req.file ? */ req.file.filename /* : req.session.userActive.avatar */
+                avatar: req.file ? req.file.filename : req.session.userActive.avatar
             },{
-                where: {
-                    id: req.session.user.id
+                where : {id : req.params.id}
+            })
+            let user = await db.User.findByPk(req.params.id)
+            if(req.file){
+                if (fs.existsSync(path.join(__dirname, "../../public/img/avatar", user.avatar)) &&
+                    user.avatar !== "default-image.png"){
+                    fs.unlinkSync( path.join(__dirname, "../../public/img/avatar", userEdit.avatar))
                 }
-            })
-            .then((user) => {
-                res.redirect("/users/perfilUser");
-              })
-            .catch(error => res.send(error))
-        }else{
-            db.User.findOne({
-                where: {
-                    id: req.session.user.id
-                }
-            })
-            .then((user) => {
-                res.render('users/perfilEdit', {
-                    title: "EditarPerfil",
-                    user,
-                    errors: errors.mapped(),
-                    old: req.body,
-                    session: req.session,
-                }) 
-            })
+            }
+            req.session.userActive = {
+                id: user.id,
+                name: user.name,
+                lastName: user.lastName,
+                email: user.email,
+                avatar: user.avatar,
+                rol: user.rol
+            }
+            res.locals.user = req.session.userActive;
+            res.redirect('/usuario/perfil')
+        } catch (error) {
+            console.log(error);
         }
     },
     userDelete: (req, res) => {

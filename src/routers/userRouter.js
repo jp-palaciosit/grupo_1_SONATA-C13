@@ -27,6 +27,6 @@ router.get("/logout", userController.logOut)
 
 router.get("/perfil", userController.perfil);
 router.get("/perfil/editar/:id", userController.perfilEdit);
-router.put("/perfil/editar/:id", uploadFile.single('avatar'),   userInSession, userController.perfilUpdate)  
+router.put("/perfil/editar/:id", uploadFile.single('avatar'), userController.perfilUpdate)  
 router.delete('userDelete/:id', userController.userDelete)
 module.exports = router

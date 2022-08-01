@@ -5,12 +5,17 @@
       <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
       <link rel="stylesheet" href="/css/perfilUsuario.css">
       <link rel="stylesheet" href="/css/register.css">
+      <script src="/js/imgPreview.js" defer></script>
     <body>
       <section class="seccion-perfil-usuario">
         <div class="perfil-usuario-header">
             <div class="perfil-usuario-portada">
                 <div class="perfil-usuario-avatar">
-                    <img src="/img/avatar/<%=session.userActive.avatar%>" alt="img-avatar">
+                    <figure class="text-center">
+                        <div id="imagePreview">
+                            <img src="/img/avatar/<%=session.userActive.avatar%>" alt="img-avatar">
+                        </div>
+                    </figure>
                     <!-- <button type="button" class="boton-avatar">
                         <i class="far fa-image"></i>
                     </button> -->
@@ -28,48 +33,25 @@
                 <br>
                 
             </div>
+            
             <form action="/usuario/perfil/editar/<%= user.id %>?_method=PUT" method="post" enctype="multipart/form-data" id="form">
               <div class="perfil-usuario-footer">
               <h2 style="text-align: center;">Edita tu perfil</h2><label for="name">Nombre</label>
               <input type="text" name="name" id="name" placeholder="  Ingrese su nombre" class="input-empuje input-edit"  value="<%=locals.old && old.name ? old.name : user.name %>">
-              <small id="errorName" style="color: pink;">
-                  <% if (locals.errors && errors.name) { %>
-                      <p style="color:red;"><%= errors.name.msg %></p>
-                  <% } %>
               
-              </small>
               <label for="lastName">Apellido</label>
               <input type="text" name="lastName" id="lastName" placeholder="  Ingrese su apellido" class="input-empuje input-edit" value="<%= locals.old && old.lastname ? old.lastname : user.lastName %>">
-              <small id="errorLastName" style="color: pink;">
-                  <% if (locals.errors && errors.lastName) { %>
-                      <p style="color:red;"><%= errors.lastName.msg %></p>
-                  <% } %>
-              </small>
+              
               <label for="email" class="correo">Email</label>
               <input type="email" name="email" id="email" value="<%= locals.old && old.email? old.email : user.email  %>" placeholder="  Ingrese su email" class="input-empuje input-edit" value="<%= locals.old && old.email ? old.email : user.lastName %>">
-              <small id="errorEmail" style="color: pink;">
-                  <% if (locals.errors && errors.email) { %>
-                      <p style="color:red;"><%= errors.email.msg %></p>
-                  <% } %>
-              </small>
-              <label for="passwd">Contraseña</label>
-              <input type="password" name="passwd" id="passwd" value="<%= locals.old && old.passwd ? old.passwd : user.passwd  %>" placeholder="  Ingrese su contraseña" class="input-empuje input-edit"  >
-              <small id="errorPasswd" style="color: pink;">
-                  <% if (locals.errors && errors.passwd) { %>
-                      <p style="color:red;"><%= errors.passwd.msg %></p>
-                  <% } %>
-              </small>
-              <!-- <div style="width: 100px; height: 100px; border:1px solid black; border-radius:10px;" id="viewFile">
-
-              </div> -->
-              <div class="input-file"> 
-                <p>Cambiar avatar</p>
-                <input type="file" name="avatar" value="<%= locals.old && old.avatar ? old.avatar : user.avatar  %>"  class="input-empuje input-edit">
-                <small id="errorFile" style="color: pink;">
-                    <% if (locals.errors && errors.avatar) { %>
-                        <p style="color:red;"><%= errors.avatar.msg %></p>
-                    <% } %>
-                </small>
+              <figure class="text-center">
+                <div id="imagePreview">
+                    <img src="/img/avatar/<%= user.avatar %> " alt="" width="100px" height="100px">
+                </div>
+                </figure> 
+              <div class="input-file">
+                <label for="inputFile">Cambiar avatar</label>
+                <input type="file" name="avatar" id="inputFile" onchange="fileValidation()" class="input-empuje input-edit">
               </div>
             <div class="col-12">
                 <button type="submit" class="btn-editar">Guardar</button>
