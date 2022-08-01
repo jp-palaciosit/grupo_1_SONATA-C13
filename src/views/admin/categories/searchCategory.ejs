@@ -3,9 +3,10 @@
 <link rel="stylesheet" href="/css/admin/categoryAdmin.css">
 <body>
     <%-include("../partials/header")%>
-
+    
     <main>
-      <div class="caja-categoria">
+        <h1 class="h1-searchResult">Categoria: <%-searchResult%> </h1>
+        <div class="caja-categoria">
           <article >
               <button class="btn-crearCategory">
                   <a href="/admin/categories/addCategory">
@@ -14,12 +15,11 @@
               </button>
           </article>
           <article >
-              <form action="/admin/categories/searchCategory" method="get">
-                  <input type="text" name="search" id="search" placeholder="  Buscar Categoría" class="search-inputCate">
-                  <button type="submit">
-
-                  </button>
-              </form>
+            <button class="btn-crearCategory">
+                <a href="/admin/categories">
+                    Volver atras
+                </a>
+            </button>
           </article>
       </div>
         <article class="container-fluid">
@@ -30,13 +30,13 @@
                     <th scope="col">Nombre</th>
                     <th scope="col">Editar</th>
                     <th scope="col">Eliminar</th>
-                  </tr>
+                </tr>
                 </thead>
                 <tbody>
-                    <% categorias.forEach(categoria => { %>
+                    <% categoria.forEach(categoria => { %>
                         <tr class="text-center">
                             <th scope="row"><%=categoria.id%></th>
-                            <td><%=categoria.name%></td>
+                            <td ><%=categoria.name%></td>
                             <td>
                                 <a href="/admin/categories/editCategory/<%- categoria.id %>" class="btn" id="btn-admin-modificacion">
                                     <i class="fa-solid fa-pen-to-square"></i>

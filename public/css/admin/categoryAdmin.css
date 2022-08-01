@@ -1,0 +1,26 @@
+.caja-categoria{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.btn-crearCategory{/* 
+    border: 1px solid none; */
+    color: black;
+    font-weight: 700;
+    border: 1px solid #c4c4c4;
+    border-radius: 20px;
+    background-color: transparent;
+}
+.salirAdminCat{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.h1-searchResult{
+    text-align: center;
+}
+.search-inputCate{
+    border-radius: 20px;
+}

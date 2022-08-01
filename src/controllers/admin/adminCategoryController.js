@@ -2,7 +2,7 @@ const {validationResult} = require('express-validator');
 const bcrypt = require('bcryptjs');
 const session = require('express-session');
 const db = require('../../database/models');
-
+const {Op} = db.Sequelize;
 
 
 module.exports = {
@@ -83,5 +83,24 @@ module.exports = {
         })
         .catch((error) => { res.send(error)})
     },
+    categorySearch: (req, res) => {
+        let searchResult = req.query.search;
+        let search = searchResult.toLowerCase()
+        console.log(search)
+        db.Category.findAll({
+            where:{
+                name:{[Op.like]:`%${search}%`}
+            }
+        })
+        .then(categoria=>{
+                res.render("admin/categories/searchCategory",{
+                    searchResult: req.query.search,
+                    categoria,
+                    session:req.session
+                })
+        })
+        .catch((error) => { res.send(error)})
+
+}
 
 };

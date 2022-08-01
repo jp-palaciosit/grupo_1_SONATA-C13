@@ -45,6 +45,8 @@ router.post('/categories', adminCategoryController.categoryCreate );
 
 router.get('/categories/editCategory/:id', userSession, adminCheck, adminCategoryController.categoryEdit );
 
+router.get('/categories/searchCategory', adminCategoryController.categorySearch)
+
 router.put('/categories/editCategory/:id', adminCategoryController.categoryUpdate );
 
 router.delete('/categories/delete/:id', adminCategoryController.categoryDelete);

@@ -63,8 +63,7 @@ module.exports = {
         })
         .then(producto=>{
 
-            res.render("generalFolder/search",{/* 
-                titulo: `resultados de ${searchResult}`, */
+            res.render("generalFolder/search",{
                 producto,
                 searchResult:producto, 
                 thousand,

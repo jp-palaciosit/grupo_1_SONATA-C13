@@ -102,9 +102,9 @@ header div.div-header div.nav-burguer{
     top: 3.7rem;
     left: 0;
     background-color: #333333;
-    width: auto;
+    width: 200px;
     height: 400px;
-    z-index: 10;
+    z-index: 13;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -136,7 +136,7 @@ header div.div-header form{
 header div.div-header form input{
     border: 1px solid white;
     border-radius: 5px;
-    font-size: 17px;
+    font-size: 14px;
 }
 header div.div-header form input:focus{
     outline: none;
@@ -191,7 +191,7 @@ header nav div label h1.btn-instrumento:hover{
    /*  text-align: center; */
 }
 
-.label-button{
+/* .label-button{
     width: 100%;
     height: 29px;
     background-color: transparent;
@@ -201,40 +201,66 @@ header nav div label h1.btn-instrumento:hover{
     cursor: pointer;
     justify-content: center;
     text-align: center;
-    /* border: 1px solid; */
-}
+} */
 .btn-instruments{
 text-align: center;
 border: none;
 border-radius: 10px;
 width: 140px;
 height: 30px;
+margin: auto;
+margin-top: 4px;
+cursor: pointer;
+z-index: 12;
+position: relative;
 background: linear-gradient(to top, #f9f1f1,#fbd38e) ;
 }
 .btn-instruments:hover{
 background: linear-gradient(to top, #fbd38e, #f9f1f1);
 }
 .ul-button{
-    position: fixed;
-    height: 70%;
+   position: absolute;
+   height: 70%;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    top: 34px;
+    left: -10px;
+    width: 160px;
+    height: 303px;
+    background-color: #333333;/* 
+    transition: opacity 0.5s ease-in-out; */
+    user-select: none; 
+    /*display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    top: 99px;
-    width: 150px;
-    height: 300px;
-    background-color: #333333;
-    z-index: 9;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    user-select: none;
+    flex-grow: 1;
+    justify-content: space-around;  */
+}/* 
+ul.ul-button li{
+    padding: 10px 0;
+    cursor: pointer;
+    transition: color .5s ease; 
+}*/
+ul.ul-button li a{
+    color: white
+}   
+.nav-desplegable{
+    display: none;
 }
+/* 
+.navigation-bar{
+    display: none;
+} */
 
-.input-button:checked + .btn-instruments{
+.h1-instruments{
+    font-family: Berkshire Swash;
+    cursor: pointer;
+}
+/* 
+.h1-instruments:checked + .btn-instruments{
     opacity: 1;
 }
-
+ *//* 
 .ul-button::before{
     content: "";
     position: absolute;
@@ -242,24 +268,24 @@ background: linear-gradient(to top, #fbd38e, #f9f1f1);
     left: 70px;
     border: solid 5px;
     border-color: transparent transparent #333333;
-}
-.input-button{
+} *//* 
+.ul-button{
     display: none;
 }
 .ul-button li a{
     color: white;
-}
-
-.input-button:checked + .ul-button{
+} */
+/* 
+.btn-instruments:checked + .ul-button{
     opacity: 1;
-}
+} */
 
 
 /*  */
 header nav div.button-tablet{
     display: none;
 }
-header nav div.button-desktop{
+.caja-desktop{
     display: none;
 }
 .session {
@@ -270,7 +296,7 @@ header nav div.button-desktop{
     border-radius: 50px;
     position: relative;
     top: 0px;
-    right: -12px;
+    right: -3;
 }
 .sessionOut{
     display: inline-block;
@@ -280,8 +306,9 @@ header nav div.button-desktop{
     border-radius: 50px;
     position: relative;
     top: 0px;
-    right: -12px;
+    right: -3;
 }
+
 
 
 /* .btn-instruments{
@@ -330,9 +357,8 @@ header nav div.button-desktop{
         width: 164px;
     } */
     .ul-button{
-        top: 100px;
-        /* width: 200px;
-        height: 350px; */
+    top: 31px;
+    left: 2px;
     }
     /* 
     .ul-button::before{
@@ -341,6 +367,9 @@ header nav div.button-desktop{
         border: solid 8px;
         border-color: transparent transparent #333333;
     } */
+    .caja-desktop{
+        display: none;
+    }
 }
 
 @media (min-width: 769px){
@@ -353,7 +382,10 @@ header nav div.button-desktop{
         --font-footer: 15px;
         --font-redes-sociales: 30px;
     }
-    
+    .li-instrumentos-tablets{
+        padding-top: 2px;
+        font-size: 21px;
+    }
     header div.div-header{
         justify-content:space-between;
         padding: 0 13px;
@@ -400,24 +432,25 @@ header nav div.button-desktop{
         text-align: center;
         width: 100%;
     }
-     header nav {
+   /*   header nav {
         display: flex;
         width: 100%;
         background-color: white;
         margin-bottom: 5px;
-    } 
+    }  */
+    .div-cajaTablet{
+        display: flex;
+        width: 100%;
+    }
     header nav div.button-tablet{
         display: flex;
+        flex-direction: column;
         width: inherit;
         border-top: 1px solid black;
         background-color: #c45333;
         justify-content: space-around;
         text-align: center;
         align-items: center;
-        padding: 30px 0;
-    }
-    header nav div.button-tablet button{
-        height: 42px;  
     }
     div.img-user {
         background-color: #333333;
@@ -470,18 +503,18 @@ header nav div.button-desktop{
     header nav div.button-tablet{
         display: none;
     }
-    header nav{
+   /*  header nav{
         display: flex;
         width: 100%;
         margin-bottom: 5px;
-    }
-    header nav div.button-desktop{
+    } */
+    .caja-desktop{
         display: flex;
-        justify-content: center;
-        border-top: 1px solid black;
         background-color: #c45333;
-        justify-content: space-around;
-        padding: 30px 0;
+    }
+    .ul-cajaDesktop{
+        display: flex;
+        width: 100%;
     }
 
 /*     header nav div.button-tablet{
@@ -493,10 +526,10 @@ header nav div.button-desktop{
         text-align: center;
         align-items: center;
         padding: 30px 0;
-    } */
+    } *//* 
     header nav div.button-desktop button{
         height: 42px;  
-    }
+    } */
 
     header div.div-header div.nav-burguer{
         left: 0;
