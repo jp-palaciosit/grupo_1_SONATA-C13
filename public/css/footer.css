@@ -6,7 +6,7 @@ footer{
     justify-content: space-between;
     font-size: var(--font-body);
     width: 100%;
-    background-color: #c45333;
+    background-color: #282828;
 }
 footer section{
     display: flex;

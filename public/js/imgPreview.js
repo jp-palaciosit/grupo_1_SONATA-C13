@@ -11,7 +11,7 @@ function fileValidation(){
         if (fileInput.file && fileInput.file[0]) {
             let reader = new FileReader();
             reader.onload = function(e) {
-                document.getElementById('imagePreview').innerHTML = '<img src="'+e.target.result+'" width="100px" height="100px"/>';
+                document.getElementById('imagePreview').innerHTML = '<img src="'+e.target.result+'"/>';
             };
             reader.readAsDataURL(fileInput.file[0]);
         }

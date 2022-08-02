@@ -3,7 +3,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fbd38e;
+    background-color: #EEEEEE;
     padding-bottom: 10px;
     /* background-color:var(--background-main); */
 }
@@ -163,9 +163,9 @@ main section.section-proteccion div p{
     margin-bottom: 3px;
 }
 main section.section-proteccion div i{
-    font-size: 20px;
+    font-size: 30px;
     margin-top: 8px;
-    color: var(--color-Celeste);
+    color: #282828;
 }
 
 
@@ -230,7 +230,6 @@ main section.section-proteccion div i{
         flex-direction: column;
         width: 260px;
         height: 310px;
-        border: solid 1px black;
         transition: 0.6s;
      }
      main section article:hover{
@@ -328,7 +327,6 @@ main section.section-proteccion div i{
         flex-direction: column;
         width: 260px;;
         height: 310px;
-        border: solid 1px black;
      }
     main section article:hover{
         box-shadow: 8px 8px 5px #909090

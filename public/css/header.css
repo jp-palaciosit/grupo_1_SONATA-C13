@@ -4,10 +4,12 @@ header{
     flex-direction: column;
     position: sticky;
     width: 100%;
-    background-color: #c45333;
+    background-color: #282828;
     top: 0;
-    z-index: 1;
-    /* left: 0; */
+    z-index: 10;
+}
+.i-burguer{
+    color: white;
 }
 header div.div-header{
     display: flex;
@@ -184,10 +186,11 @@ header nav div label h1.btn-instrumento:hover{
 .div-button{
     width: 100%;
     height: 50px;
-    border-top: 1px solid black;
-    background-color: #c45333;
+    border-top: 1px solid white;
+    background-color: #282828;
     text-align: center;
-    height: 40px;
+    padding-top: 6px;
+    height: 50px;
    /*  text-align: center; */
 }
 
@@ -287,6 +290,7 @@ header nav div.button-tablet{
 }
 .caja-desktop{
     display: none;
+    background-color: #282828;
 }
 .session {
     display: inline-block;
@@ -441,7 +445,12 @@ header nav div.button-tablet{
     .div-cajaTablet{
         display: flex;
         width: 100%;
-    }
+        background-color: #282828;
+        border: none;
+    }/* 
+    .button-tablet{ 
+        border: none;
+    } */
     header nav div.button-tablet{
         display: flex;
         flex-direction: column;
@@ -510,11 +519,12 @@ header nav div.button-tablet{
     } */
     .caja-desktop{
         display: flex;
-        background-color: #c45333;
+        background-color: #282828;
     }
     .ul-cajaDesktop{
         display: flex;
         width: 100%;
+
     }
 
 /*     header nav div.button-tablet{

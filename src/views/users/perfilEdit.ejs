@@ -11,14 +11,7 @@
         <div class="perfil-usuario-header">
             <div class="perfil-usuario-portada">
                 <div class="perfil-usuario-avatar">
-                    <figure class="text-center">
-                        <div id="imagePreview">
-                            <img src="/img/avatar/<%=session.userActive.avatar%>" alt="img-avatar">
-                        </div>
-                    </figure>
-                    <!-- <button type="button" class="boton-avatar">
-                        <i class="far fa-image"></i>
-                    </button> -->
+                    <img src="/img/avatar/<%=session.userActive.avatar%>" alt="img-avatar">
                 </div>
                 <!-- <button type="button" class="boton-portada">
                     <i class="far fa-image"></i> Cambiar fondo
@@ -43,15 +36,15 @@
               <input type="text" name="lastName" id="lastName" placeholder="  Ingrese su apellido" class="input-empuje input-edit" value="<%= locals.old && old.lastname ? old.lastname : user.lastName %>">
               
               <label for="email" class="correo">Email</label>
-              <input type="email" name="email" id="email" value="<%= locals.old && old.email? old.email : user.email  %>" placeholder="  Ingrese su email" class="input-empuje input-edit" value="<%= locals.old && old.email ? old.email : user.lastName %>">
+              <p class="input-empuje input-edit" style="padding: 4px;"><%= user.email %></p>
               <figure class="text-center">
-                <div id="imagePreview">
-                    <img src="/img/avatar/<%=user.avatar %> " alt="" width="100px" height="100px">
-                </div>
-                </figure> 
+                    <div id="imagePreview" class="caja-div-imgPreview">
+                        <img src="/img/avatar/<%=user.avatar%> " alt="">
+                    </div>
+            </figure> 
               <div class="input-file">
-                <label for="inputFile" onchange="fileValidation()">Cambiar avatar</label>
-                <input type="file" name="avatar" id="inputFile"  class="input-empuje input-edit">
+                <label for="inputFile">Cambiar avatar</label>
+                <input type="file" name="avatar" id="inputFile"  class="input-empuje input-edit" onchange="fileValidation()">
               </div>
             <div class="col-12">
                 <button type="submit" class="btn-editar">Guardar</button>

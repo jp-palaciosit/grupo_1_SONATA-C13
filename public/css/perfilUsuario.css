@@ -78,9 +78,12 @@ body {
 
 .seccion-perfil-usuario .perfil-usuario-avatar img {
     width: 100%;
+    height: 100%;
     position: relative;
     border-radius: 50%;
-    z-index: 1;
+    object-fit: cover;
+
+    /* z-index: 1; */
 }
 
 .seccion-perfil-usuario .perfil-usuario-avatar .boton-avatar {
@@ -125,7 +128,7 @@ body {
     background-color: #fff;
     border-radius: 15px;
     width: 100%;
-    /* z-index: -1; */
+    
 }
 .perfil-usuario-footer{
     display: flex;
@@ -135,6 +138,7 @@ body {
 .seccion-perfil-usuario .perfil-usuario-bio {
     margin-bottom: 1.25rem;
     text-align: center;
+    z-index: -1;
 }
 
 .seccion-perfil-usuario .lista-datos {
@@ -208,6 +212,20 @@ body {
     left: 0;
     opacity: 0;
 }
+.caja-div-imgPreview{
+    margin-top: 10px;
+    
+    width: 100px;
+    height: 100px;
+}
+.caja-div-imgPreview img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+
 @media (max-width: 750px) {
     .seccion-perfil-usuario .lista-datos {
         width: 100%;
