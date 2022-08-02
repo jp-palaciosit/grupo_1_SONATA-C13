@@ -39,7 +39,7 @@
                         <div class="description">
                             <h3><%-producto.name%></h3>
                             <span class="descuento-envios">
-                                <%-producto.discount !== 0 ? `${producto.discount} % OFF` : ""%>
+                                <p class="precioHomeVerde"><%-producto.discount !== 0 ? `${producto.discount} % OFF` : ""%></p>
                                 <%-producto.shipment ? "Envios gratis" : "" %>
                             </span>
                             <p class="precio">$ <%- thousand((producto.price - producto.price * producto.discount / 100).toFixed(0)) %></p>

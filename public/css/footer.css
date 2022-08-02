@@ -17,7 +17,7 @@ footer section{
 }
 footer article h4{
     font-size: 22px;
-    color: black;
+    color: white;
     margin:3px 0px;
 }
 footer  article ul li{
@@ -29,7 +29,7 @@ footer  article ul li{
 footer  article ul li a{
     text-decoration: none;
     font-weight: 600;
-    color: black;
+    color: white;
 
 }
 footer article.redes-sociales{
@@ -39,7 +39,7 @@ footer article.redes-sociales{
 }
 footer article.redes-sociales h4{
     font-size: 22px;
-    color: black;
+    color: white;
     text-align: center;
 }
 footer article.redes-sociales ul{

@@ -69,17 +69,19 @@ main section{
 }
 main section article{
    margin-bottom: 15px;
-/*    background-color: #712B75
-   ; */
-   background: linear-gradient(to top, #712B75, black);
    display: flex;
    height: 150px;
    align-items: center;
+   border: 1px solid;
    justify-content: center;
    position: relative;
 }
 main section article:hover{
     box-shadow: 0px 4px 0px var(--background-gray);
+}
+.precioHomeVerde{
+    color: #39b54a;
+    font-weight: 700;
 }
 /* .ancla-carrito{
    background-color: aqua;
@@ -119,13 +121,13 @@ main section article div.description p.precio{
 }
 main section article div.description i{
     position: absolute;
-    color: var(--color-green);
+    color: #282828;
     display: block;
     font-size: 16px;
     padding: 5px;
     width: 30px;
     height: 30px;
-    border: 1px solid var(--color-green);
+    border: 1px solid #282828;
     background-color: #FFF;
     border-radius: 50%;
     right: 4px;
@@ -189,6 +191,7 @@ main section.section-proteccion div i{
     }
     main section article{
         height: 250px;
+
      }
     main section article div.description i {
         top:161px;
@@ -231,6 +234,7 @@ main section.section-proteccion div i{
         width: 260px;
         height: 310px;
         transition: 0.6s;
+        border: none;
      }
      main section article:hover{
         box-shadow: 8px 8px 5px #909090
@@ -327,6 +331,7 @@ main section.section-proteccion div i{
         flex-direction: column;
         width: 260px;;
         height: 310px;
+        border: none;
      }
     main section article:hover{
         box-shadow: 8px 8px 5px #909090
