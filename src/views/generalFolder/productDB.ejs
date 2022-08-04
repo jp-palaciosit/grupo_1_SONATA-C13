@@ -3,6 +3,8 @@
     <%-include("../partials/head.ejs") %>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/whatsapp.css">
+    <link rel="stylesheet" href="css/carruselProductos.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="/js/whatsapp.js" defer></script>
 <body>
     <%-include("../partials/header.ejs") %>
@@ -53,8 +55,65 @@
                 </a>
                 <% }) %> 
             </div>
-            
         </section>
+        <h2>OFERTAS IMPERDIBLES!</h2>
+        <section class="section-productos">            
+            <div class="articulos-desktop">
+                <%product.forEach(producto => { %>
+                    <% if (producto.discount >= 15) { %>
+                        <a href="/producto/<%-producto.id %>">
+                            <article>
+                                <div class="div-img-home">
+                                    <img src="img/productos/<%-producto.image%>"   alt="<%-producto.name%>" class="producto-home">
+                                </div>
+                                <div class="description">
+                                    <h3><%-producto.name%></h3>
+                                    <span class="descuento-envios">
+                                        <p class="precioHomeVerde"><%-producto.discount !== 0 ? `${producto.discount} % OFF` : ""%></p>
+                                        <%-producto.shipment ? "Envios gratis" : "" %>
+                                    </span>
+                                    <p class="precio">$ <%- thousand((producto.price - producto.price * producto.discount / 100).toFixed(0)) %></p>
+                                    <!-- <a href="productCart" class="ancla-carrito"> -->
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <!-- </a> -->
+                                </div>                               
+                            </article>
+                        </a>
+                        <% } %>
+                    <% }) %> 
+            </div>
+        </section>
+        <h2 class="h2-carrusel-div">TODOS LOS PRODUCTOS</h2>
+        <div class="div-carrusel" id="carruselMovil" >
+            <div class="container" >
+                <div class="swiper-container mySwiper">
+                    <div class="swiper-wrapper" >
+                        <%product.forEach(producto => { %>
+                        <div class="swiper-slide" >
+                            <img src="img/productos/<%-producto.image%>" >
+                        <div class="card-description">
+                            <div class="card-title">
+                                <h4 class="h4-carrusel-productos">Descripción</h4>
+                            </div>
+                            <div class="card-text">
+                                <p><%-producto.description%></p>
+                            </div>
+                            <div class="card-link">
+                              <a href="/producto/<%-producto.id %>">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %> 
+                        </div>
+               
+                    </div>
+                 
+                 
+        
+                </div>
+        
+            
+            </div>
         <section class="section-proteccion">
             <div>
                 <i class="fa-solid fa-credit-card img-main"></i>
@@ -75,7 +134,7 @@
             </div>
         </section>
         <section class="seccion-whatsapp">
-            <a href="https://wa.me/1234567890?text=Hola%20me%20interesa%20saber%20más%20sobre%20los%20productos%20de%20la%20empresa%20" class="whatsappBtn" onmouseover="clickWhatsapp()" target="_blank">
+            <a href="https://wa.me/1234567890?text=Hola%20me%20interesa%20saber%20más%20sobre%20los%20productos%20de%20la%20SONATA%20" class="whatsappBtn" onmouseover="clickWhatsapp()" target="_blank">
                 <i class="fa-brands fa-whatsapp " id="i-btn-whatsapp"></i>
             </a>
             
@@ -86,5 +145,7 @@
     </main>
     <%-include("../partials/footer.ejs") %>
     <script src="./js/slider.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/carruselProductos.js"></script>
 </body>
 </html>
