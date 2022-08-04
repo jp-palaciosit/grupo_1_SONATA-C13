@@ -147,8 +147,11 @@ article.redes-sociales-main{
     position: relative;
     display: inline-block;
     padding: 15px 30px;
-    background-color:#1259c3;
+    background-color:#35E1BF;
     color: white;
+    border: none;
+    margin-top: 2px;
+    border-radius: 20px;
     letter-spacing: 2px;
     text-decoration: none;
     overflow: hidden;

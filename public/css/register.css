@@ -112,10 +112,11 @@ button#button-register{
     text-align: center;
     margin: 15px 0 20px;
     padding: 6px;
-    border-radius: 5px;
+    border-radius: 20px;
     border: none;
     font-size: 1.5rem;
-    background-color: #1259c3;
+    
+    background-color: #35E1BF;
     text-transform: uppercase;
     cursor:pointer;
 }

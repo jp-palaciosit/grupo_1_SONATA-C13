@@ -33,9 +33,9 @@
                   </tr>
                 </thead>
                 <tbody>
-                    <% categorias.forEach(categoria => { %>
+                    <% categorias.forEach((categoria, i)=> { %>
                         <tr class="text-center">
-                            <th scope="row"><%=categoria.id%></th>
+                            <th scope="row"><%=i+1%></th>
                             <td><%=categoria.name%></td>
                             <td>
                                 <a href="/admin/categories/editCategory/<%- categoria.id %>" class="btn" id="btn-admin-modificacion">
