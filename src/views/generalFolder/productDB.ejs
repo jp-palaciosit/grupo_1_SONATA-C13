@@ -2,6 +2,8 @@
 <html lang="en">
     <%-include("../partials/head.ejs") %>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/whatsapp.css">
+    <script src="/js/whatsapp.js" defer></script>
 <body>
     <%-include("../partials/header.ejs") %>
     <main>
@@ -72,6 +74,15 @@
                 
             </div>
         </section>
+        <section class="seccion-whatsapp">
+            <a href="https://wa.me/1234567890?text=Hola%20me%20interesa%20saber%20más%20sobre%20los%20productos%20de%20la%20empresa%20" class="whatsappBtn" onmouseover="clickWhatsapp()" target="_blank">
+                <i class="fa-brands fa-whatsapp " id="i-btn-whatsapp"></i>
+            </a>
+            
+        </section>
+        <!-- <div class="div-comentario-whatsapp" id="cartelWhatsapp">
+            <p class="p-comentario-whatsapp">ENVIANOS UN MENSAJE</p> 
+        </div> -->
     </main>
     <%-include("../partials/footer.ejs") %>
     <script src="./js/slider.js"></script>
