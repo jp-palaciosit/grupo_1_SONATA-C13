@@ -4,7 +4,6 @@ const {check, body} = require("express-validator")
 const validateAddProduct = [
     check("name")
         .notEmpty().withMessage("Ingrese un nombre del producto").bail()
-        .isAlphanumeric().withMessage("Ingrese un nombre valido").bail()
         .isLength({min:5, max:40}).withMessage("El nombre tiene que tener al menos 5 caracteres"),
     check("price")
         .notEmpty().withMessage("Ingrese precio del producto").bail()

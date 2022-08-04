@@ -13,14 +13,14 @@
                 <form action="/usuario/login" method="POST" id="form">
                     <label for="email" class="correo">Email</label>
                     <input type="email" name="email" id="email" value="" placeholder="  Ingrese su email" class="input-empuje input-login">
-                    <small id="errorEmail" style="color: pink;">
+                    <small id="errorEmail" style="color: white;">
                         <% if (locals.errors && errors.email) { %>
                             <p style="color:red;"><%=errors.email.msg%></p>
                         <% } %>
                     </small>
                     <label for="passwd">Contraseña</label>
                     <input type="password" name="passwd" id="passwd" value="" placeholder="  Ingrese su contraseña" class="input-empuje input-login">
-                    <small id="errorPasswd" style="color: pink;">
+                    <small id="errorPasswd" style="color: white;">
                         <% if (locals.errors && errors.passwd) { %>
                             <p style="color:red;"><%=errors.passwd.msg%></p>
                         <% } %>

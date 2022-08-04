@@ -13,7 +13,7 @@
                 <form action="/usuario/registro" method="post" enctype="multipart/form-data" id="form">
                     <label for="name">Nombre</label>
                     <input type="text" name="name" id="name" value="" placeholder="  Ingrese su nombre" class="input-empuj input-login" value="<%=locals.old && old.name ? old.name : "" %>">
-                    <small id="errorName" style="color: pink;">
+                    <small id="errorName" style="color: white;">
                         <% if (locals.errors && errors.name) { %>
                             <p style="color:red;"><%= errors.name.msg %></p>
                         <% } %>
@@ -21,21 +21,21 @@
                     </small>
                     <label for="lastName">Apellido</label>
                     <input type="text" name="lastName" id="lastName" placeholder="  Ingrese su apellido" class="input-empuje input-login" value="<%= locals.old && old.lastname ? old.lastname : "" %>">
-                    <small id="errorLastName" style="color: pink;">
+                    <small id="errorLastName" style="color: white;">
                         <% if (locals.errors && errors.lastName) { %>
                             <p style="color:red;"><%= errors.lastName.msg %></p>
                         <% } %>
                     </small>
                     <label for="email" class="correo">Email</label>
                     <input type="email" name="email" id="email" value="" placeholder="  Ingrese su email" class="input-empuje input-login" value="<%= locals.old && old.email ? old.email : "" %>">
-                    <small id="errorEmail" style="color: pink;">
+                    <small id="errorEmail" style="color: white;">
                         <% if (locals.errors && errors.email) { %>
                             <p style="color:red;"><%= errors.email.msg %></p>
                         <% } %>
                     </small>
                     <label for="passwd">Contraseña</label>
                     <input type="password" name="passwd" id="passwd" value="" placeholder="  Ingrese su contraseña" class="input-empuje input-login"  >
-                    <small id="errorPasswd" style="color: pink;">
+                    <small id="errorPasswd" style="color: white;">
                         <% if (locals.errors && errors.passwd) { %>
                             <p style="color:red;"><%= errors.passwd.msg %></p>
                         <% } %>
@@ -46,7 +46,7 @@
                     <div class="input-register-avatar">
                     <p>Ingrese un avatar</p>
                     <input type="file" name="avatar" id="file" value=""  class="input-empuje input-imagen input-login">
-                    <small id="errorFile" style="color: pink;">
+                    <small id="errorFile" style="color: white;">
                         <% if (locals.errors && errors.avatar) { %>
                             <p style="color:red;"><%= errors.avatar.msg %></p>
                         <% } %>
@@ -58,7 +58,7 @@
                             <p>No soy un robot</p>                           
                         </span>
                     </label>
-                    <small id="errorCaptcha" style="color: pink;">
+                    <small id="errorCaptcha" style="color: white;">
                         <% if (locals.errors && errors.captcha) { %>
                             <p style="color:red;"><%= errors.captcha.msg %></p>
                         <% } %>
@@ -76,7 +76,7 @@
                             </span>
                         </label>
                     </div>
-                    <small id="errorTC" style="color: pink;">
+                    <small id="errorTC" style="color: white;">
                         <% if (locals.errors && errors.terCondi) { %>
                             <p id="errorTC" style="color:red;"><%= errors.terCondi.msg %></p>
                         <% } %>
@@ -93,7 +93,7 @@
                     <span class="tengo-cuenta">
                         <a style="color: black;" href="/usuario/login">Ya tengo cuenta</a>
                     </span>
-                    <small id="errorForm" style="color: pink;"></small>
+                    <small id="errorForm" style="color: white;"></small>
                 </form>
                 
             </article> 

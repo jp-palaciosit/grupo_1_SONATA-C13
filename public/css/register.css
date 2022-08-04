@@ -4,14 +4,14 @@
     box-sizing: border-box;
 }
 a{
-    text-decoration: none;
-    color: #1259c3;
+    text-decoration: none;/* 
+    color: #1259c3; */
 }
 main.main-register{
     width: 100%;
     display: flex;
-    justify-content: center;
-    background: linear-gradient(to top,#616161, #9bc5c3);
+    justify-content: center;/* 
+    background: linear-gradient(to top,#616161, #9bc5c3); */
 }
 h1.h1-crearCuenta{
     font-size: 40px;

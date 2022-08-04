@@ -8,12 +8,12 @@ function fileValidation(){
         fileInput.value = '';
         return false;
     }else{
-        if (fileInput.file && fileInput.file[0]) {
+        if (fileInput.files && fileInput.files[0]) {
             let reader = new FileReader();
             reader.onload = function(e) {
                 document.getElementById('imagePreview').innerHTML = '<img src="'+e.target.result+'"/>';
             };
-            reader.readAsDataURL(fileInput.file[0]);
+            reader.readAsDataURL(fileInput.files[0]);
         }
     }
 }

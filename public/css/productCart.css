@@ -24,8 +24,8 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    border: solid 1px black;
-    background: linear-gradient(to bottom, #9BC5C3, #616161);
+    border: solid 1px black;/* 
+    background: linear-gradient(to bottom, #9BC5C3, #616161); */
 }
 .img-carrito{
     width: 75px;

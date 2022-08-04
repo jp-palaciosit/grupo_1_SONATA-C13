@@ -309,8 +309,12 @@ header nav div.button-tablet{
     background: red;
     border-radius: 50px;
     position: relative;
-    top: 0px;
-    right: -3;
+    top: 1px;
+    right: 12px;
+}
+.div-sessionOut{
+    display: flex;
+    padding-left:28px;
 }
 
 
@@ -374,6 +378,7 @@ header nav div.button-tablet{
     .caja-desktop{
         display: none;
     }
+    
 }
 
 @media (min-width: 769px){
@@ -472,7 +477,12 @@ header nav div.button-tablet{
         height: 500px;
     }
     header div.div-header div.nav-burguer::before{
-        content: none
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 13px;
+        border: solid 10px;
+        border-color: transparent transparent #333333;
     }
 }
 

@@ -106,7 +106,7 @@ module.exports = {
                     fs.unlinkSync("/img/productos", result.image)
                 }
             }
-            res.redirect('/admin/products/listaProductos')
+            res.redirect('/admin/products')
     })
     .catch(errors => console.log(errors))
 } ,

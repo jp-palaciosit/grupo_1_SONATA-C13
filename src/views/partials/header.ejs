@@ -9,13 +9,15 @@
         <div class="nav-burguer">
             <div class="img-user">
                 <% if (typeof session.userActive != "undefined") { %>
-                    <img src="img/avatar/<%=session.userActive.avatar%>" alt="img" style="border: 50%;">
+                    <img src="/img/avatar/<%=session.userActive.avatar%>" alt="img" style="border: 50%;">
                         <span class="session"></span>
                     <h2 style="color: white; margin-right: 15px;"><%=session.userActive.name%></h2>
                 <% } else { %>
                     <img src="../img/usuario/User.jpg" alt="img">
-                    <span class="sessionOut"></span>
-                    <a style="color: white;" href="/usuario/login">INICIAR SESION</a>
+                    <div class="div-sessionOut">
+                        <span class="sessionOut"></span>
+                        <a style="color: white;" href="/usuario/login">INICIAR SESION</a>
+                    </div>
                 <% } %>
             </div>
             <ul>

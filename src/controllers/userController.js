@@ -192,7 +192,24 @@ module.exports = {
         if(req.cookies.CookieSonata){
             res.cookie('CookieSonata', '', {maxAge: -1}) 
         }
-        res.redirect('/home')
+        db.User.findByPk(req.params.id)
+        .then(user => {
+            db.User.destroy({
+                where: {
+                    id: req.params.id
+                }
+            })
+            .then(() => {
+                if (fs.existsSync(path.join(__dirname, "../../public/img/avatar", user.avatar)) &&
+                    user.avatar !== "default-image.png"){
+                    fs.unlinkSync( path.join(__dirname, "../../public/img/avatar", user.avatar))
+                }
+            })
+            .catch(error => console.log(error))
+            res.redirect('/')
+        })
+        .catch(error => console.log(error))
     }
+    
 
 }
